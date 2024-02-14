@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+<head>
+    <meta charset="UTF-8">
+
+    <!--Meant to be viewed in (desktop) 1440px × 900px-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+    <!--Symbols-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Portfolio - Jessica Ocampo</title>
+
+    <style>
+
+        /*Headers*/
+        h1 {
+            text-align: left;
+            padding: 5px 5px 0;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            color:#fff;
+            font-size: 35px;
+            width: 50%;
+        }
+
+        h2 {
+            margin-left: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color:#fff;   
+        }
+
+        h3 {
+            position: relative; /* Change position to relative */
+            text-align: left;
+            padding: 30px 10px 10px; /* Adjusted padding */
+            margin-top: 0px;
+            margin-bottom: 5px;
+            color:#fff;
+            font-size: 18px;
+            width: 50%;
+        }
+
+        header {
+            margin: 100px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /*Buttons*/
+        button {
+            border: none;
+
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
+
+            padding: 25px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; 
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px; /* Adjusted margin */
+            margin-right: 20px; /* Added margin to separate buttons */
+
+            animation: glowing 4s infinite;
+
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #000000; 
+            color:#ffffff;
+            scale: 110%;
+        }
+
+        .button2 {
+            font-size: 15px;
+
+            color: #ffffff;
+
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            margin: 20px 10px; /* Adjusted margin */
+            padding: 10px 20px;
+            border: 2px solid #555;
+            transition: background-color 0.3s, border-color 0.3s;
+            cursor: pointer;
+            animation: glowing 4s infinite;
+            width: auto; /* Ensures button width adjusts to content */
+        }
+
+        .button2:hover {
+            scale: 110%;
+        }
+
+        .button3 {
+            font-size: 15px;
+
+            color: #ffffff;
+            background-color: #000000;
+
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            margin: 20px 10px; /* Adjusted margin */
+            padding: 10px 20px;
+            border: 2px solid #555;
+            transition: background-color 0.3s, border-color 0.3s;
+            cursor: pointer;
+            animation: glowing 4s infinite;
+            width: auto; /* Ensures button width adjusts to content */
+        }
+
+        .button3:hover {
+            scale: 110%;
+            color:rgb(0, 0, 0);
+            background-color: #ffffff;
+        }
+
+        .button4 {
+            border: 2px solid #ffffff;
+            border-radius: 2px;
+            padding: 5px 5px 5px 5px;
+            width: 20px;
+            text-align: center;
+            float: left;
+            margin-top: -5px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap if there isn't enough horizontal space */
+            justify-content: center; /* Center buttons horizontally */
+        }
+
+         /*Glowing Box*/
+         @keyframes glowing {
+  	    0% {
+    	    box-shadow: 0 0 2px 0px #ffffff;
+  	    }
+  	    50% {
+    	    box-shadow: 0 0 5px 2px #ffffff;
+  	    }
+  	    100% {
+    	    box-shadow: 0 0 2px 0px #ffffff;
+  	    }
+	    }
+
+        p {
+            padding: 10px;
+            margin: 0 auto; 
+            margin-top: 5px;
+            text-align: left; 
+            color:#fff
+        }
+
+        /* Styling for sections */
+        body {
+            font-family: Lato, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Smooth scrolling */
+            color:#fff
+        }
+        
+        section {
+            height: 130vh; /* Full viewport height for each section */
+            display: flex;
+            flex-direction: column; /* Set the flex-direction to column */
+            justify-content: left;
+            align-items: left;
+            font-size: 20px;
+            color: #ffffff;
+    }
+    
+        /* Background colors for sections */
+        #home { background-color: #161616; }
+        #skills { background-color: #161616; }
+        #projects { background-color: #161616; }
+        #connect { background-color: #161616; }
+
+        /* Footer styles */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+         /* Navigation bar styles */
+         nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            display: flex;
+        }
+        nav a {
+            font-size: 12px;
+            color: #ffffff;
+            background-color: #000000;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 10px 20px;
+            border: 2px solid #555;
+            transition: background-color 0.3s, border-color 0.3s;
+
+            animation: glowing 4s infinite;
+        }
+        nav a:hover {
+            background-color: #555;
+            border-color: #555;
+        }
+
+        #fa-solid {
+            color: #fff;
+            scale: 120%;
+        }
+
+        #fa-solid:hover {
+            scale: 140%;
+        }
+
+        /* Your name styles */
+        #name {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            z-index: 999; /* Ensure it's above other elements */
+
+            margin-top: 5px;
+        }
+
+        /*Icon style*/
+        .cimg {
+            width: 5%;
+            height: 70%;
+            padding: 10px 10px;
+        }
+
+        .cimg:hover {
+            scale: 115%;
+        }
+
+        .canva {
+            width: 8%;
+            height: 70%;
+            padding: 10px 10px;
+        }
+
+        .canva:hover {
+            scale: 115%;
+        }
+
+        .avatar {
+            width: 300px;
+            float: right;
+            margin-top: 50px;
+            margin-right: 40px;
+
+            animation: glowing 4s infinite;
+        }
+
+        .avatar:hover {
+            transform: rotate(6deg);
+        }
+
+        /*Project*/
+        .projects {
+            width: 250px;
+            height: 400px;
+            margin: 50px auto;
+            padding: 10px 10px 10px 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+            background-color: #000000;
+            text-align: left;   
+            border: 2px solid transparent; 
+  		    border-radius: 5px; 
+  		    animation: glowing 4s infinite;
+            cursor: pointer;
+            float: left;
+        }
+    
+		.project-section {
+  		    display: flex;
+  		    justify-content: center;
+		}
+
+        .projects:hover {
+            transform: translateY(-25px);
+        }
+
+        .projects2 {
+            width: 550px;
+            height: 500px;
+            margin: 50px auto;
+            padding: 10px 10px 10px 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+            background-color: #000000;
+            text-align: left;   
+            border: 2px solid transparent; 
+  		    border-radius: 5px; 
+  		    animation: glowing 4s infinite;
+            cursor: pointer;
+            float: left;
+        }
+
+        /*Project Image Style*/
+        .projimg {
+            width: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="name">
+        <div class="button4">
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <strong style="margin-left: 10px;">JESSICA OCAMPO</strong>
+    </div>
+
+    <nav>
+        <a href="#home">
+        <i class="fa-solid fa-house" id="fa-solid"></i>
+        </a>
+
+        <a href="#projects">PROJECTS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#connect">CONNECT</a>
+    </nav>
+
+    <section id="home">
+
+    <header style ="margin-top: 100px;">
+
+         <img src="avatar.jpeg" class="avatar">
+
+        <h3>Hey, I'm Jess.</h3>
+        <h1>I am a problem-solving designer and creator on a quest to make unique user experiences.</h1>
+        <h3> Currently based in Waterloo, attending University of Waterloo Stratford School of Interaction Design and Business. I am interested in pursuing work within the game design industry.</h3>
+        <br>
+        <p>Curious about me?</p>
+        <div>
+            <a href="#projects">
+                <button>
+                    <strong>EXPLORE GAMES</strong> &nbsp;
+                    <i class="fa-solid fa-arrow-down"></i>
+                </button>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1MGHc3yF5qIdG1DrgvLCOSZIGcz5hRl_eRZm0RxH0IDI/edit?usp=sharing">
+                <button>
+                    <strong>RESUME</strong> &nbsp;
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+            </a>
+        </div>
+
+
+    </header>
+    </section>
+
+    <section id="projects">
+        <h2 style="text-align: center; margin-left: 0;">Projects</h2>
+        <p>Here are some of my projects.</p>
+
+        <div class="project-section">
+            <div class="projects">
+              
+            <img src="moodle1.png" class="projimg">
+              <h3 style="padding-top: 20px;">MOODLE</h3>
+              <p style="font-size: 14px; line-height: 20px;">Mental Health App Game for Young Teens.</p>
+              <p style="font-size: 14px; line-height: 20px;">#FIGMA</p>
+            </div>
+
+            <div class="projects">
+              
+                <img src="campus1.png" class="projimg">
+              <h3 style="padding-top: 20px;">CAMPUS CHAOES</h3>
+              <p style="font-size: 14px; line-height: 20px;">Javascript P5 Game for Kids.</p>
+              <p style="font-size: 14px; line-height: 20px;">#JAVASCRIPT</p>
+                  </div>
+
+            <div class="projects">
+
+                <img src="heist1.png" class="projimg">
+              <h3 style="padding-top: 20px;">INTERGALACTIC HEIST</h3>
+              <p style="font-size: 14px; line-height: 20px;">Html Based Role Play Game for Preteens.</p>
+              <p style="font-size: 14px; line-height: 20px;">#HTML #JAVASCRIPT</p>
+            </div>
+                
+            </div>
+
+            <p>Some of my written projects.</p>
+        <div class="button-container">
+            <a href="https://docs.google.com/document/d/1lb2pTt_kwWmge240BQrC8oG7xq1W2zwH0j4sS_u1t9M/edit?usp=sharing">
+            <span class="button3">THE PSYCOLOGICAL IMPACTS OF THE NINTENDO SWITCH</span>
+            </a>
+
+            <a href="https://docs.google.com/document/d/12ouW3GIkiq5LBpONCrEd35IgkXDLCT-_BUNs4A9EcVo/edit?usp=sharing">
+            <span class="button3">THE RISE OF SIMULATION GAMES</span>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1sWB1tQh4cOUWAjOl2QS-fdYzKmSkEq9Wdr-msqLbOHQ/edit?usp=sharing">
+            <span class="button3">UNVEILING GENDER BIAS IN TECHNOLOGY</span>
+            </a>
+
+        </div>
+          </section>
+
+    <section id="skills">
+        <h2 style="text-align: center; margin-left: 0;">Skills</h2>
+        <p>Programming Languages</p>
+        <div class="button-container">
+            <img src="javascript.png" class="cimg">
+            <img src="html.png" class="cimg">
+            <img src="css.png" class="cimg">
+        </div>
+
+        <p>Design Tools</p>
+        <div class="button-container">
+            <img src="photoshop.png" class="cimg">
+            <img src="illustrator.png" class="cimg">
+            <img src="indesign.png" class="cimg">
+            <img src="aftereffects.png" class="cimg">
+            <img src="figma.png" class="cimg">
+            <img src="canva.png" class="canva">
+        </div>
+
+        <br>
+
+        <p>Some of my areas of interest. Let's talk about...</p>
+        <div class="button-container">
+            <span class="button2">WEBSITE DEVELOPMENT</span>
+            <span class="button2">GAME DEVELOPMENT</span>
+            <span class="button2">UX/UI PROTOTYPING</span>
+            <span class="button2">VIDEO EDITING</span>
+        </div>
+
+        <p>Design Principles. Exerienced in...</p>
+        <div class="button-container">
+            <span class="button2">PROTOTYPING</span>
+            <span class="button2">SITE MAPPING</span>
+            <span class="button2">WIREFRAMING</span>
+            <span class="button2">MOCKUPS</span>
+        </div>
+
+    </section>
+
+    <section id="connect">
+
+        <h2 style="text-align: center; margin-left: 0;">Connect</h2>
+
+        <div class="project-section">
+        <div class="projects2">
+        <p>About Me</p>
+
+        <p>I am a detail-orientated 19 year old student exploring the world of all things user interface/experience, 
+            digtial media/culture, internation business and IT. I have +3 years of experience in team-based projects, 
+            design problem solving and interactive adaptability to make products that users can benefit from.</p>
+
+        <br>
+        <p>Contact</p>
+        <p>Let's connect.</p>
+    
+            <a href="mailto:jsocampo@uwaterloo.ca">
+                <i style="margin-left: 10px; float: left; margin-top: 20px; margin-right: 14px;" class="fa-solid fa-envelope" id="fa-solid"></i>
+            </a>
+            <p>jsocampo@uwaterloo.ca</p>
+
+            <i style="margin-left: 10px; float: left; margin-top: 18px; margin-right: 10px;" class="fa-solid fa-phone"></i>
+            <p>905 - 251 - 0383</p>
+
+            <br>
+    </div>
+
+        <div class="projects2">
+            <p>Drop me a message and I'll get back to you as soon as possible.</p>
+            <br>
+
+            <form action="mailto:jessicaocampoedu@gmail.com" method="post">
+
+            <p>Send a Message.</p>
+            <br>
+
+  		    <input style="padding: 60px 100px 60px 100px;"
+            type="text" id="messagetext" name="messagetext"><br>
+            <br>
+
+            <input 
+            style="padding: 10px 20px 10px 20px;"
+            type="submit" id="submit" value="SUBMIT" class="button">
+            </form>
+    </div>
+
+    </section>
+
+    <footer>
+        &copy; 2023 J.S.Ocampo. All rights reserved.
+    </footer>
+</body>
+</html>
