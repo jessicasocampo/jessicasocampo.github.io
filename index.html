@@ -33,6 +33,7 @@
             margin-top: 10px;
             margin-bottom: 10px;
             color:#fff;   
+            font-size: 35px;
         }
 
         h3 {
@@ -87,7 +88,7 @@
             text-decoration: none;
             text-align: center;
             display: inline-block;
-            margin: 20px 10px; /* Adjusted margin */
+            margin: 10px 10px; /* Adjusted margin */
             padding: 10px 20px;
             border: 2px solid #555;
             transition: background-color 0.3s, border-color 0.3s;
@@ -169,14 +170,24 @@
         }
         
         section {
-            height: 130vh; /* Full viewport height for each section */
+            height: 150vh; /* Full viewport height for each section */
             display: flex;
             flex-direction: column; /* Set the flex-direction to column */
             justify-content: left;
             align-items: left;
             font-size: 20px;
             color: #ffffff;
-    }
+        }
+
+        section2 {
+            height: 400vh; /* Full viewport height for each section */
+            display: flex;
+            flex-direction: column; /* Set the flex-direction to column */
+            justify-content: left;
+            align-items: left;
+            font-size: 20px;
+            color: #ffffff;
+        }
     
         /* Background colors for sections */
         #home { background-color: #161616; }
@@ -300,7 +311,7 @@
         }
 
         .projects2 {
-            width: 550px;
+            width: 500px;
             height: 500px;
             margin: 50px auto;
             padding: 10px 10px 10px 10px;
@@ -308,9 +319,8 @@
             margin-right: 30px;
             background-color: #000000;
             text-align: left;   
-            border: 2px solid transparent; 
-  		    border-radius: 5px; 
-  		    animation: glowing 4s infinite;
+            border: 2px solid #818181; 
+  		    border-radius: 10px; 
             cursor: pointer;
             float: left;
         }
@@ -371,7 +381,7 @@
     </header>
     </section>
 
-    <section id="projects">
+    <section2 id="projects">
         <h2 style="text-align: center; margin-left: 0;">Projects</h2>
         <p>Here are some of my projects.</p>
 
@@ -382,6 +392,11 @@
               <h3 style="padding-top: 20px;">MOODLE</h3>
               <p style="font-size: 14px; line-height: 20px;">Mental Health App Game for Young Teens.</p>
               <p style="font-size: 14px; line-height: 20px;">#FIGMA</p>
+
+              <span class="button2">
+              <strong> MORE</strong> &nbsp;
+              <i style="float: right;"class="fa-solid fa-arrow-down"></i>
+            </span>
             </div>
 
             <div class="projects">
@@ -390,7 +405,13 @@
               <h3 style="padding-top: 20px;">CAMPUS CHAOES</h3>
               <p style="font-size: 14px; line-height: 20px;">Javascript P5 Game for Kids.</p>
               <p style="font-size: 14px; line-height: 20px;">#JAVASCRIPT</p>
-                  </div>
+              <span class="button2">
+                <strong> MORE</strong> &nbsp;
+                <i style="float: right;"class="fa-solid fa-arrow-down"></i>
+              </span>
+            </div>
+
+                  
 
             <div class="projects">
 
@@ -398,33 +419,89 @@
               <h3 style="padding-top: 20px;">INTERGALACTIC HEIST</h3>
               <p style="font-size: 14px; line-height: 20px;">Html Based Role Play Game for Preteens.</p>
               <p style="font-size: 14px; line-height: 20px;">#HTML #JAVASCRIPT</p>
+              <span class="button2">
+                <strong> MORE</strong> &nbsp;
+                <i style="float: right;"class="fa-solid fa-arrow-down"></i>
+              </span>
             </div>
 
-            <div class="projects">
+             <!--<div class="projects">
                 <img src="pygame.png" class="projimg">
                 <h3 style="padding-top: 20px;">SPACE ATTACK</h3>
                 <p style="font-size: 14px; line-height: 20px;">Description.</p>
               <p style="font-size: 14px; line-height: 20px;">#PYTHON</p>
+            </div>-->
+
             </div>
-                
+
+            <div class="project-section">
+            <div style="width: 700px;" class="projects2">
+                <p>MOODLE EXPANDED</p>
+                <p>Problem</p>
+                <p></p>
+                <p>Goal</p>
+                <p>We planned to educate young teens early on in life 
+                    order for them to be aware of mental health, 
+                    and to disstigmatize the topic more.</p>
+                <p>Role</p>
+                <p>In this team-based project, my role was to work on 
+                    the ux/ui elements regarding app layout, colour, interactivity.
+                </p>
+            </div>
             </div>
 
-            <p>Some of my written projects.</p>
-        <div class="button-container">
-            <a href="https://docs.google.com/document/d/1lb2pTt_kwWmge240BQrC8oG7xq1W2zwH0j4sS_u1t9M/edit?usp=sharing">
-            <span class="button3">THE PSYCOLOGICAL IMPACTS OF THE NINTENDO SWITCH</span>
-            </a>
+            <div class="project-section">
+            <div style="width: 700px;" class="projects2">
+                <p>CAMPUS CHAOES EXPANDED</p>
+                <p>Problem</p>
+                <p></p>
+                <p>Goal</p>
+                <p>I wanted to create a silly game that protrays the geese  
+                     population at the University of Waterloo, which can seem like
+                    a big problem to some individuals. I thought it was a funny
+                    and harmless way to display a popular characteristic of 
+                    University of Waterloo, while still being creative and 
+                    humorous. </p>
+                <p>Role</p>
+                <p>Since this was a solo project, my job was to create a game 
+                    character and items, game score board, game mechanics, and 
+                    finally execute this using javascript p5.
+                </p>
+            </div>
+            </div>
 
-            <a href="https://docs.google.com/document/d/12ouW3GIkiq5LBpONCrEd35IgkXDLCT-_BUNs4A9EcVo/edit?usp=sharing">
-            <span class="button3">THE RISE OF SIMULATION GAMES</span>
-            </a>
+        
+            <div class="project-section">
+                <div style="width: 700px;" class="projects2">
+                    <p>INTERGALACTIC HEIST EXPANDED</p>
+                    <p>Problem</p>
+                    <p>In modern society there is a constaint trend for materialistic
+                        items due to capitalism. For kids to be sucked into this trend,
+                        it has been more difficult for them to make genuine connects
+                        with friends and family.
+                    </p>
+                    <p>Goal</p>
+                    <p>I wanted to create a game for preteens that brings
+                        awareness to the importance of companionship and friendship, 
+                        showing that materialistic items in comparision are insignificant.
+                    </p>
+                    <p>Role</p>
+                    <p>Since this was a solo project, my job was to write a storyline,
+                        create alterate role play paths, and finally execute this 
+                        using html and javascript.
+                    </p>
+                </div>
+                </div>
+    
+                 <!--<div class="projects2">
+                    <p>SPACE ATTACK EXPANDED</p>
+                    <p>Problem</p>
+                    <p>Goal</p>
+                    <p>Role</p>
+                </div>-->
+                </div>
 
-            <a href="https://docs.google.com/document/d/1sWB1tQh4cOUWAjOl2QS-fdYzKmSkEq9Wdr-msqLbOHQ/edit?usp=sharing">
-            <span class="button3">UNVEILING GENDER BIAS IN TECHNOLOGY</span>
-            </a>
-
-        </div>
-          </section>
+    </section2>
 
     <section id="skills">
         <h2 style="text-align: center; margin-left: 0;">Skills</h2>
@@ -447,6 +524,8 @@
             <img src="canva.png" class="canva">
         </div>
 
+        <br>
+        <br>
         <br>
 
         <p>Some of my areas of interest. Let's talk about...</p>
