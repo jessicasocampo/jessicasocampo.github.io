@@ -221,12 +221,7 @@
             background-image: url("background.gif");
             background-position:inherit;
          }
-         /*
-         #gallery {
-            background-image: url("background.gif");
-            background-position:inherit;
-         }
-         */
+       
         #connect { 
             background-image: url("background.gif");
             background-position:inherit;
@@ -353,8 +348,8 @@
 
         /*Project*/
         .projects {
-            width: 285px;
-            height: 455px;
+            width: 290px;
+            height: 480px;
             margin: 50px auto;
             padding: 15px 25px 25px 25px;
             margin-left: 30px;
@@ -366,6 +361,7 @@
   		    animation: glowing 4s infinite; /*animation*/
             cursor: pointer;
             float: left;
+            overflow: auto; 
         }
     
 		.project-section {
@@ -379,7 +375,7 @@
 
         .projects2 {
             width: 32%;
-            height: 500px;
+            height: 550px;
             margin: 50px auto;
             padding: 15px 25px 25px 15px;
             margin-left: 30px;
@@ -415,9 +411,6 @@
         </a>
         <a href="#projects">PROJECTS</a>
         <a href="#skills">SKILLS</a>
-           <!--
-        <a href="#gallery">GALLERY</a>
-           -->
         <a href="#connect">CONNECT</a>
     </nav>
 
@@ -425,7 +418,7 @@
 
     <header>
 
-         <img src="pfp.png" class="avatar">
+         <img src="avatar.png" class="avatar">
 
         <h2 style="font-size: 25px;"><span style="color: #c8c8c8">Hey, I'm </span><span style="color:#d6dafa;"> Jess.</span> 
             <span style="animation: changeContent 5s infinite;">Student, Designer, Developer.</span></h2>
@@ -476,7 +469,7 @@
               <a href="#MOODLE">
               <span class="button2">
               <strong>CASE STUDY</strong> &nbsp;
-              <i style="float: right;"class="fa-solid fa-arrow-down"></i>
+              <i style="float: right;"class="fa-solid fa-folder"></i>
             </span>
             </a>
 
@@ -499,7 +492,7 @@
               <a href="#CAMP">
               <span class="button2">
                 <strong>CASE STUDY</strong> &nbsp;
-                <i style="float: right;"class="fa-solid fa-arrow-down"></i>
+                <i style="float: right;"class="fa-solid fa-folder"></i>
               </span>
               </a>
 
@@ -508,6 +501,32 @@
             </a>
 
             </div>
+
+            <div class="projects">
+              
+                <img src="instaposts.jpg" class="projimg">
+              <h4 style="padding-top: 5px;">JAMIESON VITAMINS</h4>
+              <p style="font-size: 14px; line-height: 20px;">
+                Advertisement Package: Instagram Posts & Infographic Poster Design Idea. <span style="color: #c8c8c8">To promote the use of Vitamin C within young adults with weaker immune systems due to lack of sleep or use of substances.
+            </span></p>
+              <p style="font-size: 14px; line-height: 20px;"><span style="color: #b6caff">#PHOTOSHOP #CANVA</span></p>
+
+              <a href="https://docs.google.com/document/d/1Dd19qwuU_F2taGEEiNDp0WnrITnDiRiifOH2XA30FiM/edit?usp=sharing">
+              <span class="button2">
+                <strong>CASE STUDY</strong> &nbsp;
+                <i style="float: right;"class="fa-solid fa-folder"></i>
+              </span>
+              </a>
+
+              <a href="https://www.canva.com/design/DAGA2uJuzzc/kdHHCoFrbwhJsGMtg-w72Q/edit?utm_content=DAGA2uJuzzc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+              <i class="fa-solid fa-image" id="tool"></i>
+            </a>
+
+            </div>
+
+           
+
+    
 
             </div>
 
@@ -528,17 +547,16 @@
                             fast reflects.</span></p>
                               <p style="font-size: 14px; line-height: 20px;"><span style="color: #b6caff">#JAVASCRIPT</span></p>
                 
-                              <a href="#CAMP">
-                              <span class="button2">
-                                <strong>CASE STUDY</strong> &nbsp;
-                                <i style="float: right;"class="fa-solid fa-arrow-down"></i>
-                              </span>
-                              </a>
+                            
                 
                               <a href="https://github.com/jessicasocampo/CampusChaos.git">
                               <i class="fa-brands fa-square-github" id="tool"></i>
                             </a>
-                
+
+                            <a href="https://vimeo.com/778728714?share=copy">
+                            <i class="fa-brands fa-vimeo" id="tool"></i>
+                            </a>
+
                             </div>
                 
                                   
@@ -552,12 +570,7 @@
                                 making genuine connects with people.</span></p>
                               <p style="font-size: 14px; line-height: 20px;"><span style="color: #b6caff">#HTML #JAVASCRIPT</span></p>
                 
-                              <a href="#HEIST">
-                              <span class="button2">
-                                <strong>CASE STUDY</strong> &nbsp;
-                                <i style="float: right;"class="fa-solid fa-arrow-down"></i>
-                              </span>
-                            </a>
+                           
                 
                             <a href="https://github.com/jessicasocampo/Intergalactic-Heist.git">
                             <i class="fa-brands fa-square-github" id="tool"></i>
@@ -596,7 +609,10 @@
                                       <p style="font-size: 14px; line-height: 20px;"><span style="color: #b6caff">#PREMIEREPRO</span> #VIDEOESSAY</p>
                         
                                       <a href="https://docs.google.com/document/d/1sWB1tQh4cOUWAjOl2QS-fdYzKmSkEq9Wdr-msqLbOHQ/edit?usp=sharing">
-                                      <i class="fa-solid fa-folder" id="tool"></i>
+                                        <span class="button2">
+                                        <strong>CASE STUDY</strong> &nbsp;
+                                        <i style="float: right;"class="fa-solid fa-folder"></i>
+                                      </span>
                                       </a>
                         
                                       <a href="https://vimeo.com/884259166?share=copy">
@@ -616,8 +632,11 @@
                                       <p style="font-size: 14px; line-height: 20px;"><span style="color: #b6caff">#PREMIEREPRO</span> #TUTORIAL</p>
                         
                                     <a href="https://docs.google.com/document/d/1C-qVvkDTFonZESA6kihYxDWc0_ijbOJNif8JDqhjrkI/edit?usp=sharing">
-                                    <i class="fa-solid fa-folder" id="tool"></i>
-                                    </a>
+                                        <span class="button2">
+                                        <strong>CASE STUDY</strong> &nbsp;
+                                        <i style="float: right;"class="fa-solid fa-folder"></i>
+                                      </span>
+                                      </a>
                         
                                     <a href="https://vimeo.com/908063697?share=copy">
                                     <i class="fa-brands fa-vimeo" id="tool"></i>
@@ -745,12 +764,12 @@
     <section id="skills">
         <h2 style="text-align: center; margin-left: 0;">Skills</h2>
         <p><span style="color: #ffffff">TOOLS</span></p>
-        <p><span style="color: #c8c8c8">Programming Languages: Javascript P5, HTML, CSS, Python.</span></p>
+        <p><span style="color: #c8c8c8">Programming Languages: Javascript P5, HTML, CSS.</span></p>
         <div class="button-container">
             <img src="javascript.png" class="cimg">
             <img src="html.png" class="cimg">
             <img src="css.png" class="cimg">
-            <img src="python.png" class="cimg">
+            
         </div>
 
         <br>
