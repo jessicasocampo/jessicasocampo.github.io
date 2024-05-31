@@ -331,9 +331,7 @@
             margin-top: 50px;
         }
 
-        .avatar:hover {
-            transform: rotate(10deg);
-        }
+        
 
         /*text fade*/
         @keyframes changeContent {
@@ -392,6 +390,22 @@
             border-radius: 5px;
         }
 
+        /* Define the keyframes for the rotation */
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* Apply the animation to a class */
+.rotating-element {
+    animation: rotate 10s infinite; /* Adjust duration and timing as needed */
+    transform-origin: 1% 1%; /* Adjust the origin point as needed */
+}
+
     </style>
 </head>
 <body>
@@ -415,9 +429,10 @@
 
     <header>
 
+        
          <img src="astrolaptop.gif" class="avatar">
 
-        <h2 style="font-size: 28px;"><span style="color: #c8c8c8">Hey, I'm </span><span style="color:#d6dafa;"> Jess.</span> 
+        <h2 style="font-size: 30px;"><span style="color: #c8c8c8">Hey, I'm </span><span style="color:#d6dafa;"> Jess.</span> 
             <span style="animation: changeContent 5s infinite;">Researcher, Designer, Developer.</span></h2>
         <h1><span style="color:#ffffff"> I am a problem-solving creator </span><span style="color: #d6dafa">
             on a quest to make unique user experiences.</span></h1>
@@ -579,6 +594,7 @@
                               <p style="font-size: 14px; line-height: 20px;">
                                 An Educational Role Play HTML Game for Preteens. <span style="color: #c8c8c8">It teaches younger audiences how materialistic items are superficial compared to 
                                 making genuine connects with people.</span></p>
+            
                               <p style="font-size: 14px; line-height: 20px;"><span style="color: #b6caff">#HTML #JAVASCRIPT</span> #ROLEPLAYGAME</p>
                 
                            
