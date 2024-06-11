@@ -206,7 +206,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -60%);
     color: white;
     text-align: center;
     z-index: 1;
@@ -271,13 +271,17 @@
             position: fixed;
             top: 0;
             right: 0;
-            padding: 20px;
+            padding-left: 20px;
+            padding-top: 20px;
             display: flex;
+            border-radius: 10px;
+            margin-top: 10px;
+            width: 100%;
         }
         nav a {
-            font-size: 18px;
-            color: #ffffff;
-            background-color: #000000;
+            font-size: 15px;
+            color: #000000;
+            background-color: #ffffff;
             text-decoration: none;
             margin-left: 20px;
             padding: 14px 28px;
@@ -427,33 +431,31 @@
 </head>
 
 <body>
-    <div id="name">
-        <strong style="margin-left: 10px; font-size: 25px; ">jessicaocampo.</strong>
-    </div>
 
     <section id="home">
         <div class="video-container">
 
             <nav>
                 <a href="#home">
-                <i class="fa-solid fa-house" id="fa-solid"></i>
+                <i style="color: #000000" class="fa-solid fa-house" id="fa-solid"></i>
                 </a>
-                <a href="#projects">PROJECTS</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#connect">CONNECT</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#connect">Connect With Me</a>
             </nav>
 
         
         <div class="overlay-text">
-            <h1>Hey, I'm <span style="color: #c397c8;"> Jess.</span></h1>
-            <p style="font-size: 25px; text-align: center;">RESEARCHER, DESIGNER, DEVELOPER.</p>
+            <h1>Hello, I'm <span style="color: #c397c8;"> Jess.</span></h1>
             <p style="font-size: 38px; text-align: center;"><span style="color:#ffffff;"> I am a problem-solving creator </span><span style="color: #c397c8; width: 50%;">
                 on a quest to make unique user experiences.</span></p>
+                <br>
+                 <p style="font-size: 25px; text-align: center;">RESEARCHER - DESIGNER - DEVELOPER.</p>
             <br>
         <div>
             <a href="#projects">
                 <button>
-                    <strong>EXPLORE PROJECTS</strong> &nbsp;
+                    <i>EXPLORE PROJECTS</i> &nbsp;
                     <i class="fa-solid fa-arrow-down"></i>
                 </button>
             </a>
@@ -465,7 +467,6 @@
                 </span>
             </a>
         </div>
-        <br>
         <br>
         <br>
         <br>
