@@ -108,7 +108,7 @@
             text-align: center;
             display: inline-block;
             margin: 10px 10px; 
-            padding: 18px 25px;
+            padding: 20px 25px;
             border: 2px solid #132a3e;
             transition: background-color 0.3s, border-color 0.3s;
             cursor: pointer;
@@ -118,7 +118,7 @@
         }
 
         .button2:hover {
-            scale: 110%;
+            scale: 104%;
         }
 
         .button3 {
@@ -153,7 +153,8 @@
         .button-container {
             display: flex;
             flex-wrap: wrap; /* Allow buttons to wrap if there isn't enough horizontal space */
-            justify-content: center; /* Center buttons horizontally */
+            justify-content: left; /* Center buttons horizontally */
+            margin-left: 40px;
         }
 
          /*Glowing Box*/
@@ -244,6 +245,36 @@
             background-position: center center;
             background-size: cover;
         }
+        #news {
+            background-color: #704e74;
+            background-position:inherit;
+        }
+
+        #news2 {
+            background-color: #0b1f23;
+            background-position:inherit;
+        }
+
+        #myprojects0 {
+            background-color: #3f2542;
+            background-position:inherit;
+        }
+
+        #myprojects {
+            background-color: #000000;
+            background-position:inherit;
+        }
+
+        #myprojects2 {
+            background-color: #3f2542;
+            background-position:inherit;
+        }
+
+        #aboutme {
+            background-color: #000000;
+            background-position:inherit;
+        }
+
         #skills { 
             background-image: url(background.gif);
             background-position:inherit;
@@ -269,31 +300,39 @@
          /* Navigation bar styles */
          nav {
             position: fixed;
-            top: 0;
-            right: 0;
-            padding-left: 20px;
-            padding-top: 20px;
+            top: 10px;
+            right: 70px;
+
+            padding-left: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
             display: flex;
             border-radius: 10px;
             margin-top: 10px;
-            width: 100%;
+            width: 90%;
+            height: 7%;
+            background: rgba(255, 255, 255, 0.7); /* Adjust the opacity as needed */
         }
         nav a {
-            font-size: 15px;
+            font-size: 18px;
             color: #000000;
-            background-color: #ffffff;
+            background: rgba(255, 255, 255, 0); /* Adjust the opacity as needed */
             text-decoration: none;
-            margin-left: 20px;
-            padding: 14px 28px;
-            border: 2px solid #555;
+            margin-left: 40px;
+
+
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+
             border-radius: 10px;
             transition: background-color 0.3s, border-color 0.3s;
-
-            animation: glowing 4s infinite;
         }
         nav a:hover {
-            background-color: #555;
-            border-color: #555;
+            color:#20486a;
+            background: rgba(255, 255, 255, 0.3); /* Adjust the opacity as needed */
         }
 
         /*font awesome*/
@@ -317,14 +356,14 @@
 
         /*Icons*/
         #tool {
-            scale: 160%;
+            scale: 140%;
             color:rgb(255, 255, 255);
             margin: 10px;
         }
 
 
         #tool:hover {
-            scale: 175%;
+            scale: 150%;
         }
 
         /* Your name styles */
@@ -395,6 +434,22 @@
             float: left;
             overflow: auto; 
         }
+
+        .projects3 {
+            width: 390px;
+            height: 450px;
+            margin: 50px auto;
+            padding: 15px 15px 15px 15px;
+            margin-left: 30px;
+            margin-right: 30px;
+            background-color: #000000;
+            text-align: left;
+            border: 2px solid transparent; 
+  		    border-radius: 10px; 
+            cursor: pointer;
+            float: left;
+            overflow: auto; 
+        }
     
 		.project-section {
   		    display: flex;
@@ -402,6 +457,10 @@
 		}
 
         .projects:hover {
+            transform: translateY(-25px);
+        }
+
+        .projects3:hover {
             transform: translateY(-25px);
         }
 
@@ -435,14 +494,21 @@
     <section id="home">
         <div class="video-container">
 
-            <nav>
+            <strong><nav>
                 <a href="#home">
                 <i style="color: #000000" class="fa-solid fa-house" id="fa-solid"></i>
                 </a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#connect">Connect With Me</a>
-            </nav>
+                <a href="#news">NEW</a>
+                <a href="#myprojects0">PROJECT</a>
+                <a href="#myprojects">GAMES</a>
+                <a href="#myprojects2">VIDEOS</a>
+                <a href="#connect">CONNECT</a>
+
+                <a style="background-color: #20486a; color:#ffffff;"
+                href="https://docs.google.com/document/d/1MGHc3yF5qIdG1DrgvLCOSZIGcz5hRl_eRZm0RxH0IDI/edit?usp=sharing" 
+                target="_blank">RESUME</a>
+
+            </nav></strong>
 
         
         <div class="overlay-text">
@@ -450,7 +516,7 @@
             <p style="font-size: 38px; text-align: center;"><span style="color:#ffffff;"> I am a problem-solving creator </span><span style="color: #c397c8; width: 50%;">
                 on a quest to make unique user experiences.</span></p>
                 <br>
-                 <p style="font-size: 25px; text-align: center;">RESEARCHER - DESIGNER - DEVELOPER.</p>
+                 <p style="font-size: 25px; text-align: center;">RESEARCHER - DESIGNER - DEVELOPER</p>
             <br>
         <div>
             <a href="#projects">
@@ -470,298 +536,396 @@
         <br>
         <br>
         <br>
-        <p style="font-size: 22px; text-align: center;">
+        <p style="
+        font-size: 22px; 
+        text-align: center;
+        width: 100%;
+        ">
             <a href="https://www.linkedin.com/in/jessica--ocampo/" target="_blank">
             <i class="fa-brands fa-linkedin" id="tool"></i>
-            </a> JESSICA--OCAMPO | 
+            </a> jessica--ocampo | 
+            
             <a href="https://github.com/jessicasocampo" target="_blank">
                               <i class="fa-brands fa-square-github" id="tool"></i>
-                            </a> JESSICASOCAMPO</p>
+                            </a> jessicasocampo |
+    
+            <a href="mailto:jsocampo@uwaterloo.ca" target="_blank">
+                <i class="fa-solid fa-envelope" id="tool"></i>
+            </a> jsocampo@uwaterloo.ca </p>
         </div>
     </section>
 
-    <section2 id="projects">
-        <br>
-        <br>
-        <br>
+    <section style="
+    height: 550px;
+    "
+    id="news">
 
-        <h2 style="text-align: center; margin-left: 0;">Product & Graphic Design</h2>
-        <p><span style="color:#c8c8c8">App Design & Graphics</span></p>
+    <strong><h2 style=
+    "text-align: left;
+    margin-left: 50px;
+    margin-top: 80px;
+    width: 40%;
+    ">SUN LIFE UXPERIENCE DESIGNATHON 2024</h2> </strong>
+    <p style=
+    "text-align: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 42%;
+    font-size: 20px;
+    ">I attended the Sun Life Uxperience Designathon, where teams compete against 
+        each other to create an app under a limited amount of time. 
+        This year we were tasked to create a mental health app within teams of 6. 
+        Learn more about my group's journey through this experience.
+    </p>
+
+    <a href="casestudy1.html" target="_blank"> 
+                <span style="
+                text-align: left;
+                margin-left: 50px;
+                margin-top: 30px;
+                "
+                    class="button0">
+                    <strong>LEARN MORE</strong> &nbsp;
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </span>
+            </a>
+
+            <img style=
+            "float: right;
+            scale: 45%;
+            transform: translate(50%, -150%);
+            border-radius: 20px;
+            "
+            src="moodlecspic1.png">
+
+    </section>
+
+    <section style="
+    height: 550px;
+    "
+    id="news2">
+
+    <strong><h2 style=
+    "text-align: right;
+    margin-right: 50px;
+    margin-top: 80px;
+    width: 42%;
+    transform: translate(130%, 0%);
+    ">HELPING OUT UNIVERSITY STUDENTS</h2> </strong>
+
+    <p style=
+    "text-align: right;
+    margin-right: 50px;
+    margin-top: 10px;
+    width: 42%;
+    font-size: 20px;
+    ">My group and I wanted to create an app to help university student's budget their finances more effectively
+    as many seem to struggle with saving and spending appropriately.   
+        As a group of 6, we ventured into the industry of finance apps and created our own called Finease. 
+        Learn more about my group's journey through this experience.
+    </p>
+
+    <a href="casestudy2.html" target="_blank"> 
+                <span style="
+                text-align: right;
+                margin-right: 50px;
+                margin-top: 30px;
+                float: right;
+                "
+                    class="button0">
+                    <strong>LEARN MORE</strong> &nbsp;
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </span>
+            </a>
+
+            <img style=
+            "float: left;
+            scale: 45%;
+            transform: translate(-50%, -150%);
+            border-radius: 20px;
+            "
+            src="fineasecspic1.png">
+
+    </section>
+
+    <section style="
+    height: 800px;
+    "
+    id="myprojects0">
+        <h2 style="
+        text-align: center;
+        margin-top: 50px;
+            "
+        >APP & DESIGN PROJECTS</h2>
 
         <div class="project-section">
-            <div class="projects">
-              
-            <img src="moodlecspic1.png" class="projimg">
-              <h4 style="padding-top: 5px;">Moodle</h4>
-              <p style="font-size: 20px; line-height: 20px;">
-                    A Mental Health App Game for Young Teens. <span style="color: #c8c8c8">It was made with the intention to educate
-                and inform younger audiences about mental health and how to deal with it in a healthy manner. </span></p>
-              <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#FIGMA</span> #APP</p>
 
-              <a href="casestudy1.html" target="_blank"> 
-              <span class="button2">
-              <strong>MORE</strong> &nbsp;
-              <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
-            </span>
-            </a>
+            <div style="background-color:#241025;"class="projects3">
+                <img src="moodlecspic1.png" class="projimg">
 
-            <a href="https://www.figma.com/file/GphHfEIMGQPFyR1BNZSkNx/MENTAL-HEALTH-APP?type=design&mode=design&t=idWSMiviqztyfyWu-1" target="_blank">
-            <i class="fa-brands fa-figma" id="tool"></i>
-        </a>
+                <a href="casestudy1.html" target="_blank"> 
+                    <span class="button2">
+                    <strong>MORE</strong> &nbsp;
+                    <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
+                  </span>
+                  </a>
 
-        <a href="https://docs.google.com/presentation/d/1x6dIFYfUc8e0RyB0giS5Kp4PY7zF311H-A9wKU5DRQg/edit?usp=sharing" target="_blank">
-            <i class="fa-brands fa-slideshare" id="tool"></i>
-          </a>
-
-            </div>
-
-            <div class="projects">
-              
-                <img src="fineasecspic1.png" class="projimg">
-              <h4 style="padding-top: 5px;">Finease</h4>
-              <p style="font-size: 20px; line-height: 20px;">
-                A Simple Finance Planner for Post-Secondary Students. <span style="color: #c8c8c8">It helps improve students improve their spending
-                    habits in an organized and visually appealing manner.
-            </span></p>
-              <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#FIGMA</span> #APP #DESKTOP</p>
-
-              <a href="casestudy2.html" target="_blank"> 
-              <span class="button2">
-                <strong>MORE</strong> &nbsp;
-                <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
-              </span>
-              </a>
-
-              <a href="https://www.figma.com/file/hbBGlLS0UUqYfPSuGFd9AL/FinEase-(Copy)?type=design&node-id=821%3A5312&mode=design&t=z6bgGXPI8VORiPgp-1" target="_blank">
-              <i class="fa-brands fa-figma" id="tool"></i>
-            </a>
-
-            </div>
-
-            <div class="projects">
-              
-                <img src="jamieson1.png" class="projimg">
-              <h4 style="padding-top: 5px;">Jamieson Vitamins</h4>
-              <p style="font-size: 20px; line-height: 20px;">
-                Advertisement Package: Instagram Posts & Infographic Poster Design Idea. <span style="color: #c8c8c8">To promote the use of Vitamin C within young adults with weaker immune systems due to lack of sleep or use of substances.
-            </span></p>
-              <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#PHOTOSHOP #CANVA</span> #INSTAGRAMPOSTS #POSTER</p>
-
-              <a href="https://docs.google.com/document/d/1Dd19qwuU_F2taGEEiNDp0WnrITnDiRiifOH2XA30FiM/edit?usp=sharing" target="_blank">
-              <span class="button2">
-                <strong>MORE</strong> &nbsp;
-                <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
-              </span>
-              </a>
-
-              <a href="https://www.canva.com/design/DAGA2uJuzzc/kdHHCoFrbwhJsGMtg-w72Q/edit?utm_content=DAGA2uJuzzc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
-              <i class="fa-brands fa-slideshare" id="tool"></i>
-            </a>
-
-            </div>
-
-           
-
-    
-
-            </div>
-
-           
-
-                    <section2 id="projects">
-                        <h2 style="text-align: center; margin-left: 0;">Game Design & Coding</h2>
-                        <p><span style="color:#c8c8c8">Desktop Games</span></p>
-                
-                        <div class="project-section">
-                
-                            <div class="projects">
-                              
-                                <img src="campus1.png" class="projimg">
-                              <h4 style="padding-top: 5px;">Campus Chaos</h4>
-                              <p style="font-size: 20px; line-height: 20px;"><span style="color: #a8dff1">
-                                Stay Away From the Geese! Collect Five Slices of Bread to Stay Safe From Geese Attacks. </span>
-                                </p>
-
-
-                              <p style="font-size: 20px; line-height: 20px;">
-                                A Humorous Javascript P5 Game for Kids. <span style="color: #c8c8c8">It is a short and entertaining game to play in one's free time, helping improve
-                            fast reflects.</span></p>
-                              <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#JAVASCRIPT</span> #SURVIVALGAME</p>
-                
-                            
-                
-                              <a href="https://github.com/jessicasocampo/CampusChaos.git" target="_blank">
-                              <i class="fa-brands fa-square-github" id="tool"></i>
-                            </a>
-
-                            <a href="https://vimeo.com/778728714?share=copy" target="_blank">
-                            <i class="fa-brands fa-vimeo" id="tool"></i>
-                            </a>
-
-                            </div>
-                
-                                  
-                
-                            <div class="projects">
-                
-                                <img src="coverinter.png" class="projimg">
-                              <h4 style="padding-top: 5px;">Intergalactic-Heist</h4>
-                              <p style="font-size: 20px; line-height: 20px;"><span style="color: #a8dff1">
-                                Experience an Intergalactic Heist to Steal an Expensive Artifact with Your Robotic Companion! </span>
-                                </p>
-
-
-                              <p style="font-size: 20px; line-height: 20px;">
-                                An Educational Role Play HTML Game for Preteens. <span style="color: #c8c8c8">It teaches younger audiences how materialistic items are superficial compared to 
-                                making genuine connects with people.</span></p>
-            
-                              <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#HTML #JAVASCRIPT</span> #ROLEPLAYGAME</p>
-                
-                           
-                
-                            <a href="https://github.com/jessicasocampo/Intergalactic-Heist.git" target="_blank">
-                            <i class="fa-brands fa-square-github" id="tool"></i>
-                            </a>
-                
-                            </div>
-                            </div>
-                            <section2 id="projects">
-                                <h2 style="text-align: center; margin-left: 0;">Videography</h2>
-                                <p><span style="color:#c8c8c8">Filming & Video Editing</span></p>
-                        
-                                <div class="project-section">
-                                    <div class="projects">
-                                      
-                                    <img src="documentarypic.png" class="projimg">
-                                      <h4 style="padding-top: 5px;">Uphill Race of Hannah Sabit</h4>
-                                      <p style="font-size: 20px; line-height: 20px;">
-                                            A Documentary Based Off Activist Hannah Sabit. <span style="color: #c8c8c8">It was made with the intention to educate
-                                         younger audiences about what an Activist is and what they do. A heart felt story about how Sabit balances her life as an Activist, Chairperson and Runner. </span></p>
-                                      <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#PREMIEREPRO</span> #DOCUMENTARY</p>
-                    
-                        
-                                    <a href="https://youtu.be/_0RsJRH2B6o?si=_Gwo5rp58uzc3d_B" target="_blank">
-                                    <i class="fa-brands fa-youtube" id="tool"></i>
-                                </a>
-                        
-                                    </div>
-                        
-                                    <div class="projects">
-                                      
-                                        <img src="technologypic.png" class="projimg">
-                                      <h4 style="padding-top: 5px;">Technological Production & Gender Roles</h4>
-                                      <p style="font-size: 20px; line-height: 20px;">
-                                        A Video Essay About How Technological Production Impacts Gender Roles. <span style="color: #c8c8c8">A short & educational video reflecting on the history
-                                    of technological production and how it has impacted women in the domestic and work world.</span></p>
-                                      <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#PREMIEREPRO</span> #VIDEOESSAY</p>
-                        
-                                      <a href="https://docs.google.com/document/d/1sWB1tQh4cOUWAjOl2QS-fdYzKmSkEq9Wdr-msqLbOHQ/edit?usp=sharing" target="_blank">
-                                        <span class="button2">
-                                        <strong>MORE</strong> &nbsp;
-                                        <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
-                                      </span>
-                                      </a>
-                        
-                                      <a href="https://vimeo.com/884259166?share=copy" target="_blank">
-                                      <i class="fa-brands fa-vimeo" id="tool"></i>
-                                    </a>
-                        
-                                    </div>
-                
-                
-                                    <div class="projects">
-                        
-                                        <img src="pulluppic.png" class="projimg">
-                                      <h4 style="padding-top: 5px;">How to Build Up to a Pull-Up</h4>
-                                      <p style="font-size: 20px; line-height: 20px;">
-                                        An Tutorial On How to Build Up to Achieve a Pull-up. <span style="color: #c8c8c8">It teaches audiences how to build up to achieve 
-                                            a difficult exercise within a minute.</span></p>
-                                      <p style="font-size: 20px; line-height: 20px;"><span style="color: #c397c8;">#PREMIEREPRO</span> #TUTORIAL</p>
-                        
-                                    <a href="https://docs.google.com/document/d/1C-qVvkDTFonZESA6kihYxDWc0_ijbOJNif8JDqhjrkI/edit?usp=sharing" target="_blank">
-                                        <span class="button2">
-                                        <strong>MORE</strong> &nbsp;
-                                        <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
-                                      </span>
-                                      </a>
-                        
-                                    <a href="https://vimeo.com/908063697?share=copy" target="_blank">
-                                    <i class="fa-brands fa-vimeo" id="tool"></i>
-                                    </a>
-                        
-                                    </div>
-                        
-                                    </div>
-                        
-  
-    
-
-    <section id="skills">
-        <h2 style="text-align: center; margin-left: 0;">Skills</h2>
-        <p><span style="color: #ffffff">TOOLS</span></p>
-        <p><span style="color: #c8c8c8">Programming Languages: Javascript P5, HTML, CSS.</span></p>
-        <div class="button-container">
-            <img src="javascript.png" class="cimg">
-            <img src="html.png" class="cimg">
-            <img src="css.png" class="cimg">
-            
-        </div>
-
-        <br>
-        <p><span style="color: #c8c8c8">Design Tools: Photoshop, Illustrator, Indesign, Aftereffects, etc.</span></p>
-        <div class="button-container">
-            <img src="photoshop.png" class="cimg">
-            <img src="illustrator.png" class="cimg">
-            <img src="indesign.png" class="cimg">
-            <img src="aftereffects.png" class="cimg">
-            <img src="premierpro.png" class="cimg">
-            <img src="figma.png" class="cimg">
-            <img src="canva.png" class="canva">
-        </div>
-
-        <br>
-        <br>
-        <p><span style="color: #ffffff">PRINCIPLES</span></p>
-        <p><span style="color: #c8c8c8">Some of my areas of interest. Let's talk about...</span></p>
-        <div class="button-container">
-            <span class="button2"><span style="color:#f8afc8;">WEBSITE DEVELOPMENT</span></span>
-            <span class="button2"><span style="color:#aabff8;">GAME DEVELOPMENT</span></span>
-            <span class="button2"><span style="color:#a4f4e0;">UX/UI PROTOTYPING</span></span>
-            <span class="button2"><span style="color:#e5ffad;">VIDEO EDITING</span></span>
-        </div>
-
-        <br>
-        <p><span style="color: #c8c8c8">Design Principles. Experienced in...</span></p>
-        <div class="button-container">
-            <span class="button2">PROTOTYPING</span>
-            <span class="button2">SITE MAPPING</span>
-            <span class="button2">WIREFRAMING</span>
-            <span class="button2">MOCKUPS</span>
-            <span class="button2">USER CONTROL</span>
-        </div>
+                <a href="https://www.figma.com/file/GphHfEIMGQPFyR1BNZSkNx/MENTAL-HEALTH-APP?type=design&mode=design&t=idWSMiviqztyfyWu-1" target="_blank">
+                    <i class="fa-brands fa-figma" id="tool"></i>
+                </a>
         
-    </div>
+                <a href="https://docs.google.com/presentation/d/1x6dIFYfUc8e0RyB0giS5Kp4PY7zF311H-A9wKU5DRQg/edit?usp=sharing" target="_blank">
+                    <i class="fa-brands fa-slideshare" id="tool"></i>
+                  </a>
+
+                <p style="font-size: 15px;">
+                    A Mental Health App Game for Young Teens. 
+                    It was made with the intention to educate
+                and inform younger audiences about mental health 
+                and how to deal with it in a healthy manner. </p>
+              <p style="font-size: 15px;">#FIGMA #APP</p>
+
+            </div>
+
+            <div style="background-color:#241025;"class="projects3">
+                <img src="fineasecspic1.png" class="projimg">
+
+                <a href="casestudy2.html" target="_blank"> 
+                    <span class="button2">
+                      <strong>MORE</strong> &nbsp;
+                      <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
+                    </span>
+                    </a>
+
+                <a href="https://www.figma.com/file/hbBGlLS0UUqYfPSuGFd9AL/FinEase-(Copy)?type=design&node-id=821%3A5312&mode=design&t=z6bgGXPI8VORiPgp-1" target="_blank">
+                    <i class="fa-brands fa-figma" id="tool"></i>
+                  </a>
+
+                <p style="font-size: 15px;">
+                    A Simple Finance Planner for Post-Secondary Students.
+                    It helps improve students improve their spending
+                    habits in an organized and visually appealing manner.
+                </p>
+                  <p style="font-size: 15px;">#FIGMA #APP #DESKTOP</p>
+            </div>
+
+            <div style="background-color:#241025;"class="projects3">
+                <img src="Jamieson1.png" class="projimg">
+                
+                <a href="https://docs.google.com/document/d/1Dd19qwuU_F2taGEEiNDp0WnrITnDiRiifOH2XA30FiM/edit?usp=sharing" target="_blank">
+                    <span class="button2">
+                      <strong>MORE</strong> &nbsp;
+                      <i style="float: right;"class="fa-solid fa-right-to-bracket"></i>
+                    </span>
+                    </a>
+
+                <a href="https://www.canva.com/design/DAGA2uJuzzc/kdHHCoFrbwhJsGMtg-w72Q/edit?utm_content=DAGA2uJuzzc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
+                    <i class="fa-brands fa-slideshare" id="tool"></i>
+                  </a>
+
+                <p style="font-size: 15px;">
+                    Advertisement Package: Instagram Posts & Infographic Poster 
+                    Design Idea. To promote the use of Vitamin C within young 
+                    adults with weaker immune systems due to lack of sleep or use of substances.
+                </p>
+                  <p style="font-size: 15px;">#PHOTOSHOP #CANVA #INSTAGRAMPOSTS #POSTER</p>
+    
+            </div>
+
+        </div>
+
     </section>
-<br>
-<br>
-<br>
-    <section id="connect">
 
-        <h2 style="text-align: center; margin-left: 0;">Connect</h2>
-        <p>Learn more about me. &nbsp;<span style="animation: changeContent 5s infinite;">Let's connect.</span></p>
+    <section style="
+    height: 800px;
+    "
+    id="myprojects">
+        <h2 style="
+        text-align: center;
+        margin-top: 50px;
+            "
+        >GAME PROJECTS</h2>
+
         <div class="project-section">
-        <div class="projects2">
-        <p><span style="color: #ffffff">ABOUT</span></p>
+            <div style="background-color:#171717;"class="projects3">
+                <img src="campus1.png" class="projimg">
+                <p>CAMPUS CHAOS</p>
 
-        <p> <span style="color: #c8c8c8">Currently based in Waterloo, attending 
+                <a href="https://github.com/jessicasocampo/CampusChaos.git" target="_blank">
+                    <i 
+                    
+                    class="fa-brands fa-square-github" id="tool"></i>
+                  </a>
+  
+                  <a href="https://vimeo.com/778728714?share=copy" target="_blank">
+                  <i 
+
+                  class="fa-brands fa-vimeo" id="tool"></i>
+                  </a>
+
+                  <p style="
+                  font-size: 15px;
+                  ">
+                    A Humorous Javascript P5 Game for Kids. It is a short and entertaining
+                     game to play in one's free time, helping improve fast reflects.</p>
+                  <p style="
+                  font-size: 15px;
+                  ">#JAVASCRIPT #SURVIVALGAME</p>
+    
+            
+
+                <P></P>
+            </div>
+
+            <div style="background-color:#171717;"class="projects3">
+                <img src="coverinter.png" class="projimg">
+                <p>INTERGALACTIC HEIST</p>
+
+                <a href="https://github.com/jessicasocampo/Intergalactic-Heist.git" target="_blank">
+                    <i 
+                    class="fa-brands fa-square-github" id="tool"></i>
+                    </a>
+
+                  <p style="
+                  font-size: 15px;
+                  ">An Educational Role Play HTML Game for Preteens. It teaches younger
+                     audiences how materialistic items are superficial compared to 
+                    making genuine connects with people.</p>
+
+                  <p style="
+                  font-size: 15px;
+                  ">#HTML #JAVASCRIPT #ROLEPLAYGAME</p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section style="
+    height: 800px;
+    "
+     id="myprojects2">
+        <h2 style="
+        text-align: center;
+        margin-top: 50px;
+            "
+        >VIDEO PROJECTS</h2>
+
+        <div class="project-section">
+            <div style="background-color:#241025;"
+            class="projects3">
+                                      
+                <img src="documentarypic.png" class="projimg">
+
+                <a href="https://youtu.be/_0RsJRH2B6o?si=_Gwo5rp58uzc3d_B" target="_blank">
+                    <i class="fa-brands fa-youtube" id="tool"></i>
+                    </a>
+
+                <p style="
+                font-size: 15px;
+                "
+                >A Documentary Based Off Activist Hannah Sabit. It was made with the 
+                    intention to educate younger audiences about what an Activist is
+                     and what they do. A heart felt story about how Sabit balances 
+                     her life as an Activist, Chairperson and Runner.</p>
+                <p style="
+                font-size: 15px;
+                "
+                >#PREMIEREPRO #DOCUMENTARY</p>
+                        
+            </div>
+
+            <div style="background-color:#241025;"class="projects3">
+                <img src="technologypic.png" class="projimg">
+
+                <a href="https://docs.google.com/document/d/1sWB1tQh4cOUWAjOl2QS-fdYzKmSkEq9Wdr-msqLbOHQ/edit?usp=sharing" target="_blank">
+                    <span class="button2">
+                    <strong>MORE</strong> &nbsp;
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                  </span>
+                  </a>
+
+                <a href="https://vimeo.com/884259166?share=copy" target="_blank">
+                    <i class="fa-brands fa-vimeo" id="tool"></i>
+                  </a>
+
+                <p style="font-size: 15px;">
+                A Video Essay About How Technological Production Impacts Gender Roles. A short
+                 & educational video reflecting on the history
+                of technological production and how it has impacted women in the domestic
+                 and work world.</p>
+                <p style="font-size: 15px;">#PREMIEREPRO #VIDEOESSAY</p>
+            </div>
+
+            <div style="background-color:#241025;"class="projects3">
+                <img src="pulluppic.png" class="projimg">
+
+                <a href="https://docs.google.com/document/d/1C-qVvkDTFonZESA6kihYxDWc0_ijbOJNif8JDqhjrkI/edit?usp=sharing" target="_blank">
+                    <span class="button2">
+                    <strong>MORE</strong> &nbsp;
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                  </span>
+                  </a>
+
+                    <a href="https://vimeo.com/908063697?share=copy" target="_blank">
+                        <i class="fa-brands fa-vimeo" id="tool"></i>
+                    </a>
+                    
+                    <p style="font-size: 15px;">
+                    An Tutorial On How to Build Up to Achieve a Pull-up. 
+                    It teaches audiences how to build up to achieve 
+                    a difficult exercise within a minute.</p>
+                     <p style="font-size: 15px;">#PREMIEREPRO #TUTORIAL</p>
+                        
+            </div>
+        </div>
+
+    </section>
+
+    <section id="aboutme">
+        <strong><h2 style=
+        "text-align: left;
+        margin-left: 50px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+        width: 40%;
+        "
+        ><span style="color: #ffffff">ABOUT ME</span></h2></strong>
+
+        <div class="project-section">
+        <div style="
+            background-color:#171717;
+            padding: 20px;
+            " class="project3">
+        <p style="
+        margin-left: 40px;
+        "
+        > <span style="color: #c8c8c8">Currently based in Waterloo, attending 
         </span>University of Waterloo Stratford School of Interaction Design 
             and Business. <span style="color: #c8c8c8">I am interested in pursuing work within the industry of user experience & interface.</span></p>
 
-        <p><span style="color: #c8c8c8">I am a detail-orientated student exploring </span> the world of all things user interface/experience, 
+        <p style="
+        margin-left: 40px;
+        "><span style="color: #c8c8c8">I am a detail-orientated student exploring </span> the world of all things user interface/experience, 
             digital media/culture, internation business and IT.</p>
+        </div>
+
+        </div>
+
         <br>
-        <p><span style="color: #ffffff">HOBBIES</span></p>
-        <div class="button-container">
+
+        <p style="
+        color: #c8c8c8;
+        text-align: left;
+        margin-left: 0px;
+        margin-top: 10px;
+        margin-left: 40px;
+        font-size: 20px;
+        ">Hobbies.</span></p>
+        <div
+        class="button-container">
             <span class="button2"><span style="color:#f8af99;">BADMINTON</span></span>
             <span class="button2"><span style="color:#fbe09b;">WEIGHT-LIFTING</span></span>
             <span class="button2"><span style="color:#e9ffba;">GAMING</span></span>
@@ -770,28 +934,43 @@
             <span class="button2"><span style="color:#a6cbf4;">FASHION</span></span>
             <span class="button2"><span style="color:#c8baf8;">HAIR-CUTTING</span></span>
         </div>
-    </div>
 
-        <div class="projects2">
-            <p><span style="color: #ffffff">CONTACT</span></p>
+        <br>
+
+        <p style="
+        color: #c8c8c8;
+        text-align: left;
+        margin-left: 50px;
+        margin-top: 10px;
+        width: 42%;
+        font-size: 20px;
+        ">Some of my areas of interest. Let's talk about...</p>
+
+        <div class="button-container">
+            <span class="button2"><span style="color:#f8afc8;">WEBSITE DEVELOPMENT</span></span>
+            <span class="button2"><span style="color:#aabff8;">GAME DEVELOPMENT</span></span>
+            <span class="button2"><span style="color:#a4f4e0;">UX/UI PROTOTYPING</span></span>
+            <span class="button2"><span style="color:#e5ffad;">VIDEO EDITING</span></span>
+        </div>
+
+        <br>
+
+        <p style="font-size: 22px; text-align: center;">
+            <a href="https://www.linkedin.com/in/jessica--ocampo/" target="_blank">
+            <i class="fa-brands fa-linkedin" id="tool"></i>
+            </a> jessica--ocampo | 
+            
+            <a href="https://github.com/jessicasocampo" target="_blank">
+                              <i class="fa-brands fa-square-github" id="tool"></i>
+                            </a> jessicasocampo |
     
             <a href="mailto:jsocampo@uwaterloo.ca" target="_blank">
-                <i style="margin-left: 10px; float: left; margin-top: 15px; margin-right: 14px;" class="fa-solid fa-envelope" id="fa-solid"></i>
-            </a>
-            <p>jsocampo@uwaterloo.ca</p>
+                <i class="fa-solid fa-envelope" id="tool"></i>
+            </a> jsocampo@uwaterloo.ca |
 
-            <i style="margin-left: 10px; float: left; margin-top: 15px; margin-right: 14px;" class="fa-solid fa-phone"></i>
-            <p>905 - 251 - 0383</p>
-
-            <a href="https://www.linkedin.com/in/jessica--ocampo/" target="_blank">
-            <i style= "margin-left: 10px; float: left; margin-top: 15px; margin-right: 14px;" class="fa-brands fa-linkedin" id="fa-brands"></i>
-            </a>
-            <p>Linkedin</p>
-            <br>
-            <img src="space.gif">
-            
-    </div>
-
+            <i class="fa-solid fa-phone" id="tool"></i>
+            </a> 905 - 251 - 0383 </p>
+        
     </section>
 
     <footer>
