@@ -63,7 +63,7 @@
         .button0 {
             border: none;
             color: rgb(255, 255, 255);
-            background-color: #3f2847;
+            background-color: #567da1;
             padding: 25px 32px;
             text-align: center;
             text-decoration: none;
@@ -204,6 +204,7 @@
 
 /* Overlay text styling */
 .overlay-text {
+    width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -241,12 +242,11 @@
     
         /* Background colors for sections */
         #home { 
-            background-image: url("trippybg.png");
-            background-position: center;
-            background-size: cover;
+            background-color: #000000;
+            background-position:inherit;
         }
         #news {
-            background-color: #704e74;
+            background-color: #335576;
             background-position:inherit;
         }
 
@@ -295,48 +295,58 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            font-size: 25px;
         }
 
          /* Navigation bar styles */
          nav {
+            animation: glowing 4s infinite; /*animation*/
             position: fixed;
             top: 10px;
             right: 70px;
 
-            padding-left: 15px;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding-left: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
 
             display: flex;
-            border-radius: 10px;
+            border-radius: 8px;
 
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
 
             width: 90%;
             height: 7%;
-            background: rgba(255, 255, 255, 0.7); /* Adjust the opacity as needed */
+            background: rgba(42, 42, 42, 0.7); /* Adjust the opacity as needed */
         }
         nav a {
-            font-size: 18px;
             text-align: center center;
-            color: #000000;
+            font-size: 15px;
+            text-align: center center;
+            color: #ffffff;
             background: rgba(255, 255, 255, 0); /* Adjust the opacity as needed */
             text-decoration: none;
-            margin-left: 40px;
+
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 5px;
+            margin-top: 5px;
 
 
-            padding-top: 15px;
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-bottom: 15px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
 
             border-radius: 10px;
             transition: background-color 0.3s, border-color 0.3s;
         }
         nav a:hover {
-            color:#20486a;
-            background: rgba(255, 255, 255, 0.3); /* Adjust the opacity as needed */
+            color:#a1b7cc;
+            background: rgba(28, 28, 28, 0.3); /* Adjust the opacity as needed */
         }
 
         /*font awesome*/
@@ -500,7 +510,7 @@
 
             <strong><nav>
                 <a href="#home">
-                <i style="color: #363636" class="fa-solid fa-house" id="fa-solid"></i>
+                <i style="color: #ffffff" class="fa-solid fa-house" id="fa-solid"></i>
                 </a>
                 <a href="#news">NEW ✧</a>
                 <a href="#myprojects0">PROJECT</a>
@@ -508,7 +518,10 @@
                 <a href="#myprojects2">VIDEOS</a>
                 <a href="#aboutme">CONNECT</a>
 
-                <a style="background-color: #101011; color:#ffffff;"
+                <a style="
+                background-color: #101011; 
+                color:#ffffff;"
+            
                 href="https://docs.google.com/document/d/1MGHc3yF5qIdG1DrgvLCOSZIGcz5hRl_eRZm0RxH0IDI/edit?usp=sharing" 
                 target="_blank">RESUME</a>
 
@@ -516,11 +529,11 @@
 
         
         <div class="overlay-text">
-            <h1>Hello, I'm <span style="color: #c397c8;"> Jess.</span></h1>
-            <p style="font-size: 38px; text-align: center;"><span style="color:#c8c8c8;"> I am a problem-solving creator </span><span style="color: #c397c8; width: 50%;">
+            <h1>HEY. I'M JESSICA <span style="color: #98b9d8;"> OCAMPO.</span></h1>
+            <p style="font-size: 40px; text-align: center;"><span style="color:#c8c8c8;"> I am a problem-solving creator </span><span style="color: #98b9d8; width: 50%;">
                 on a quest to make unique user experiences.</span></p>
                 <br>
-                 <p style="font-size: 25px; text-align: center;">RESEARCHER ✦ DESIGNER ✦ DEVELOPER</p>
+                 <p style="font-size: 35px; text-align: center;">RESEARCHER ✦ DESIGNER ✦ DEVELOPER</p>
             <br>
         <div>
             <a href="#myprojects0">
@@ -902,6 +915,10 @@
         <div style="
             background-color:#171717;
             padding: 20px;
+            margin-top: 0px;
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 20px;
             " class="project3">
         <p style="
         margin-left: 40px;
@@ -919,7 +936,14 @@
         </div>
 
         <br>
-
+        <div style="
+            background-color:#171717;
+            padding: 20px;
+            margin-top: 0px;
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 20px;
+            " class="project3">
         <p style="
         color: #c8c8c8;
         text-align: left;
@@ -933,14 +957,20 @@
             <span class="button2"><span style="color:#e34110;">BADMINTON</span></span>
             <span class="button2"><span style="color:#ad800d;">WEIGHT-LIFTING</span></span>
             <span class="button2"><span style="color:#77a80e;">GAMING</span></span>
-            <span class="button2"><span style="color:#22a82d;">COOKING</span></span>
             <span class="button2"><span style="color:#0d8968;">CODING</span></span>
             <span class="button2"><span style="color:#2e8df9;">FASHION</span></span>
             <span class="button2"><span style="color:#3e11cf;">HAIR-CUTTING</span></span>
         </div>
-
+        </div>
         <br>
-
+        <div style="
+            background-color:#171717;
+            padding: 20px;
+            margin-top: 0px;
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 20px;
+            " class="project3">
         <p style="
         color: #c8c8c8;
         text-align: left;
@@ -955,6 +985,7 @@
             <span class="button2"><span style="color:#0d2975;">GAME DEVELOPMENT</span></span>
             <span class="button2"><span style="color:#096c53;">UX/UI PROTOTYPING</span></span>
             <span class="button2"><span style="color:#456109;">VIDEO EDITING</span></span>
+        </div>
         </div>
 <br>
         <br>
