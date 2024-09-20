@@ -23,17 +23,18 @@
     .header-text {
         font-size: 30px;
         text-align: center;
-        margin-bottom: 30px; /* Add this to create space */
+        margin-bottom: 30px;
     }
 
     /*Buttons*/
     button {
-        padding: 15px 25px; /* Reduced padding for smaller buttons */
-        font-size: 16px; /* Adjust font size if needed */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+        padding: 10px 20px 10px 20px;
+        font-size: 14px;
         border: none;
-        background-color: transparent; /* Ensure button background is transparent */
-        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 20px;
+        left: 20px;
     }
 
     .button:hover {
@@ -55,7 +56,7 @@
 
     .button-container {
         display: flex;
-        gap: 20px; /* Adjust the gap between buttons */
+        gap: 20px;
     }
 
     #home {
@@ -74,7 +75,7 @@
 
     #about {
         background-color: rgb(255, 255, 255);
-        height: 600px;
+        height: 800px;
     }
 
     .project-boxes {
@@ -94,9 +95,10 @@
 
     .slideshow {
         position: relative;
-        width: 80%; /* Center the slideshow */
+        width: 80%;
         height: 600px;
-        margin: 0 auto; /* Center the slideshow */
+        margin: 0 auto;
+        cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
     }
 
     .slideshow img {
@@ -108,23 +110,6 @@
         display: none;
     }
 
-    .slideshow .prev, .slideshow .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 20px; /* Adjust size for arrows */
-        color: rgb(122, 122, 122);
-        cursor: pointer;
-        user-select: none;
-    }
-
-    .slideshow .prev {
-        left: 10px; /* Adjust position */
-    }
-
-    .slideshow .next {
-        right: 10px; /* Adjust position */
-    }
     </style>
 
 </head>
@@ -133,6 +118,9 @@
     <section id="home">
         <header>
             <div class="container">
+                <a href="home.html">
+                    <button class="button">Back</button>
+                </a>
                 <p class="header-text">I'm Jessica Ocampo.</p>
             </div>
         </header>
@@ -143,29 +131,24 @@
             <img src="image1.jpg" alt="Image 1">
             <img src="image2.jpg" alt="Image 2">
             <img src="image3.jpg" alt="Image 3">
-            <button class="prev">&lang;</button>
-            <button class="next">&rang;</button>
         </div>
     
         <script>
             let index = 0;
             const images = document.querySelectorAll('.slideshow img');
-            const prev = document.querySelector('.prev');
-            const next = document.querySelector('.next');
     
+            // Show the first image initially
             images[index].style.display = 'block';
-    
-            prev.addEventListener('click', () => {
-                images[index].style.display = 'none';
-                index = (index - 1 + images.length) % images.length;
-                images[index].style.display = 'block';
-            });
-    
-            next.addEventListener('click', () => {
+
+            // Function to show the next image
+            const showNextImage = () => {
                 images[index].style.display = 'none';
                 index = (index + 1) % images.length;
                 images[index].style.display = 'block';
-            });
+            };
+
+            // Add click event listener to the slideshow div
+            document.querySelector('.slideshow').addEventListener('click', showNextImage);
         </script>
     </section>
 
