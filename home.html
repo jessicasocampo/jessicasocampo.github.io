@@ -6,6 +6,9 @@
     <!--Desktop View 1440px x 900px-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+     <!--Style-->
+    <!-- Add this in the <head> section of all HTML files -->
+        <link rel="stylesheet" href="webstyle.css">
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,78 +18,6 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <title>Portfolio-Jessica Ocampo</title>
-    <style> 
-    p {
-        font-family: 'Inter';
-    }
-
-    .header-text {
-        font-size: 30px;
-        text-align: center;
-        margin-bottom: 30px; /* Add this to create space */
-    }
-
-    /*Buttons*/
-    button {
-        padding: 30px 50px 30px 50px;
-        font-size: 20px;
-
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
-        border: none;
-    }
-
-    .button:hover {
-        transform: scale(1.2);
-}
-
-    header {
-        text-align: center;
-        height: 600px;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
-        height: 700px;
-    }
-
-    .button-container {
-        display: flex;
-        gap: 20px; /* Adjust the gap between buttons */
-    }
-
-    #home {
-        background-color: white;
-        height: 800px;
-    }
-
-    #projects {
-        background-color: rgb(44, 44, 44);
-        height: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .project-boxes {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .project-box {
-        width: 300px;
-        height: 200px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    </style>
-
 </head>
 
 <body>
@@ -98,10 +29,10 @@
             <p class="header-text">Welcome Stranger. View My Projects Below.</p>
             <div class="button-container">
                 <a href="resume.html">
-                    <button class="button">Resume.</button>
+                    <button class="large-button">Resume.</button>
                 </a>
                 <a href="about.html">
-                    <button class="button">About.</button>
+                    <button class="large-button">About.</button>
                 </a>
             </div>
         </div>

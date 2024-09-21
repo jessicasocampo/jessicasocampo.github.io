@@ -6,6 +6,11 @@
     <!--Desktop View 1440px x 900px-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Style-->
+    <!-- Add this in the <head> section of all HTML files -->
+    <link rel="stylesheet" href="webstyle.css">
+
+
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,49 +20,6 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <title>Portfolio - Jessica Ocampo</title>
-    <style> 
-    p {
-        font-family: 'Inter';
-    }
-
-    .header-text {
-        font-size: 30px;
-        text-align: center;
-        margin-bottom: 30px; /* Add this to create space */
-    }
-
-    /*Buttons*/
-    button {
-        padding: 30px 50px 30px 50px;
-        margin: 0 auto; /* Center the button */
-        font-size: 20px;
-
-        border: none;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
-    }
-
-    .button:hover {
-        transform: scale(1.2);
-}
-
-    header {
-        text-align: center;
-        height: 600px;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
-        height: 700px;
-    }
-
-        #start {
-            background-color: white;
-        }
-
-    </style>
 
 </head>
 
@@ -69,7 +31,7 @@
         <div class="container">
             <p class="header-text">Hey there. Your Journey Begins Here.</p>
             <a href="home.html">
-            <button class="button" >Click to Start.</button>
+                <button class="large-button">Click to Start</button>
             </a>
         </div>
 

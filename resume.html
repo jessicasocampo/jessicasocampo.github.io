@@ -6,6 +6,10 @@
     <!--Desktop View 1440px x 900px-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+     <!--Style-->
+    <!-- Add this in the <head> section of all HTML files -->
+        <link rel="stylesheet" href="webstyle.css">
+
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,75 +19,13 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <title>Resume</title>
-    <style> 
-    p {
-        font-family: 'Inter';
-    }
-
-    .header-text {
-        font-size: 30px;
-        text-align: center;
-        margin-bottom: 30px; /* Add this to create space */
-    }
-
-    /*Buttons*/
-    button {
-        padding: 10px 20px 10px 20px;
-        font-size: 14px;
-        border: none;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
-        position: absolute;
-        top: 20px;
-        left: 20px;
-    }
-
-    button:hover {
-        transform: scale(1.1);
-    }
-
-    header {
-        text-align: center;
-        height: 600px;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
-        height: 400px;
-    }
-
-    .button-container {
-        display: flex;
-        gap: 20px; /* Adjust the gap between buttons */
-    }
-
-    #home {
-        background-color: white;
-    }
-
-    .section {
-        text-align: center; /* Centers the image horizontally */
-        padding: 50px; /* Adds some padding around the image */
-        height: 800px;
-        position: relative;
-    }
-
-    #MyResume {
-        width: 50%; /* Resizes the image to 50% of its original width */
-        height: auto; /* Maintains the aspect ratio */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
-    }
-
-    </style>
 
 </head>
 
 <body>
     <div class="section">
         <a href="home.html">
-            <button>Back</button>
+            <button class="back-button">Back</button>
         </a>
         <img id="MyResume" src="jessresume.jpg" alt="Resume">
     </div>
