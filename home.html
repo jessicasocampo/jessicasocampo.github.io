@@ -15,25 +15,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!--Symbols-->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <title>Portfolio-Jessica Ocampo</title>
 </head>
 
 <body>
+
+     <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="#home"></a></li>
+      <li><a href="#projects"></a></li>
+      <li><a href="#section3"></a></li>
+      <li><a href="#contact"></a></li>
+    </ul>
+  </div>
+
     <section id="home">
+
+        <a href="index.html">
+        <button class="back-button">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        </a>
 
         <header>
 
         <div class="container">
-            <p class="header-text">Welcome Stranger. View My Projects Below.</p>
+            <p class="header-text">Welcome Stranger.</p>
             <div class="button-container">
-                <a href="resume.html">
-                    <button class="large-button">Resume.</button>
-                </a>
+
                 <a href="about.html">
-                    <button class="large-button">About.</button>
+                    <button class="large-button">
+                        About
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </a>
+                <a href="resume.html">
+                    <button class="large-button">
+                        Resume
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                </a>
+
             </div>
         </div>
 
@@ -54,11 +79,16 @@
             <div class="project-box"></div>
 
             <div class="project-box"></div>
-
-            <div class="project-box"></div>
-            
-            <div class="project-box"></div>
         </div>
     </section>
+
+    <section id="contact">
+
+    </section>
+
+    <section id="footer">
+       <p class="footer-text">©2024 By J.S.Ocampo. All rights reserved.</p>
+    </section>
+
 </body>
 </html>
