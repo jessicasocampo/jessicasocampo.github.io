@@ -28,6 +28,7 @@
         <div class="container">
             <p class="header-text"> Hello Stranger.</p>
             <p class="header2-text">Your Journey Begins Here</p>
+
             <a href="home.html" class="startbutton">
                 <p>START</p>
                 <i class="fa-solid fa-circle-chevron-right"></i>
@@ -35,5 +36,24 @@
         </div>
     </header>
     </section>
+
+    <script>
+        // Select the element with class 'header-text' where the greeting will be inserted
+        const greeting = document.querySelector('.header-text');
+        // Get the current hour of the day (returns a number between 0 and 23)
+        const hour = new Date().getHours();
+        // Conditional statement to set the greeting based on the time of day
+        if (hour < 12) {
+        // If it's before 12 PM (morning), change the text content to 'Good Morning'
+            greeting.textContent = 'Good Morning, Stranger.';
+        } else if (hour < 18) {
+        // If it's between 12 PM and 5:59 PM (afternoon), set the greeting to 'Good Afternoon'
+            greeting.textContent = 'Good Afternoon, Stranger.';
+        } else {
+        // If it's 6 PM or later (evening), change the greeting to 'Good Evening'
+            greeting.textContent = 'Good Evening, Stranger.';
+        }
+    </script>
+    
 </body>
 </html>
