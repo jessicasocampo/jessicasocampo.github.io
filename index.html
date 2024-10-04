@@ -26,33 +26,37 @@
     <section id="start">
         <header>
         <div class="container">
-            <p class="header-text"> Hello Stranger.</p>
-            <p class="header2-text">Your Tour Begins Here</p>
-
+            <h1> Hello Stranger.</h1>
+            <h2>Your Tour Begins Here</h2>
             <a href="home.html" class="startbutton">
                 <p>START</p>
                 <i class="fa-solid fa-circle-chevron-right"></i>
             </a>
         </div>
-    </header>
+        <h3>Proceed with creativity.</h3>
+    <div class="wave-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+        </header>
     </section>
 
     <script>
-        // Select the element with class 'header-text' where the greeting will be inserted
-        const greeting = document.querySelector('.header-text');
-        // Get the current hour of the day (returns a number between 0 and 23)
-        const hour = new Date().getHours();
-        // Conditional statement to set the greeting based on the time of day
-        if (hour < 12) {
-        // If it's before 12 PM (morning), change the text content to 'Good Morning'
-            greeting.textContent = 'Good Morning, Stranger.';
-        } else if (hour < 18) {
-        // If it's between 12 PM and 5:59 PM (afternoon), set the greeting to 'Good Afternoon'
-            greeting.textContent = 'Good Afternoon, Stranger.';
-        } else {
-        // If it's 6 PM or later (evening), change the greeting to 'Good Evening'
-            greeting.textContent = 'Good Evening, Stranger.';
+        // Function to update greeting based on the time of day
+        function updateGreeting() {
+            const greeting = document.querySelector('h1');
+            const hour = new Date().getHours();
+            if (hour < 12) {
+                greeting.textContent = 'Good Morning, Stranger.';
+            } else if (hour < 18) {
+                greeting.textContent = 'Good Afternoon, Stranger.';
+            } else {
+                greeting.textContent = 'Good Evening, Stranger.';
+            }
         }
+
+        // Call the function to set the greeting
+        updateGreeting();
     </script>
     
 </body>
