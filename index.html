@@ -1,63 +1,255 @@
 <!DOCTYPE html>
-<html lang="eng-ca">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Dark Mode</title>
+  <link rel="stylesheet" href="webstyle.css">
+  <!-- Include Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Basic styles for sections */
+    .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
 
-    <!--Desktop View 1440px x 900px-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-    <!--Style-->
-    <!-- Add this in the <head> section of all HTML files -->
-    <link rel="stylesheet" href="webstyle.css">
+    /* Adding a fade-in effect when the page loads */
+    body {
+      animation: fadeIn 1s ease-in-out;
+    }
 
+    /* Simple fade-in animation for the body */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
-    <!--Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    /* Nav link hover effect */
+    .nav-link {
+      transition: color 0.3s ease;
+      display: block;
+      text-align: center;
+    }
 
-    <!--Symbols-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    .nav-link:hover {
+      color: #ff6347; /* Change to a color you like */
+    }
 
-    <title>Welcome | Jessica Ocampo</title>
+    /* Bento Box animation */
+    .bento-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
 
+    .bento-box.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Button hover effect */
+    .button {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .button:hover {
+      background-color: #ff6347;
+      transform: translateY(-5px); /* Slight lift effect on hover */
+    }
+
+    /* Add active class to buttons for animation */
+    .home-buttons.active .button {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Greeting text style */
+    .greeting {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* Style for the icons above the navigation links */
+    .nav-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <section id="start">
-        <header>
-        <div class="container">
-            <h1> Hello Stranger.</h1>
-            <h2>Your Tour Begins Here</h2>
-            <a href="home.html" class="startbutton">
-                <p>START</p>
-                <i class="fa-solid fa-circle-chevron-right"></i>
-            </a>
-        </div>
-        <h3>Proceed with creativity.</h3>
-    <div class="wave-container">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-        </header>
+  <nav>
+    <h1>Jessica Ocampo</h1>
+    <a href="#home" class="nav-link" data-target="home">
+      <i class="fas fa-home nav-icon"></i> <br>Home
+    </a>
+    <a href="#projects" class="nav-link" data-target="projects">
+      <i class="fas fa-project-diagram nav-icon"></i> <br>Projects
+    </a>
+    <a href="#about" class="nav-link" data-target="about">
+      <i class="fas fa-user nav-icon"></i> <br> About
+    </a>
+    <a href="#connect" class="nav-link" data-target="connect">
+      <i class="fas fa-envelope nav-icon"></i> <br>Connect
+    </a>
+    <a href="#resume" class="nav-link" data-target="resume">
+      <i class="fas fa-file-alt nav-icon"></i> <br> Resume
+    </a>
+  </nav>
+
+  <main>
+    <section id="home" class="section active">
+      <h2 class="greeting"></h2> <!-- This will hold the dynamic greeting -->
+      <p>Explore my projects, learn about me, and feel free to connect!</p>
+      <div class="home-buttons">
+        <a href="#" class="button" data-target="projects">Go to Projects</a>
+        <a href="#resume" class="button">View My Resume</a>
+      </div>
     </section>
 
-    <script>
-        // Function to update greeting based on the time of day
-        function updateGreeting() {
-            const greeting = document.querySelector('h1');
-            const hour = new Date().getHours();
-            if (hour < 12) {
-                greeting.textContent = 'Good Morning, Stranger.';
-            } else if (hour < 18) {
-                greeting.textContent = 'Good Afternoon, Stranger.';
-            } else {
-                greeting.textContent = 'Good Evening, Stranger.';
-            }
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="bento-box">
+        <div class="bento-item">Project 1</div>
+        <div class="bento-item">Project 2</div>
+        <div class="bento-item">Project 3</div>
+        <div class="bento-item">Project 4</div>
+        <div class="bento-item">Project 5</div>
+        <div class="bento-item">Project 6</div>
+        <div class="bento-item">Project 7</div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>Hi! I'm Jessica, a UX/UI designer passionate about creating intuitive designs.</p>
+    </section>
+
+    <section id="connect" class="section">
+      <h2>Connect</h2>
+      <p>Let's get in touch! You can reach me through email or social media.</p>
+    </section>
+
+    <section id="resume" class="section">
+      <h2>My Resume</h2>
+      <p>Here is a summary of my qualifications, experience, and skills.</p>
+      <!-- Add your resume content here -->
+    </section>
+  </main>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+    const bentoBox = document.querySelector('.bento-box');
+    const greetingElement = document.querySelector('.greeting');
+    const homeButtons = document.querySelector('.home-buttons');
+    const homeButtonLinks = document.querySelectorAll('.home-buttons .button');
+
+    // Function to update the greeting based on time of day
+    function updateGreeting() {
+      const currentHour = new Date().getHours();
+      let greetingMessage = "";
+
+      if (currentHour >= 5 && currentHour < 12) {
+        greetingMessage = "Good Morning, Stranger!";
+      } else if (currentHour >= 12 && currentHour < 18) {
+        greetingMessage = "Good Afternoon, Stranger!";
+      } else {
+        greetingMessage = "Good Evening, Stranger!";
+      }
+
+      greetingElement.textContent = greetingMessage;
+    }
+
+    // Function to handle section transitions
+    navLinks.forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+
+        const targetId = link.getAttribute('data-target');
+
+        // Remove active class and reset animation
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+
+        // Add active class to the target section and trigger animation
+        const targetSection = document.getElementById(targetId);
+        targetSection.classList.add('active');
+
+        // If it's the projects section, trigger bento box animation
+        if (targetId === 'projects') {
+          setTimeout(() => {
+            bentoBox.classList.add('active');
+          }, 500); // Delay to match section transition
+        } else {
+          bentoBox.classList.remove('active');
         }
 
-        // Call the function to set the greeting
-        updateGreeting();
-    </script>
-    
+        // If it's the home section, trigger home buttons animation
+        if (targetId === 'home') {
+          homeButtons.classList.add('active');
+        } else {
+          homeButtons.classList.remove('active');
+        }
+      });
+    });
+
+    // Handle "Go to Projects" button click
+    homeButtonLinks.forEach(button => {
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        const targetId = button.getAttribute('data-target');
+
+        // Remove active class from all sections
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+
+        // Add active class to the target section
+        const targetSection = document.getElementById(targetId);
+        targetSection.classList.add('active');
+
+        // If it's the projects section, trigger bento box animation
+        if (targetId === 'projects') {
+          setTimeout(() => {
+            bentoBox.classList.add('active');
+          }, 500); // Delay to match section transition
+        } else {
+          bentoBox.classList.remove('active');
+        }
+
+        // If it's the home section, trigger home buttons animation
+        if (targetId === 'home') {
+          homeButtons.classList.add('active');
+        } else {
+          homeButtons.classList.remove('active');
+        }
+      });
+    });
+
+    // Trigger the initial animation on page load (for home section)
+    window.addEventListener('load', () => {
+      updateGreeting();  // Set the greeting based on the time
+      document.getElementById('home').classList.add('active');
+      homeButtons.classList.add('active'); // Trigger animation for buttons on page load
+    });
+  </script>
 </body>
 </html>
