@@ -3,153 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Dark Mode</title>
+  <title>Jessica Ocampo</title>
   <link rel="stylesheet" href="webstyle.css">
   <!-- Include Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <style>
-    /* Basic styles for sections */
-    .section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
 
-    .section.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Adding a fade-in effect when the page loads */
-    body {
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    /* Simple fade-in animation for the body */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Nav link hover effect */
-    .nav-link {
-      transition: color 0.3s ease;
-      display: block;
-      text-align: center;
-    }
-
-    .nav-link:hover {
-      color: #ff6347; /* Change to a color you like */
-    }
-
-    /* Bento Box animation */
-    .bento-box {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .bento-box.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Button hover effect */
-    .button {
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .button:hover {
-      background-color: #ff6347;
-      transform: translateY(-5px); /* Slight lift effect on hover */
-    }
-
-    /* Add active class to buttons for animation */
-    .home-buttons.active .button {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    /* Greeting text style */
-    .greeting {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    /* Style for the icons above the navigation links */
-    .nav-icon {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav>
-    <h1>Jessica Ocampo</h1>
     <a href="#home" class="nav-link" data-target="home">
-      <i class="fas fa-home nav-icon"></i> <br>Home
+      <i class="fas fa-home nav-icon"></i> 
+      <p>home</p>
     </a>
     <a href="#projects" class="nav-link" data-target="projects">
-      <i class="fas fa-project-diagram nav-icon"></i> <br>Projects
+      <i class="fas fa-project-diagram nav-icon"></i>
+      <p>projects</p>
     </a>
     <a href="#about" class="nav-link" data-target="about">
-      <i class="fas fa-user nav-icon"></i> <br> About
+      <i class="fas fa-user nav-icon"></i> 
+      <p>about</p>
     </a>
     <a href="#connect" class="nav-link" data-target="connect">
-      <i class="fas fa-envelope nav-icon"></i> <br>Connect
+      <i class="fas fa-envelope nav-icon"></i> 
+      <p>connect</p>
     </a>
     <a href="#resume" class="nav-link" data-target="resume">
-      <i class="fas fa-file-alt nav-icon"></i> <br> Resume
+      <i class="fas fa-file-alt nav-icon"></i> 
+      <p>resume</p>
     </a>
   </nav>
 
   <main>
     <section id="home" class="section active">
-      <h2 class="greeting"></h2> <!-- This will hold the dynamic greeting -->
-      <p>Explore my projects, learn about me, and feel free to connect!</p>
+      <h3 class="greeting"></h3>
+      <br>
+      <h1>hey, <u>i'm jess</u></h1>
+      <h2>a <strong>ux specialist</strong> in research, design & analytics</h2>
+      <br>
+      <p>Take action. Create stories and expand your creativity.</p>
       <div class="home-buttons">
-        <a href="#" class="button" data-target="projects">Go to Projects</a>
-        <a href="#resume" class="button">View My Resume</a>
+        <a href="#" class="button" data-target="projects">
+            <b>See My Projects</b>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#resume" class="button" data-target="resume">
+            <b>View My Resume</b>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h3>Projects</h3>
       <div class="bento-box">
-        <div class="bento-item">Project 1</div>
-        <div class="bento-item">Project 2</div>
-        <div class="bento-item">Project 3</div>
-        <div class="bento-item">Project 4</div>
-        <div class="bento-item">Project 5</div>
-        <div class="bento-item">Project 6</div>
-        <div class="bento-item">Project 7</div>
+        <div class="bento-item">Maple Leaf Food's Inspection Form</div>
+        <div class="bento-item">CrossCultura</div>
+        <div class="bento-item">Moodle</div>
+        <div class="bento-item">Sushi Kui's Menu</div>
+        <div class="bento-item">XR Speculative Design</div>
+        <div class="bento-item">Data Visualization</div>
+        <div class="bento-item">Under Construction</div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <h2>About Me</h2>
+      <h3>About Me</h3>
       <p>Hi! I'm Jessica, a UX/UI designer passionate about creating intuitive designs.</p>
     </section>
 
     <section id="connect" class="section">
-      <h2>Connect</h2>
-      <p>Let's get in touch! You can reach me through email or social media.</p>
-    </section>
+        <h3>Connect</h3>
+        <br>
+        <h2>let's work <u>together</u></h2>
+        <br>
+        <p>Let's get in touch! You can reach me through email or social media.</p>
+        <div class="connect-buttons">
+          <a href="mailto:your-email@example.com" class="button">
+            <b>Email Me</b>
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/your-linkedin-profile" class="button" target="_blank">
+            <b>View My LinkedIn</b>
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </section>
+  
 
     <section id="resume" class="section">
-      <h2>My Resume</h2>
+      <h3>My Resume</h3>
       <p>Here is a summary of my qualifications, experience, and skills.</p>
-      <!-- Add your resume content here -->
     </section>
   </main>
 
@@ -167,11 +111,11 @@
       let greetingMessage = "";
 
       if (currentHour >= 5 && currentHour < 12) {
-        greetingMessage = "Good Morning, Stranger!";
+        greetingMessage = "Good Morning, Stranger.";
       } else if (currentHour >= 12 && currentHour < 18) {
-        greetingMessage = "Good Afternoon, Stranger!";
+        greetingMessage = "Good Afternoon, Stranger.";
       } else {
-        greetingMessage = "Good Evening, Stranger!";
+        greetingMessage = "Good Evening, Stranger.";
       }
 
       greetingElement.textContent = greetingMessage;
@@ -253,3 +197,4 @@
   </script>
 </body>
 </html>
+
