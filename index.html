@@ -12,6 +12,7 @@
 </head>
 <body>
   <nav>
+    <h1>jessica ocampo</h1>
     <a href="#home" class="nav-link" data-target="home">
       <i class="fas fa-home nav-icon"></i> 
       <p>home</p>
@@ -38,12 +39,24 @@
     <section id="home" class="section active">
       <h3 class="greeting"></h3>
       <br>
-      <h1>hey, <u>i'm jess</u></h1>
-      <h2>a <strong>ux specialist</strong> in research, design & analytics</h2>
+      <img src="myicon.png" alt="Decorative Image" class="float-right-image">
+      <h1>Hey, <h>I'm <u>Jess.</u></h></h1>
       <br>
-      <p>Take action. Create stories and expand your creativity.</p>
+      <h2> <i class="fa-brands fa-codepen"></i>
+        A <h><b>UX specialist</b></h> in research, 
+        design & analytics.</h2>
+        <br>
+        <div class="container">
+          <div class="moving-block" id="block1"></div>
+        </div>
+        <div class="container">
+          <div class="moving-block2" id="block2"></div>
+        </div>
+
+      <br>
+      <p><i>Take action. </i>Create stories and expand your creativity.</p>
       <div class="home-buttons">
-        <a href="#" class="button" data-target="projects">
+        <a href="#projects" class="button" data-target="projects">
             <b>See My Projects</b>
             <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -56,36 +69,175 @@
 
     <section id="projects" class="section">
       <h3>Projects</h3>
+      <div class="visual-buttons">
+        <a class="button">APPLICATIONS</a>
+        <a class="button">RESEARCH</a>
+        <a class="button">GRAPHICS</a>
+      </div>
       <div class="bento-box">
-        <div class="bento-item">Maple Leaf Food's Inspection Form</div>
-        <div class="bento-item">CrossCultura</div>
-        <div class="bento-item">Moodle</div>
-        <div class="bento-item">Sushi Kui's Menu</div>
-        <div class="bento-item">XR Speculative Design</div>
-        <div class="bento-item">Data Visualization</div>
+        <div class="bento-item" data-modal="modal-maple">Maple Leaf Food's Inspection Form</div>
+        <div class="bento-item" data-modal="modal-cross">CrossCultura</div>
+        <div class="bento-item" data-modal="modal-moodle">Moodle</div>
+        <div class="bento-item" data-modal="modal-sushi">Sushi Kui's Menu</div>
+        <div class="bento-item" data-modal="modal-xr">XR Speculative Design</div>
+        <div class="bento-item" data-modal="modal-data">Data Visualization</div>
         <div class="bento-item">Under Construction</div>
       </div>
     </section>
 
+    <!-- Modal Structure -->
+    <div id="modal-maple" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Maple Leaf Food's Inspection Form</h2>
+      <br>
+        <div class="slideshow">
+        <img src="https://via.placeholder.com/600x400?text=Slide+1" class="active" alt="Slide 1">
+        <img src="https://via.placeholder.com/600x400?text=Slide+2" alt="Slide 2">
+        <img src="https://via.placeholder.com/600x400?text=Slide+3" alt="Slide 3">
+
+        <button class="arrow left">&#10094;</button>
+        <button class="arrow right">&#10095;</button>
+        </div>
+
+        <p><b>Duration:</b> [Project timeline, e.g., 3 months]
+          <br>
+        <b>Role:</b> 
+        <div class="visual-buttons">
+          <a class="button">ROLE</a>
+          <a class="button">ROLE</a>
+          <a class="button">ROLE</a>
+        </div>
+          <br>
+        <b>Tools:</b></p>
+        <div class="visual-buttons">
+          <a class="button">TOOL</a>
+          <a class="button">TOOL</a>
+          <a class="button">TOOL</a>
+        </div>
+        <br>
+        <hr>
+
+        <h3>Overview</h3>
+          <p>What was the project about?
+          Who was it for (client or organization)?
+          What was the goal?
+          Problem Statement
+          Define the problem you aimed to solve.</p>
+          <p>What challenges did the users face?
+          Why was this a problem for the client/business?
+          Process
+          Outline your approach and methods.</p>
+
+          <p><b>Research:</b> What methods did you use (e.g., user interviews, surveys)?
+            <br>
+          <b>Ideation:</b> How did you brainstorm solutions?
+            <br>
+          <b>Design:</b> What tools and techniques helped bring your ideas to life?
+            <br>
+          <b>Testing:</b> How did you validate your designs?</p>
+
+        <hr>
+
+          <h3>Solution</h3>
+          <p>What features or design elements were key?
+          How did it address the problem?
+          Impact
+          Highlight the results.
+          What was the outcome? (e.g., increased user engagement, higher conversion rates)
+          Any measurable metrics? </p>
+
+        <hr>
+
+          <h3>Reflection</h3>
+          <p>What did you learn from this project?
+          Challenges faced and how you overcame them.
+          <br>
+          <b>Skills Gained:</b></p>
+          <div class="visual-buttons">
+            <a class="button">SKILL</a>
+            <a class="button">SKILL</a>
+            <a class="button">SKILL</a>
+          </div>
+
+      </div>
+    </div>
+
+    <div id="modal-cross" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>CrossCultura</h2>
+        <p>Details about the project...</p>
+      </div>
+    </div>
+
+    <div id="modal-moodle" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Moodle</h2>
+        <p>Details about the project...</p>
+      </div>
+    </div>
+
+    <div id="modal-sushi" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sushi Kui's Menu</h2>
+        <p>Details about the project...</p>
+      </div>
+    </div>
+
+    <div id="modal-xr" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>XR Speculative Design</h2>
+        <p>Details about the project...</p>
+      </div>
+    </div>
+
+    <div id="modal-data" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Data Visualization</h2>
+        <p>Details about the project...</p>
+      </div>
+    </div>
+
     <section id="about" class="section">
       <h3>About Me</h3>
-      <p>Hi! I'm Jessica, a UX/UI designer passionate about creating intuitive designs.</p>
+      <p>Hi! I'm Jessica, <h>a passionate UX/UI designer</h> about creating intuitive designs.</p>
+        <br>
+      <b>Hobbies</b>
+      <div class="visual-buttons">
+        <a class="button">READING</a>
+        <a class="button">GAMING</a>
+        <a class="button">CODING</a>
+        <a class="button">WEIGHT-LIFTING</a>
+      </div>
+      <br>
+      <b>Interests</b>
+      <div class="visual-buttons">
+        <a class="button">GENERATIVE AI</a>
+        <a class="button">EXTENDED REALITIES</a>
+        <a class="button">UX/UI DESIGN</a>
+        <a class="button">VIDEO-EDITING</a>
+      </div>
     </section>
 
     <section id="connect" class="section">
         <h3>Connect</h3>
         <br>
-        <h2>let's work <u>together</u></h2>
+        <h1>Let's Work <u>Together!</u></h1>
         <br>
         <p>Let's get in touch! You can reach me through email or social media.</p>
         <div class="connect-buttons">
           <a href="mailto:your-email@example.com" class="button">
-            <b>Email Me</b>
             <i class="fas fa-envelope"></i>
+            <b>&nbsp;Email Me</b>
           </a>
           <a href="https://www.linkedin.com/in/your-linkedin-profile" class="button" target="_blank">
-            <b>View My LinkedIn</b>
             <i class="fab fa-linkedin"></i>
+            <b>&nbsp;View My LinkedIn</b>
           </a>
         </div>
       </section>
@@ -93,7 +245,17 @@
 
     <section id="resume" class="section">
       <h3>My Resume</h3>
-      <p>Here is a summary of my qualifications, experience, and skills.</p>
+      <p>Here is a summary of my <h>qualifications, experience, and skills.</h></p>
+ 
+      <div class="connect-buttons">
+        <a href="https://docs.google.com/document/d/1to7_K3YdC5uoMdBK5PZyvYo5_1diwFRCgcU2f2W7_T4/edit?usp=sharing" class="button">
+          <b>View Document</b>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      
+      </div>
+
+      <img src="resumeimg.png" alt="UXresume" id="resumeimg">
     </section>
   </main>
 
@@ -111,11 +273,11 @@
       let greetingMessage = "";
 
       if (currentHour >= 5 && currentHour < 12) {
-        greetingMessage = "Good Morning, Stranger.";
+        greetingMessage = "Good Morning, User.";
       } else if (currentHour >= 12 && currentHour < 18) {
-        greetingMessage = "Good Afternoon, Stranger.";
+        greetingMessage = "Good Afternoon, User.";
       } else {
-        greetingMessage = "Good Evening, Stranger.";
+        greetingMessage = "Good Evening, User.";
       }
 
       greetingElement.textContent = greetingMessage;
@@ -194,6 +356,90 @@
       document.getElementById('home').classList.add('active');
       homeButtons.classList.add('active'); // Trigger animation for buttons on page load
     });
+
+    //Blocks Touch 
+    const block1 = document.getElementById("block1");
+    const block2 = document.getElementById("block2");
+
+function isCollision() {
+  const block1Rect = block1.getBoundingClientRect();
+  const block2Rect = block2.getBoundingClientRect();
+
+  // Check if the blocks are overlapping
+  return (
+    block1Rect.left < block2Rect.right &&
+    block1Rect.right > block2Rect.left &&
+    block1Rect.top < block2Rect.bottom &&
+    block1Rect.bottom > block2Rect.top
+  );
+}
+
+function checkCollision() {
+  if (isCollision()) {
+    block1.classList.add("red");
+    block2.classList.add("red");
+  } else {
+    block1.classList.remove("red");
+    block2.classList.remove("red");
+  }
+}
+
+// Check for collision every 16ms (60fps)
+setInterval(checkCollision, 16);
+
+
+// Modal Functionality
+const bentoItems = document.querySelectorAll('.bento-item');
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.close');
+
+// Open modal on bento-item click
+bentoItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const modalId = item.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  });
+});
+
+// Close modal on close button click
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    modal.style.display = 'none';
+  });
+});
+
+// Close modal on clicking outside the modal content
+window.addEventListener('click', (event) => {
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+
+//Slide Show
+// Function to handle each slideshow independently
+document.querySelectorAll('.slideshow').forEach(slideshow => {
+    const slides = slideshow.querySelectorAll("img");
+    const prev = slideshow.querySelector(".arrow.left");
+    const next = slideshow.querySelector(".arrow.right");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides[currentIndex].classList.remove("active");
+        currentIndex = (index + slides.length) % slides.length;
+        slides[currentIndex].classList.add("active");
+    }
+
+    prev.addEventListener("click", () => showSlide(currentIndex - 1));
+    next.addEventListener("click", () => showSlide(currentIndex + 1));
+});
+
+
   </script>
 </body>
 </html>
