@@ -39,22 +39,24 @@
     <section id="home" class="section active">
       <h3 class="greeting"></h3>
       <br>
-      <img src="myicon.png" alt="Decorative Image" class="float-right-image">
-      <h1>Hey, <h>I'm <u>Jess.</u></h></h1>
+      <h1>Hello, my name is <u>Jess</u>.
       <br>
+      I am a <h>UX specialist.</h>
+      </h1>
       <h2> <i class="fa-brands fa-codepen"></i>
-        A <h><b>UX specialist</b></h> in research, 
-        design & analytics.</h2>
+        Knowledgable in <h>design, research, 
+        & analytics.</h></h2>
         <br>
-        <div class="container">
-          <div class="moving-block" id="block1"></div>
-        </div>
-        <div class="container">
-          <div class="moving-block2" id="block2"></div>
-        </div>
-
-      <br>
-      <p><i>Take action. </i>Create stories and expand your creativity.</p>
+      
+        <p><b>Quick! A UX Nightmare as appeared.</b> Get Rid of the Issues!</p>
+        <div id="game-container"></div>
+        <div id="scoreboard">Score: <span id="score">0</span></div>
+        <br>
+        <button id="start-btn">Start Game</button>
+        <br>
+        <br>
+       <p><i class="fa-solid fa-star"></i>
+      Previously @ <i>Maple Leaf Foods, Sushi Kui, etc.</i></p>
       <div class="home-buttons">
         <a href="#projects" class="button" data-target="projects">
             <b>See My Projects</b>
@@ -68,7 +70,7 @@
     </section>
 
     <section id="projects" class="section">
-      <h3>Projects</h3>
+      <h2>Projects</h2>
       <div class="visual-buttons">
         <a class="button">APPLICATIONS</a>
         <a class="button">RESEARCH</a>
@@ -80,8 +82,6 @@
         <div class="bento-item" data-modal="modal-moodle">Moodle</div>
         <div class="bento-item" data-modal="modal-sushi">Sushi Kui's Menu</div>
         <div class="bento-item" data-modal="modal-xr">XR Speculative Design</div>
-        <div class="bento-item" data-modal="modal-data">Data Visualization</div>
-        <div class="bento-item">Under Construction</div>
       </div>
     </section>
 
@@ -204,7 +204,8 @@
     </div>
 
     <section id="about" class="section">
-      <h3>About Me</h3>
+      <h2>About Me</h2>
+      <img src="myicon.png" alt="Decorative Image" class="float-right-image">
       <p>Hi! I'm Jessica, <h>a passionate UX/UI designer</h> about creating intuitive designs.</p>
         <br>
       <b>Hobbies</b>
@@ -225,7 +226,7 @@
     </section>
 
     <section id="connect" class="section">
-        <h3>Connect</h3>
+        <h2>Connect</h2>
         <br>
         <h1>Let's Work <u>Together!</u></h1>
         <br>
@@ -244,7 +245,7 @@
   
 
     <section id="resume" class="section">
-      <h3>My Resume</h3>
+      <h2>My Resume</h2>
       <p>Here is a summary of my <h>qualifications, experience, and skills.</h></p>
  
       <div class="connect-buttons">
@@ -357,35 +358,7 @@
       homeButtons.classList.add('active'); // Trigger animation for buttons on page load
     });
 
-    //Blocks Touch 
-    const block1 = document.getElementById("block1");
-    const block2 = document.getElementById("block2");
-
-function isCollision() {
-  const block1Rect = block1.getBoundingClientRect();
-  const block2Rect = block2.getBoundingClientRect();
-
-  // Check if the blocks are overlapping
-  return (
-    block1Rect.left < block2Rect.right &&
-    block1Rect.right > block2Rect.left &&
-    block1Rect.top < block2Rect.bottom &&
-    block1Rect.bottom > block2Rect.top
-  );
-}
-
-function checkCollision() {
-  if (isCollision()) {
-    block1.classList.add("red");
-    block2.classList.add("red");
-  } else {
-    block1.classList.remove("red");
-    block2.classList.remove("red");
-  }
-}
-
-// Check for collision every 16ms (60fps)
-setInterval(checkCollision, 16);
+  
 
 
 // Modal Functionality
@@ -439,6 +412,105 @@ document.querySelectorAll('.slideshow').forEach(slideshow => {
     next.addEventListener("click", () => showSlide(currentIndex + 1));
 });
 
+//Game
+const gameContainer = document.getElementById('game-container');
+    const scoreDisplay = document.getElementById('score');
+    const startBtn = document.getElementById('start-btn');
+
+    let score = 0;
+    let gameInterval;
+    let gameDuration = 30; // seconds
+    let isGameRunning = false;
+
+    function getRandomPosition() {
+      const x = Math.random() * (gameContainer.offsetWidth - 50);
+      const y = Math.random() * (gameContainer.offsetHeight - 50);
+      return { x, y };
+    }
+
+    function createShape() {
+      const shape = document.createElement('div');
+      shape.classList.add('shape');
+
+      const { x, y } = getRandomPosition();
+      shape.style.left = `${x}px`;
+      shape.style.top = `${y}px`;
+
+      shape.addEventListener('click', () => {
+        if (isGameRunning) {
+          score++;
+          scoreDisplay.textContent = score;
+          shape.remove();
+        }
+      });
+
+      gameContainer.appendChild(shape);
+
+      setTimeout(() => {
+        if (shape.parentElement) shape.remove();
+      }, 2000); // Remove shape after 2 seconds
+    }
+
+    function startGame() {
+      if (isGameRunning) return;
+
+      score = 0;
+      scoreDisplay.textContent = score;
+      isGameRunning = true;
+      startBtn.disabled = true;
+
+      gameInterval = setInterval(createShape, 800); // Spawn shapes every 800ms
+
+      setTimeout(() => {
+        clearInterval(gameInterval);
+        isGameRunning = false;
+        startBtn.disabled = false;
+        alert(`Game Over! Your score is ${score}`);
+      }, gameDuration * 1000);
+    }
+
+    startBtn.addEventListener('click', startGame);
+
+    //Additions
+    const heuristics = [
+  'Unclear error message',
+  'Inconsistent button styles',
+  'No feedback on action',
+  'Poor readability',
+  'Low contrast',
+  'Hard to read text',
+  'Crowded layout',
+  'Overloaded forms',
+  'Lack of undo/redo',
+  'Confusing terminology',
+  'Missing accessibility features'
+];
+
+function createShape() {
+  const shape = document.createElement('div');
+  shape.classList.add('shape');
+
+  shape.textContent = heuristics[Math.floor(Math.random() * heuristics.length)];
+  shape.style.fontSize = '15px';
+
+  const { x, y } = getRandomPosition();
+  shape.style.left = `${x}px`;
+  shape.style.top = `${y}px`;
+
+  shape.addEventListener('click', () => {
+    if (isGameRunning) {
+      score++;
+      scoreDisplay.textContent = score;
+      shape.remove();
+    }
+  });
+
+  gameContainer.appendChild(shape);
+
+  setTimeout(() => {
+    if (shape.parentElement) shape.remove();
+  }, 2000);
+}
 
   </script>
 </body>
