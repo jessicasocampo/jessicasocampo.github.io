@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="webstyle.css">
   <!-- Include Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -47,7 +50,9 @@
         <a class="button">UX SPECIALIST</a>
       </div>
       <br>
-      <h1 style="scale: 1; padding: 20px; background-color: var(--black); border: 2px solid white;">> HELLO, <h>I'M JESS.</h></h1>
+      <div class="ps">
+      <h1 style="scale: 1; padding: 20px; background-color: var(--black); border: 2px solid white;">>HELLO, <h>I'M JESS.</h></h1>
+      </div>
       <br>
 
       <h2><div id="rotatingText"> Knowledgable in design, research, & analytics.</div> </h2>
@@ -74,8 +79,13 @@
             <br>
             <img src="uxmonster.png" style="float: left;">
         <div id="game-container">
-          <p style="background-color: var(--black); border: 2px solid white; padding: 10px;"><b>> UX MONSTERS HAVE APPEARED!</b> 
-            FIX THE ISSUES TO SAVE THE USER EXPERIENCE!</p>
+
+          <div class="ps">
+          <p style="background-color: var(--black); border: 2px solid white; padding: 10px;">>WILD UX MONSTERS HAVE APPEARED!
+            </p>
+            </div>
+            <p><i class="fa-solid fa-star"></i> Fix the issues to save the user experience.</p>
+
           <div id="scoreboard">Score: <span id="score">0</span></div>
           <br>
           <button id="start-btn">
