@@ -15,7 +15,7 @@
 </head>
 <body>
   <nav>
-    <img src="logo.png" style="scale:0.35;" alt="Logo">
+    <h1>JESSICA OCAMPO</h1>
     <a href="#home" class="nav-link" data-target="home">
       <i class="fas fa-home nav-icon"></i> 
       <p>HOME</p>
@@ -50,9 +50,18 @@
         <a class="button">UX SPECIALIST</a>
       </div>
       <br>
-      <div class="ps">
-      <h1 style="scale: 1; padding: 20px; background-color: var(--black); border: 2px solid white;">>HELLO, <h>I'M JESS.</h></h1>
+
+      <div class="typing-container">
+        <div class="ps">
+        <h1 style="padding: 30px; background-color: var(--black); 
+        border: 2px solid var(--button-bg-color);">
+        <span class="typed-text">
+        > HELLO, <h>I'M JESS.</h>
+        </span>
+        </h1>
+        </div>
       </div>
+
       <br>
 
       <h2><div id="rotatingText"> Knowledgable in design, research, & analytics.</div> </h2>
@@ -81,7 +90,7 @@
         <div id="game-container">
 
           <div class="ps">
-          <p style="background-color: var(--black); border: 2px solid white; padding: 10px;">>WILD UX MONSTERS HAVE APPEARED!
+          <p style="background-color: var(--black); border: 2px solid var(--button-bg-color); padding: 20px;">> WILD UX MONSTERS HAVE APPEARED!
             </p>
             </div>
             <p><i class="fa-solid fa-star"></i> Fix the issues to save the user experience.</p>
@@ -103,11 +112,22 @@
         <a class="button">GRAPHICS</a>
       </div>
       <div class="bento-box">
-        <div class="bento-item" data-modal="modal-maple">Maple Leaf Food's Inspection Form</div>
-        <div class="bento-item" data-modal="modal-cross">CrossCultura</div>
-        <div class="bento-item" data-modal="modal-moodle">Moodle</div>
-        <div class="bento-item" data-modal="modal-sushi">Sushi Kui's Menu</div>
-        <div class="bento-item" data-modal="modal-xr">XR Speculative Design</div>
+        <div class="bento-item" data-modal="modal-maple">
+          <h4>MAPLE LEAF FOODS INSPECTION FORM</h4>
+          <img src="mlfcover.png" style="width: 550px;">
+        </div>
+        <div class="bento-item" data-modal="modal-cross">
+          <h4>CROSSCULTURA</h4>
+          <img src="crosscultura1-front.png" style="width: 360px;">
+        </div>
+        <div class="bento-item" data-modal="modal-moodle">
+          <h4>MOODLE</h4>
+          <img src="moodcover.png" style="width: 350px;">
+          
+        </div>
+        <div class="bento-item" data-modal="modal-sushi">
+          <h4>SUSHI KUI MENU</h4>
+        </div>
       </div>
     </section>
 
@@ -589,82 +609,6 @@
       </div>
     </div>
 
-    <div id="modal-xr" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>XR Speculative Design</h2>
-        <br>
-        <div class="slideshow">
-        <img src="https://via.placeholder.com/600x400?text=Slide+1" class="active" alt="Slide 1">
-        <img src="https://via.placeholder.com/600x400?text=Slide+2" alt="Slide 2">
-        <img src="https://via.placeholder.com/600x400?text=Slide+3" alt="Slide 3">
-
-        <button class="arrow left">&#10094;</button>
-        <button class="arrow right">&#10095;</button>
-        </div>
-
-        <p><b>Duration:</b> [Project timeline, e.g., 3 months]
-          <br>
-        <b>Role:</b> 
-        <div class="visual-buttons">
-          <a class="button">ROLE</a>
-          <a class="button">ROLE</a>
-          <a class="button">ROLE</a>
-        </div>
-          <br>
-        <b>Tools:</b></p>
-        <div class="visual-buttons">
-          <a class="button">TOOL</a>
-          <a class="button">TOOL</a>
-          <a class="button">TOOL</a>
-        </div>
-        <br>
-        <hr>
-
-        <h3>Overview</h3>
-          <p>What was the project about?
-          Who was it for (client or organization)?
-          What was the goal?
-          Problem Statement
-          Define the problem you aimed to solve.</p>
-          <p>What challenges did the users face?
-          Why was this a problem for the client/business?
-          Process
-          Outline your approach and methods.</p>
-
-          <p><b>Research:</b> What methods did you use (e.g., user interviews, surveys)?
-            <br>
-          <b>Ideation:</b> How did you brainstorm solutions?
-            <br>
-          <b>Design:</b> What tools and techniques helped bring your ideas to life?
-            <br>
-          <b>Testing:</b> How did you validate your designs?</p>
-
-        <hr>
-
-          <h3>Solution</h3>
-          <p>What features or design elements were key?
-          How did it address the problem?
-          Impact
-          Highlight the results.
-          What was the outcome? (e.g., increased user engagement, higher conversion rates)
-          Any measurable metrics? </p>
-
-        <hr>
-
-          <h3>Reflection</h3>
-          <p>What did you learn from this project?
-          Challenges faced and how you overcame them.
-          <br>
-          <b>Skills Gained:</b></p>
-          <div class="visual-buttons">
-            <a class="button">SKILL</a>
-            <a class="button">SKILL</a>
-            <a class="button">SKILL</a>
-          </div>
-      </div>
-    </div>
-
     <section id="about" class="section">
       <h2>About Me</h2>
       <img src="myicon.png" alt="Decorative Image" class="float-right-image">
@@ -979,7 +923,7 @@ function createShape() {
 const phrases = [
       "Knowledgeable in design, research, & analytics.",
       "Knowledgeable in HTML, CSS, JavaScript, & Racket.",
-      "Knowledgeable in Figma, Illustrator, Premiere Pro, etc."
+      "Knowledgeable in Figma & Adobe Softwares."
     ];
 
     // Reference to the HTML element
