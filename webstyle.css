@@ -3,7 +3,7 @@
     --bg-color: #f1f1f1; /* Dark background color */
     --nav-color: #ebebeb; /* Semi-transparent light navigation */
     --text-color: #1b1b1b; /* Light text color */
-    --text-color2: #2c2c2c;
+    --text-color2: #494949;
 
     --highlight-color: #c9b7c1; /* Lighter highlight color */
     --hightlighttext: #d8c061;
@@ -80,24 +80,24 @@ h1, h2, h3 {
 h1 { 
     font-size: 60px;
     font-weight: 700;
-    padding: 10px;
+    padding: 5px;
  }
 
 h2 { 
     font-size: 32px;
     font-weight: 500;
-    padding: 10px;
+    padding: 5px;
  }
 h3 { 
     font-size: 28px;
     font-weight: 400;
-    padding: 10px;
+    padding: 5px;
     color: var(--text-color2);
  }
 
  h4 {
     font-size: 18px;
-    padding: 0px;
+    padding: 5px;
     padding-bottom: 10px;
     margin: 0px;
     font-weight: 400;
