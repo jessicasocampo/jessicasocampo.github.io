@@ -51,6 +51,10 @@ h {
     background-color: var(--hightlighttext);
 }
 
+htwo {
+  background-color: var(--bg-box);
+}
+
 hr {
     color: var(--hr-color);
 }
