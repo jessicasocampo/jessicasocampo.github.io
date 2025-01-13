@@ -270,9 +270,35 @@ footer {
   text-align: left;
   font-size: 12px;
   width: 580px;
-  height: 400px; /* Uniform height */
+  height: auto; /* Let the height be determined by content */
   transition: transform 0.3s ease;
 
+}
+.coversty {
+  width:580px;
+  float: right;
+}
+
+/* Monitors */
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .bento-item {
+    background-color: var(--bg-bento);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    font-size: 12px;
+    width: 780px;
+    height: auto; /* Let the height be determined by content */
+    transition: transform 0.3s ease;
+  
+  }
+
+  .coversty {
+    width: 780px;
+    float: right;
+  }
 }
 
 .bento-item:hover {
@@ -387,7 +413,7 @@ footer {
   .modal-content {
     background-color: var(--bg-color);
     margin: 5% auto;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     width: 80%;
     max-width: 1000px;
