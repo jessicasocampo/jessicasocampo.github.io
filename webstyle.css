@@ -15,7 +15,7 @@
     --visual-button: #bbc2cb;
     --visual-text: #252525; 
 
-    --hr-color: #393939;
+    --hr-color: #6b6b6b;
     --black: #141414;
     
     --bg-box: #ededed;
@@ -40,6 +40,7 @@ body {
 p {
     color: var(--text-color2);
     font-size: 16px;
+    margin: 10px;
 }
 
 ac {
@@ -120,9 +121,8 @@ h3 {
   float: right;
   max-width: 25%; /* Adjust as needed */
   height: auto;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px; /* Optional: adds rounded corners */
+  border: solid 5px var(--outline-box);
+  margin: 20px;
 }
 
 .imageLeft {
@@ -221,7 +221,7 @@ main {
 }
 
 #resume {
-  height: 1300px;
+  height: 1400px;
 }
 
 .section.active {
@@ -238,8 +238,8 @@ main {
       "item3 item4";
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-top: 20px;
+  margin-top: 30px;
+  gap: 30px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -253,13 +253,15 @@ main {
 .bento-item {
   background-color: var(--bg-bento);
   color: var(--text-color);
-  border: 2px solid var(--button-bg-color);
+  border: none;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   font-size: 12px;
+  width: 580px;
   height: 400px; /* Uniform height */
   transition: transform 0.3s ease;
+
 }
 
 .bento-item:hover {
@@ -355,7 +357,8 @@ main {
 
 #resumeimg {
     width: 700px;
-    padding-top: 30px;
+    margin-top: 30px;
+    border: solid 5px var(--outline-box);
 }
 
   .modal {
@@ -418,19 +421,19 @@ main {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: var(--text-color);
+    color: var(--bg-color);
     border: none;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     border-radius: 50%;
 }
 
 .arrow.left {
-    left: 10px;
+    left: 20px;
 }
 
 .arrow.right {
-    right: 10px;
+    right: 20px;
 }
 
 /* Game */
@@ -502,7 +505,7 @@ main {
     display: inline-block;
     white-space: nowrap; /* Ensures the text doesn't wrap */
     overflow: hidden;    /* Hides the text that is being "typed" */
-    border-right: 2px solid var(--text-color); /* Simulates the cursor */
+    
     width: 115ch; /* Adjust based on the length of your text */
     animation: typing 3s steps(18) 1s forwards, blink 0.5s step-end infinite;
   }
@@ -531,5 +534,9 @@ main {
     text-align: center;
       font-size: 1.2rem;
       line-height: 1.4;
+  }
+
+  iframe {
+    border: solid 5px var(--outline-box);
   }
   
