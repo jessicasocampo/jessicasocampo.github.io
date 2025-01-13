@@ -1,25 +1,27 @@
 /* Root Variables */
 :root {
-    --bg-color: #f1f1f1; /* Dark background color */
-    --nav-color: #ebebeb; /* Semi-transparent light navigation */
-    --text-color: #1b1b1b; /* Light text color */
-    --text-color2: #494949;
+    --bg-color: #d4dae1; 
+    --nav-color: #bbc2cb; 
+    --text-color: #252525; 
+    --text-color2: #424242;
 
-    --highlight-color: #c9b7c1; /* Lighter highlight color */
-    --hightlighttext: #d8c061;
-    --hover-color: #bdbdbd; /* Hover effect for elements */
+    --highlight-color: #c9b7c1; 
+    --hightlighttext: #debc35;
+    --hover-color: #747474; 
 
-    --button-bg-color: #cfcfcf; /* Button background color */
-    --button-hover-color: #dedede; /* Button hover color */
+    --button-bg-color: #abb5c1; 
+    --button-hover-color: #c1c9d3; 
 
-    --visual-button: #d7d7d7;
-    --visual-text: rgb(41, 41, 41); 
+    --visual-button: #bbc2cb;
+    --visual-text: #252525; 
 
     --hr-color: #393939;
-    --black: #ebebeb;
+    --black: #141414;
     
-    --bg-box: #f6f6f6;
-    --outline-box: rgb(25, 25, 25);
+    --bg-box: #ededed;
+    --outline-box: #262626;
+
+    --bg-bento: #e3e8ee;
     
 }
 
@@ -74,25 +76,27 @@ hr {
 
 h1, h2, h3 {
     margin: 0;
-    color: var(--text-color);
+    
 }
 
 h1 { 
     font-size: 60px;
     font-weight: 700;
     padding: 5px;
+    color: var(--outline-box);
  }
 
 h2 { 
     font-size: 32px;
     font-weight: 500;
     padding: 5px;
+    color: var(--text-color);
  }
 h3 { 
     font-size: 28px;
     font-weight: 400;
     padding: 5px;
-    color: var(--text-color2);
+    color: var(--text-color);
  }
 
  h4 {
@@ -101,6 +105,7 @@ h3 {
     padding-bottom: 10px;
     margin: 0px;
     font-weight: 400;
+    color: var(--text-color2);
 
  }
 
@@ -199,6 +204,26 @@ main {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+#home {
+  height: 1500px;
+}
+
+#projects {
+  height: 1300px;
+}
+
+#about {
+  height: 1000px;
+}
+
+#connect {
+  height: 1200px;
+}
+
+#resume {
+  height: 1300px;
+}
+
 .section.active {
     display: block;
     opacity: 1;
@@ -207,47 +232,40 @@ main {
 
 /* Bento Box */
 .bento-box {
-    display: grid;
-    grid-template-areas:
-      "item1 item1 item2"
-      "item3 item4 item4";
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 500px 1fr 500px;
-    gap: 40px;
-    margin-top: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  display: grid;
+  grid-template-areas:
+      "item1 item2"
+      "item3 item4";
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .bento-box.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .bento-item {
-    background-color: white;
-    color: var(--text-color);
-    border: 2px solid var(--button-bg-color);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    font-size: 12px;
-    height: 400px;
-    transition: transform 0.3s ease;
-}
-
-/* Larger items */
-.bento-item:nth-child(1) {
-    grid-column: span 2;
-}
-.bento-item:nth-child(4) {
-    grid-column: span 2;
+  background-color: var(--bg-bento);
+  color: var(--text-color);
+  border: 2px solid var(--button-bg-color);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  font-size: 12px;
+  height: 400px; /* Uniform height */
+  transition: transform 0.3s ease;
 }
 
 .bento-item:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
+
 
 /*Visual Buttons Styling*/
 .visual-buttons {
@@ -336,8 +354,8 @@ main {
 }
 
 #resumeimg {
-    width: 800px;
-    padding-top: 20px;
+    width: 700px;
+    padding-top: 30px;
 }
 
   .modal {
@@ -400,7 +418,7 @@ main {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: var(--bg-color);
+    color: var(--text-color);
     border: none;
     padding: 10px;
     cursor: pointer;
