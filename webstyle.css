@@ -217,11 +217,18 @@ main {
 }
 
 #connect {
-  height: 1200px;
+  height: 1250px;
 }
 
 #resume {
   height: 1400px;
+}
+
+footer {
+  background-color: var(--nav-color); /* Light background */
+  text-align: center;
+  margin: 50px;
+  padding: 10px; 
 }
 
 .section.active {
