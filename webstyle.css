@@ -4,6 +4,7 @@
     --nav-color: #bbc2cb; 
     --text-color: #252525; 
     --text-color2: #424242;
+    --link-text: #003f8d;
 
     --highlight-color: #c9b7c1; 
     --hightlighttext: #debc35;
@@ -57,6 +58,10 @@ htwo {
 
 hr {
     color: var(--hr-color);
+}
+
+.aboutlinks {
+  color: var(--link-text);
 }
 
 @keyframes fadeIn {
