@@ -341,7 +341,7 @@ footer {
 
 /* Home Buttons Styling */
 .home-buttons {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     gap: 20px;
 }
@@ -526,7 +526,7 @@ footer {
 }
 
 #start-btn {
-  padding: 15px 25px;
+  padding: 18px 28px;
   font-size: 16px;
   background-color: var(--button-bg-color);
   color: var(--text-color);
@@ -545,6 +545,8 @@ footer {
     font-size: 34px;
     font-weight: 500;
     padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
 
   /* Container for the text */
