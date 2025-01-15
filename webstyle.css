@@ -127,11 +127,11 @@ h3 {
   
 
  .float-right-image {
-  float: right;
-  max-width: 25%; /* Adjust as needed */
-  height: auto;
-  border: solid 5px var(--outline-box);
-  margin: 20px;
+    float: right;
+    max-width: 25%; /* Adjust as needed */
+    height: auto;
+    border: solid 5px var(--outline-box);
+    margin: 20px;
 }
 
 .imageLeft {
@@ -206,7 +206,8 @@ nav a:hover {
 
 /* Main Content */
 main {
-    margin-left: 120px;
+    margin-left: 150px;
+    margin-right: 150px;
     padding: 50px;
     flex: 1;
 }
