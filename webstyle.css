@@ -23,9 +23,7 @@
     --outline-box: #262626;
 
     --bg-bento: #e3e8ee;
-    
 }
-
 
 /* Global Styles */
 body {
@@ -86,14 +84,17 @@ hr {
 
 h1, h2, h3 {
     margin: 0;
-    
 }
 
 h1 { 
     font-size: 60px;
     font-weight: 700;
-    padding: 5px;
+    padding: 30px;
     color: var(--outline-box);
+    background-color: var(--bg-box); 
+    border: 5px solid var(--outline-box);
+    margin-top: 20px;
+    margin-bottom: 20px;
  }
 
 h2 { 
@@ -102,6 +103,7 @@ h2 {
     padding: 5px;
     color: var(--text-color);
  }
+
 h3 { 
     font-size: 25px;
     font-weight: 400;
@@ -116,7 +118,6 @@ h3 {
     margin: 0px;
     font-weight: 400;
     color: var(--text-color2);
-
  }
 
  .ps {
@@ -124,7 +125,6 @@ h3 {
     font-weight: 400;
     font-style: normal;
   }
-  
 
  .float-right-image {
     float: right;
@@ -146,7 +146,6 @@ h3 {
   scale: 1.02;
 }
 
-
 /* Navigation Bar */
 nav {
     width: 85px;
@@ -160,13 +159,15 @@ nav {
 }
 
 nav h1 {
-  font-family: "Press Start 2P", serif;
+    font-family: "Press Start 2P", serif;
     margin: 10px;
     padding: 10px;
     font-size: 0.9rem;
     color: var(--text-color);
     text-align: center;
     font-weight: 400;
+    background-color: var(--nav-color);
+    border: none;
 }
 
 nav h1:hover {
@@ -196,7 +197,6 @@ nav p {
     font-size: 12px;
     margin: 0;
     padding: 5px;
-
 }
 
 nav a:hover {
@@ -291,7 +291,7 @@ footer {
   float: right;
 }
 
-/* Monitors */
+/* Monitor */
 @media (min-width: 1920px) and (max-width: 2560px) {
   .bento-item {
     background-color: var(--bg-bento);
@@ -304,7 +304,6 @@ footer {
     width: 780px;
     height: auto; /* Let the height be determined by content */
     transition: transform 0.3s ease;
-  
   }
 
   .coversty {
@@ -316,7 +315,6 @@ footer {
 .bento-item:hover {
   transform: scale(1.02);
 }
-
 
 /*Visual Buttons Styling*/
 .visual-buttons {
@@ -338,7 +336,6 @@ footer {
     justify-content: center;
     border: none;
 }
-
 
 /* Home Buttons Styling */
 .home-buttons {
@@ -555,7 +552,6 @@ footer {
     display: inline-block;
     white-space: nowrap; /* Ensures the text doesn't wrap */
     overflow: hidden;    /* Hides the text that is being "typed" */
-    
     width: 110ch; /* Adjust based on the length of your text */
     animation: typing 3s steps(18) 1s forwards, blink 0.5s step-end infinite;
   }
