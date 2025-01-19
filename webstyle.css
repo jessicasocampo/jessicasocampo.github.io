@@ -13,7 +13,8 @@
     --button-bg-color: #abb5c1; 
     --button-hover-color: #c1c9d3; 
 
-    --visual-button: #bbc2cb;
+    --visual-button: #ededed;
+    --visual-button-outline: #bbc2cb;
     --visual-text: #0d1622; 
 
     --hr-color: #212121;
@@ -332,11 +333,12 @@ footer {
     text-decoration: none;
     border-radius: 40px;
     font-size: 14px;
+    font-weight: 500;
     transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: none;
+    border: 2px solid var(--visual-button-outline);
 }
 
 /* Home Buttons Styling */
