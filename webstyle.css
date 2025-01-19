@@ -132,7 +132,7 @@ h3 {
     float: right;
     max-width: 25%; /* Adjust as needed */
     height: auto;
-    border: solid 5px var(--outline-box);
+    border: solid 5px var(--nav-color);
     margin: 20px;
 }
 
@@ -408,7 +408,7 @@ footer {
 #resumeimg {
     width: 700px;
     margin-top: 30px;
-    border: solid 5px var(--outline-box);
+    border: solid 5px var(--nav-color);
 }
 
   .modal {
@@ -588,6 +588,6 @@ footer {
   }
 
   iframe {
-    border: solid 5px var(--outline-box);
+    border: solid 5px var(--nav-color);
   }
   
