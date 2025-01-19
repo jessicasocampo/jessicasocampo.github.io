@@ -89,7 +89,7 @@ h1, h2, h3 {
 }
 
 h1 { 
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 700;
     padding: 30px;
     color: var(--outline-box);
@@ -567,7 +567,7 @@ footer {
       width: 0;
     }
     to {
-      width: 115ch; /* Matches the width of the text */
+      width: 110ch; /* Matches the width of the text */
     }
   }
   
