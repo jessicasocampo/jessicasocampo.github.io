@@ -130,7 +130,7 @@ h3 {
 
  .float-right-image {
     float: right;
-    max-width: 25%; /* Adjust as needed */
+    width: 250px; /* Adjust as needed */
     height: auto;
     border: solid 5px var(--nav-color);
     margin: 20px;
