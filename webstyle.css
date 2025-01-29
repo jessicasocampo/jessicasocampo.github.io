@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
-    --bg-color: #d4dae1; 
-    --nav-color: #bbc2cb; 
+    --bg-color: #dce2e9; 
+    --nav-color: #d4dbe3; 
     --text-color: #252525; 
     --text-color2: #424242;
     --link-text: #003f8d;
@@ -23,7 +23,7 @@
     --bg-box: #ededed;
     --outline-box: #262626;
 
-    --bg-bento: #bbc2cb;
+    --bg-bento: #bfc7d2;
 }
 
 /* Global Styles */
@@ -41,6 +41,7 @@ p {
     color: var(--text-color2);
     font-size: 16px;
     margin: 10px;
+    line-height: 2;
 }
 
 ac {
