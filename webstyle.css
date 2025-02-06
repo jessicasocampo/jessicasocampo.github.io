@@ -583,20 +583,25 @@ footer {
 }
 
 #scoreboard {
-  margin-top: 20px;
   font-size: 16px;
 }
 
 #start-btn {
-  padding: 18px 28px;
-  font-size: 16px;
+  padding: 20px 30px;
+  font-size: 14px;
   background-color: var(--button-bg-color);
   color: var(--text-color);
   border-style: none;
   cursor: pointer;
   border-radius: 50px;
   transition: background-color 0.3s;
+
+  /* Centering */
+  display: block;
+  margin: 20px auto; /* Centers horizontally */
+  text-align: center;
 }
+
 
 #start-btn:hover {
   background-color: var(--hightlightbutton);
