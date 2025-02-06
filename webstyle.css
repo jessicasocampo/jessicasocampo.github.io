@@ -152,7 +152,7 @@ h3 {
 
 /* Navigation Bar */
 nav {
-  margin-top: 30px;
+  top: 30px;
   width: 100%;
   background-color: var(--nav-color);
   display: flex;
@@ -162,8 +162,8 @@ nav {
   padding: 10px;
   position: fixed;
   height: 50px;
-
   gap: 30px;
+  z-index: 9999;
 }
 
 nav h1 {
@@ -595,3 +595,6 @@ footer {
     border: solid 5px var(--nav-color);
   }
   
+  .hidden {
+    display: none;
+}
