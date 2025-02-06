@@ -1,29 +1,30 @@
 /* Root Variables */
 :root {
-    --bg-color: #dce2e9; 
-    --nav-color: #d4dbe3; 
-    --text-color: #252525; 
-    --text-color2: #424242;
-    --link-text: #003f8d;
+    --bg-color: #202123; 
+    --nav-color: #202123; 
+    --text-color: #e5e5e5; 
+    --text-color2: #cacaca;
+    --link-text: #7fb9ff;
 
     --highlight-color: #c9b7c1; 
-    --hightlighttext: #debc35;
-    --hover-color: #a3a9b2; 
+    --hightlighttext: #454c5d;
+    --hightlightbutton: #c9680d;
+    --hover-color: #303133; 
 
-    --button-bg-color: #abb5c1; 
-    --button-hover-color: #c1c9d3; 
+    --button-bg-color: #4c5054; 
+    --button-hover-color: #5f6469; 
 
-    --visual-button: #ededed;
+    --visual-button: #252525;
     --visual-button-outline: #bbc2cb;
-    --visual-text: #0d1622; 
+    --visual-text: #e2e2e2; 
 
     --hr-color: #212121;
     --black: #141414;
     
-    --bg-box: #ededed;
-    --outline-box: #262626;
+    --bg-box: #dcdcdc;
+    --outline-box: #18181a;
 
-    --bg-bento: #bfc7d2;
+    --bg-bento: #2c2d2f;
 }
 
 /* Global Styles */
@@ -53,7 +54,7 @@ h {
 }
 
 htwo {
-  background-color: var(--bg-box);
+  background-color: var(--bg-color);
 }
 
 hr {
@@ -151,68 +152,70 @@ h3 {
 
 /* Navigation Bar */
 nav {
-    width: 85px;
-    background-color: var(--nav-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    position: fixed;
-    height: 100%;
+  margin-top: 30px;
+  width: 100%;
+  background-color: var(--nav-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Centers all items horizontally */
+  padding: 10px;
+  position: fixed;
+  height: 50px;
+
+  gap: 30px;
 }
 
 nav h1 {
-    font-family: "Press Start 2P", serif;
-    margin: 10px;
-    padding: 10px;
-    font-size: 0.9rem;
-    color: var(--text-color);
-    text-align: center;
-    font-weight: 400;
-    background-color: var(--nav-color);
-    border: none;
-    margin-top: 20px;
-}
-
-nav h1:hover {
-  scale: 1.04;
+  font-family: "Press Start 2P", serif;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: center;
+  font-weight: 400;
+  background-color: var(--nav-color);
+  border: none;
+  margin: 0; /* Remove unnecessary margin */
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 10px;
-    margin: 10px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 18px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 5px;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a i {
-    margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 nav p {
-    font-size: 12px;
-    margin: 0;
-    padding: 5px;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px;
 }
 
 nav a:hover {
-    background-color: var(--hover-color);
-    color: var(--bg-color);
+  background-color: var(--hover-color);
+  color: var(--bg-color);
+}
+
+nav p:hover {
+  color: var(--hightlightbutton);
 }
 
 /* Main Content */
 main {
-    margin-top: 20px;
-    margin-left: 150px;
-    margin-right: 80px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 0px;
     padding: 50px;
     flex: 1;
 }
@@ -541,7 +544,7 @@ footer {
 }
 
 #start-btn:hover {
-  background-color: var(--hightlighttext);
+  background-color: var(--hightlightbutton);
 }
 
 /* Text that rotates out */
