@@ -32,9 +32,6 @@
     <a href="#connect" class="nav-link" data-target="connect">
       <i class="fas fa-envelope nav-icon"></i> 
       <p>CONNECT</p></a>
-    <a href="#resume" class="nav-link" data-target="resume">
-      <i class="fas fa-file-alt nav-icon"></i> 
-      <p>CV</p></a>
   </nav>
 
   <main>
@@ -66,7 +63,8 @@
                 <b>See Projects</b>
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="#resume" class="button" data-target="resume">
+          
+            <a href="https://docs.google.com/document/d/1to7_K3YdC5uoMdBK5PZyvYo5_1diwFRCgcU2f2W7_T4/edit?usp=sharing" class="button" target="_blank">
                 <b>View Resume</b>
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
@@ -987,32 +985,6 @@
     <p>© 2025 Jessica Ocampo. All rights reserved. <i class="fa-solid fa-rocket"></i> Coded & Designed By Jessica Ocampo.</p>
   </footer>
       </section>
-  
-    <section id="resume" class="section">
-      <h2>Employment History?</h2>
-      <br>
-      <div class="typing-container">
-        <div class="ps">
-        <h1 style="background-color: var(--bg-box); 
-        border: 5px solid var(--outline-box); margin-top: 20px; margin-bottom: 20px;">
-        <span class="typed-text">
-        >HAPPY VIEWING.
-        </span>
-        </h1>
-        </div>
-      </div>
-
-      <p><i class="fa-solid fa-star"></i> Here is a summary of my 
-        <b>qualifications, experience, and skills.</b></p>
- 
-      <div class="connect-buttons">
-        <a href="https://docs.google.com/document/d/1to7_K3YdC5uoMdBK5PZyvYo5_1diwFRCgcU2f2W7_T4/edit?usp=sharing" class="button" target="_blank">
-          <b>View Document</b>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
-      <img src="jessresume.png" alt="UXresume" id="resumeimg">
-    </section>
   </main>
 
   <script>
@@ -1075,36 +1047,40 @@
 
     // Handle "Go to Projects" button click
     homeButtonLinks.forEach(button => {
-      button.addEventListener('click', event => {
-        event.preventDefault();
-        const targetId = button.getAttribute('data-target');
+  button.addEventListener('click', event => {
+    const targetId = button.getAttribute('data-target');
 
-        // Remove active class from all sections
-        sections.forEach(section => {
-          section.classList.remove('active');
-        });
+    if (targetId) { // Only prevent default if there is a data-target
+      event.preventDefault();
 
-        // Add active class to the target section
-        const targetSection = document.getElementById(targetId);
-        targetSection.classList.add('active');
-
-        // If it's the projects section, trigger bento box animation
-        if (targetId === 'projects') {
-          setTimeout(() => {
-            bentoBox.classList.add('active');
-          }, 500); // Delay to match section transition
-        } else {
-          bentoBox.classList.remove('active');
-        }
-
-        // If it's the home section, trigger home buttons animation
-        if (targetId === 'home') {
-          homeButtons.classList.add('active');
-        } else {
-          homeButtons.classList.remove('active');
-        }
+      // Remove active class from all sections
+      sections.forEach(section => {
+        section.classList.remove('active');
       });
-    });
+
+      // Add active class to the target section
+      const targetSection = document.getElementById(targetId);
+      targetSection.classList.add('active');
+
+      // If it's the projects section, trigger bento box animation
+      if (targetId === 'projects') {
+        setTimeout(() => {
+          bentoBox.classList.add('active');
+        }, 500);
+      } else {
+        bentoBox.classList.remove('active');
+      }
+
+      // If it's the home section, trigger home buttons animation
+      if (targetId === 'home') {
+        homeButtons.classList.add('active');
+      } else {
+        homeButtons.classList.remove('active');
+      }
+    }
+  });
+});
+
 
     // Trigger the initial animation on page load (for home section)
     window.addEventListener('load', () => {

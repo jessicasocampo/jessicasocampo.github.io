@@ -250,10 +250,6 @@ main {
   height: 1350px;
 }
 
-#resume {
-  height: 1500px;
-}
-
 footer {
   background-color: var(--nav-color); /* Light background */
   text-align: center;
@@ -459,18 +455,6 @@ footer {
   .connect-buttons {
       flex-direction: column;
   }
-}
-
-
-#resumeimg {
-  width: 800px;
-  margin-top: 30px;
-  border: solid 5px var(--nav-color);
-
-  /* Center Horizontally */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
   .modal {
