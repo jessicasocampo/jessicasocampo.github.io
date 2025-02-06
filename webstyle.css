@@ -475,7 +475,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: var(--bg-color);
+    color: var(--text-color);
     border: none;
     padding: 15px;
     cursor: pointer;
