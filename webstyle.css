@@ -305,6 +305,15 @@ footer {
   float: right;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers vertically if needed */
+  width: 800px; /* Keeps the container at a fixed width */
+  margin: 0 auto; /* Centers the container itself */
+  padding: 10px;
+}
+
 /* Monitor */
 @media (min-width: 1920px) and (max-width: 2560px) {
   .bento-item {
