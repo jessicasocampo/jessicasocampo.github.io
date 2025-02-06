@@ -344,7 +344,7 @@ footer {
   color: var(--visual-text);
   padding: 15px 25px;
   text-decoration: none;
-  border-radius: 40px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -368,7 +368,7 @@ footer {
   color: var(--text-color);
   padding: 25px 35px;
   text-decoration: none;
-  border-radius: 40px;
+  border-radius: 10px;
   font-size: 16px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   display: inline-flex;
@@ -418,7 +418,7 @@ footer {
   color: var(--text-color);
   padding: 25px 35px;
   text-decoration: none;
-  border-radius: 40px;
+  border-radius: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -552,7 +552,7 @@ footer {
   overflow: hidden;
   background-color: var(--bg-color);
   border: dotted 2px;
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 20px;
   
   /* Center Horizontally */
@@ -593,7 +593,7 @@ footer {
   color: var(--text-color);
   border-style: none;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: background-color 0.3s;
 
   /* Centering */
