@@ -495,7 +495,7 @@ footer {
   
   .close:hover,
   .close:focus {
-    color: black;
+    color: var(--hightlightbutton);
     text-decoration: none;
   }
   
