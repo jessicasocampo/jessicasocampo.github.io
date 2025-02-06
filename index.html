@@ -1279,6 +1279,14 @@ function activateFoldIn() {
     }
 }
 
+document.getElementById("openModalBtn").addEventListener("click", function() {
+    document.getElementById("myNav").classList.add("hidden");
+});
+
+document.getElementById("closeModalBtn").addEventListener("click", function() {
+    document.getElementById("myNav").classList.remove("hidden");
+});
+
 
 
 // Call the function when the page loads
