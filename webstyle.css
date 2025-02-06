@@ -220,8 +220,8 @@ nav p:hover {
 /* Main Content */
 main {
     margin-top: 100px;
-    margin-left: 50px;
-    margin-right: 0px;
+    margin-left: 70px;
+    margin-right: 70px;
     padding: 50px;
     flex: 1;
 }
