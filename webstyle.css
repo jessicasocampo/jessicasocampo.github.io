@@ -46,6 +46,10 @@ p {
     text-align: center;
 }
 
+b {
+  text-align: center; /* Centers the text */
+}
+
 ac {
   color: var(--pastel-color);
 }
@@ -460,7 +464,6 @@ footer {
   margin-right: auto;
 }
 
-
   .modal {
     display: none;
     position: fixed;
@@ -499,13 +502,18 @@ footer {
   /* Slide Show */
   .slideshow {
     position: relative;
-    max-width: auto;
-    width: 100%;
+    max-width: 100%; /* Ensures it doesn’t stretch too much */
+    width: 80%; /* Adjust as needed */
     overflow: hidden;
     border: none;
     border-radius: 20px;
     padding: 20px;
+
+    /* Centering Horizontally */
+    display: block;
+    margin: 0 auto;
 }
+
 
 .slideshow img {
     width: 100%;
