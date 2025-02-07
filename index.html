@@ -36,9 +36,6 @@
 
   <main>
     <section id="home" class="section active">
-      <div id="animatedText" class="foldIn"> 
-        <h3 class="greeting"></h3></div> 
-      <br>
       <div class="visual-buttons">
         <a class="button"><i class="fa-solid fa-pen-ruler"></i>&nbsp;DESIGN STUDENT</a>
         <a class="button"><i class="fa-solid fa-user-tie"></i>&nbsp;ENTREPRENEUR</a>
@@ -86,14 +83,13 @@
                 <htwo>/_____\     /_____\ </htwo>                <htwo>/_____\     /_____\</htwo>
               <htwo>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</htwo>
               </pre>
-              
+         
+              <div class="ps">
+                <p style="background-color: var(--bg-color); color: var(--text-color); 
+                border: 0px solid var(--outline-box); padding: 10px;">>WILD UX MONSTERS HAVE APPEARED!!</p>
+                  </div>
         <div id="game-container">
-          <div class="ps">
-          <p style="background-color: var(--bg-box); color: var(--outline-box); 
-          border: 5px solid var(--outline-box); padding: 10px;">>WILD UX MONSTERS HAVE APPEARED!!</p>
-            </div>
             <p><i class="fa-solid fa-star"></i> Fix the issues to <b>save the user experience.</b></p>
-
           <div id="scoreboard"> <p>
             Score: <span id="score">0</span>
           </p></div>
@@ -989,25 +985,8 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
     const bentoBox = document.querySelector('.bento-box');
-    const greetingElement = document.querySelector('.greeting');
     const homeButtons = document.querySelector('.home-buttons');
     const homeButtonLinks = document.querySelectorAll('.home-buttons .button');
-
-    // Function to update the greeting based on time of day
-    function updateGreeting() {
-      const currentHour = new Date().getHours();
-      let greetingMessage = "";
-
-      if (currentHour >= 5 && currentHour < 12) {
-        greetingMessage = "Good Morning, User.";
-      } else if (currentHour >= 12 && currentHour < 18) {
-        greetingMessage = "Good Afternoon, User.";
-      } else {
-        greetingMessage = "Good Evening, User.";
-      }
-
-      greetingElement.textContent = greetingMessage;
-    }
 
     // Function to handle section transitions
     navLinks.forEach(link => {

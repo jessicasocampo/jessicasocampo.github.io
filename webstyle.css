@@ -541,8 +541,8 @@ footer {
 /* Game */
 #game-container {
   position: relative;
-  width: 800px;
-  height: 300px;
+  width: 700px;
+  height: 200px;
   overflow: hidden;
   background-color: var(--bg-color);
   border: dotted 2px;
