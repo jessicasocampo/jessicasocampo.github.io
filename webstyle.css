@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
-    --bg-color: #202123; 
-    --nav-color: #202123; 
+    --bg-color: #19191a; 
+    --nav-color: #1d1d1f; 
     --text-color: #e5e5e5; 
     --text-color2: #cacaca;
     --link-text: #7fb9ff;
@@ -164,7 +164,7 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: center; /* Centers all items horizontally */
-  padding: 25px 10px 10px 10px;
+  padding: 20px 0px 20px 0px;
   position: fixed;
   height: 50px;
   gap: 30px;
@@ -176,11 +176,12 @@ nav h1 {
   padding: 10px;
   font-size: 0.9rem;
   color: var(--text-color);
-  text-align: center;
+  text-align: left;
+  align-items: left;
   font-weight: 400;
   background-color: var(--nav-color);
   border: none;
-  margin: 0; /* Remove unnecessary margin */
+  margin: 0; 
 }
 
 nav a {
@@ -346,7 +347,7 @@ footer {
 .visual-buttons .button {
   background-color: var(--visual-button);
   color: var(--visual-text);
-  padding: 15px 25px;
+  padding: 18px 28px;
   text-decoration: none;
   border-radius: 10px;
   font-size: 14px;
@@ -370,7 +371,7 @@ footer {
 .home-buttons .button {
   background-color: var(--button-bg-color);
   color: var(--text-color);
-  padding: 25px 35px;
+  padding: 28px 40px;
   text-decoration: none;
   border-radius: 10px;
   font-size: 16px;
@@ -420,7 +421,7 @@ footer {
 .connect-buttons .button {
   background-color: var(--button-bg-color);
   color: var(--text-color);
-  padding: 25px 35px;
+  padding: 28px 40px;
   text-decoration: none;
   border-radius: 10px;
   display: inline-flex;
