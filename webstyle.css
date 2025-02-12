@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
     --bg-color: #19191a; 
-    --nav-color: #1d1d1f; 
+    --nav-color: #19191a; 
     --text-color: #e5e5e5; 
     --text-color2: #cacaca;
     --link-text: #7fb9ff;
@@ -21,8 +21,8 @@
     --hr-color: #212121;
     --black: #141414;
     
-    --bg-box: #dcdcdc;
-    --outline-box: #18181a;
+    --bg-box: #252525;
+    --outline-box: #e5e5e5;
 
     --bg-bento: #2c2d2f;
 }
@@ -97,14 +97,17 @@ h1, h2, h3 {
 }
 
 h1 { 
-    font-size: 55px;
-    font-weight: 700;
-    padding: 30px;
+    font-size: 48px;
+    font-weight: 500;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: var(--outline-box);
     background-color: var(--bg-box); 
     border: 5px solid var(--outline-box);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
  }
 
 h2 { 
@@ -221,9 +224,9 @@ nav p:hover {
 
 /* Main Content */
 main {
-    margin-top: 150px;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-top: 130px;
+    margin-left: 100px;
+    margin-right: 100px;
     padding: 50px;
     flex: 1;
 }
@@ -253,9 +256,7 @@ main {
 }
 
 footer {
-  background-color: var(--nav-color); /* Light background */
   text-align: center;
-  margin: 50px;
   padding: 10px; 
 }
 
@@ -291,7 +292,7 @@ footer {
   border: none;
   border-radius: 5px;
   padding: 15px;
-  text-align: left;
+  text-align: center;
   font-size: 12px;
   width: 580px;
   height: auto; /* Let the height be determined by content */
@@ -320,7 +321,7 @@ footer {
     border: none;
     border-radius: 10px;
     padding: 15px;
-    text-align: left;
+    text-align: center;
     font-size: 12px;
     width: 780px;
     height: auto; /* Let the height be determined by content */
@@ -613,16 +614,15 @@ footer {
   }
 
   .typing-container {
-    display: inline-block;
+    display: block;
     white-space: nowrap; /* Ensures the text doesn't wrap */
     overflow: hidden;    /* Hides the text that is being "typed" */
-    width: 110ch; /* Adjust based on the length of your text */
-    animation: typing 3s steps(18) 1s forwards, blink 0.5s step-end infinite;
+    width: 90ch; /* Adjust based on the length of your text */
+    animation: typing 3s steps(16) 1s forwards, blink 0.5s step-end infinite;
 
     /* Centering Horizontally Without Affecting Typing */
     margin: 0 auto;
-    display: block;
-    text-align: left; /* Ensures typing starts from the left */
+    text-align: center; /* Ensures typing starts from the left */
 }
 
   
