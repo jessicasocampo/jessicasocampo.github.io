@@ -632,7 +632,7 @@ footer {
       width: 0;
     }
     to {
-      width: 110ch; /* Matches the width of the text */
+      width: 90ch; /* Matches the width of the text */
     }
   }
   
