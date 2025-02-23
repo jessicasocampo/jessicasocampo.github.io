@@ -225,10 +225,11 @@ nav p:hover {
 /* Main Content */
 main {
     margin-top: 130px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 180px;
+    margin-right: 180px;
     padding: 50px;
     flex: 1;
+    
 }
 
 /* Sections */
