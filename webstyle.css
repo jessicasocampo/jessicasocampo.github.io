@@ -40,7 +40,7 @@ body {
 
 p {
     color: var(--text-color2);
-    font-size: 16px;
+    font-size: 14px;
     margin: 10px;
     line-height: 2;
     text-align: center;
@@ -97,7 +97,7 @@ h1, h2, h3 {
 }
 
 h1 { 
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 500;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -105,13 +105,13 @@ h1 {
     padding-right: 10px;
     color: var(--outline-box);
     background-color: var(--bg-box); 
-    border: 5px solid var(--outline-box);
+    border: none;
     margin-top: 30px;
     margin-bottom: 30px;
  }
 
 h2 { 
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     padding: 5px;
     color: var(--text-color);
@@ -125,7 +125,7 @@ h3 {
  }
 
  h4 {
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
     padding-bottom: 10px;
     margin: 0px;
@@ -225,8 +225,8 @@ nav p:hover {
 /* Main Content */
 main {
     margin-top: 130px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
     padding: 50px;
     flex: 1;
 }
@@ -294,13 +294,13 @@ footer {
   padding: 15px;
   text-align: center;
   font-size: 12px;
-  width: 580px;
+  width: 500px;
   height: auto; /* Let the height be determined by content */
   transition: transform 0.3s ease;
 
 }
 .coversty {
-  width:580px;
+  width:500px;
   float: right;
 }
 
@@ -350,10 +350,10 @@ footer {
 .visual-buttons .button {
   background-color: var(--visual-button);
   color: var(--visual-text);
-  padding: 18px 28px;
+  padding: 15px 25px;
   text-decoration: none;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.3s ease;
   display: inline-flex;
@@ -374,10 +374,10 @@ footer {
 .home-buttons .button {
   background-color: var(--button-bg-color);
   color: var(--text-color);
-  padding: 28px 40px;
+  padding: 25px 35px;
   text-decoration: none;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 14px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   display: inline-flex;
   align-items: center;
@@ -424,13 +424,13 @@ footer {
 .connect-buttons .button {
   background-color: var(--button-bg-color);
   color: var(--text-color);
-  padding: 28px 40px;
+  padding: 25px 35px;
   text-decoration: none;
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 14px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -635,16 +635,13 @@ footer {
       width: 90ch; /* Matches the width of the text */
     }
   }
-  
+
   /* Cursor blinking effect */
-  @keyframes blink {
-    from {
-      border-right-color: var(--text-color);
-    }
-    to {
-      border-right-color: transparent;
-    }
+@keyframes blink {
+  50% {
+      border-right-color: white;
   }
+}
 
   pre {
     text-align: center;
