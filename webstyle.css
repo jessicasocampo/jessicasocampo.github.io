@@ -15,7 +15,7 @@
     --button-hover-color: #5f6469; 
 
     --visual-button: #252525;
-    --visual-button-outline: #bbc2cb;
+    --visual-button-outline: #323232;
     --visual-text: #e2e2e2; 
 
     --hr-color: #212121;
@@ -139,7 +139,7 @@ h2 {
     padding: 5px;
     color: var(--text-color2);
 
-    text-align: center;
+    text-align: left;
  }
 
 h3 { 
@@ -148,7 +148,8 @@ h3 {
     padding: 5px;
     color: var(--text-color);
 
-    text-align: center;
+    text-align: left;
+    line-height: 2;
  }
 
  h4 {
@@ -442,8 +443,8 @@ footer {
 .visual-buttons {
   margin-top: 20px;
   display: flex;
-  justify-content: center; /* Centers buttons horizontally */
-  align-items: center; /* Ensures they are aligned properly */
+  justify-content: left; /* Centers buttons horizontally */
+  align-items: left; /* Ensures they are aligned properly */
   gap: 20px;
 }
 
@@ -509,39 +510,6 @@ footer {
 .home-buttons .button i {
     margin-left: 10px;
     font-size: 18px;
-}
-
-/* Connect Buttons Styling */
-.connect-buttons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center; /* Centers buttons horizontally */
-  align-items: center; /* Aligns them vertically in the container */
-  gap: 20px;
-}
-
-/* Connect Section */
-.connect-buttons .button {
-  background-color: var(--button-bg-color);
-  color: var(--text-color);
-  padding: 25px 35px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.connect-buttons .button:hover {
-  background-color: var(--button-hover-color);
-  transform: translateY(-2px);
-}
-
-.connect-buttons .button i {
-  margin-left: 8px;
-  font-size: 18px;
 }
 
 /* Optional: Center vertically in the viewport */
