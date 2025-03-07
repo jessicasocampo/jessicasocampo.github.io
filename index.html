@@ -18,20 +18,20 @@
 </head>
 <body>
 
+  <div class="page-wrapper">
   <nav>
-    <h1>  >JO.</h1>
-    <a href="#home" class="nav-link" data-target="home">
-      <i class="fas fa-home nav-icon"></i> 
-      <p>HOME</p></a>
-    <a href="#projects" class="nav-link" data-target="projects">
-      <i class="fas fa-project-diagram nav-icon"></i>
-      <p>PROJECTS</p></a>
-    <a href="#about" class="nav-link" data-target="about">
-      <i class="fas fa-user nav-icon"></i> 
-      <p>ABOUT</p></a>
-    <a href="#connect" class="nav-link" data-target="connect">
-      <i class="fas fa-envelope nav-icon"></i> 
-      <p>CONNECT</p></a>
+    <h1> >JO.</h1>
+    <div class="nav-links">
+      <a href="#home" class="nav-link" data-target="home">
+        <p>HOME</p>
+      </a>
+      <a href="#about" class="nav-link" data-target="about">
+        <p>ABOUT</p>
+      </a>
+      <a href="#footer" class="nav-link" data-target="home">
+        <p>CONNECT</p>
+      </a>
+    </div>
   </nav>
 
   <main>
@@ -54,8 +54,8 @@
          <p><i class="fa-solid fa-star"></i>
           Previously <i>@ Maple Leaf Foods, Sushi Kui, PCI Glass,</i> etc.</p>
           <div class="home-buttons">
-            <a href="#projects" class="button" data-target="projects" style="background: var(--hightlightbutton)">
-                <b>See Projects</b>
+            <a href="#projects" class="button" data-target="about" style="background: var(--hightlightbutton)">
+                <b>Learn More</b>
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
           
@@ -69,53 +69,8 @@
             <hr>
             <br>
             <br>
-              <div class="ps">
-                <p style="background-color: var(--bg-color); color: var(--text-color); 
-                 ">>WILD UX MONSTERS HAVE APPEARED!!</p>
-                  </div>
-        <div id="game-container">
-            <p><i class="fa-solid fa-star"></i> Fix the issues to <b>save the user experience.</b></p>
-          <div id="scoreboard"> <p>
-            Score: <span id="score">0</span>
-          </p></div>
-          <br>
-          <button id="start-btn">
-           <b>Start Game</b>
-           <i class="fa-solid fa-play"></i>
-          </button>
-        </div>
-        <br>
-        <pre>
-          <htwo>(◣_◢)</htwo>                               <htwo>(ಠ_ಠ)</htwo>
-                      <htwo>||| </htwo>                                 <htwo>|||    < Grrrah!</htwo>
-            <htwo>/   /‾‾‾‾‾‾\   \ </htwo>                   <htwo>/‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\</htwo>
-          <htwo>/   /   O O    \   \ </htwo>                <htwo>/   O   O   O   O   \</htwo>
-          <htwo>|   |   | ★ |    |   | </htwo>              <htwo>|      _____        |</htwo>
-          <htwo>|   |   |_|_|    |   | </htwo>              <htwo>|     |  ★  |       |</htwo>
-          <htwo>|    \__________/    | </htwo>              <htwo>\     \_____/      /</htwo>
-          <htwo>\                   / </htwo>                <htwo>\               /</htwo>
-            <htwo>\_________________/ </htwo>                  <htwo>\_____________/</htwo>
-              <htwo>//       \\ </htwo>                          <htwo>//       \\</htwo>
-            <htwo> //         \\ </htwo>                        <htwo>//         \\ </htwo>
-            <htwo>||__     __||__ </htwo>                  <htwo>__||__     __||__</htwo>
-        <htwo>/_____\     /_____\ </htwo>                <htwo>/_____\     /_____\</htwo>
-      <htwo>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</htwo>
-      </pre>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>What Can I Do?</h2>
-      <br>
-      <div class="typing-container">
-        <div class="ps">
-        <h1>
-        <span class="typed-text">
-        >EXPLORE <i>PROJECTS</i>.
-        </span>
-        </h1>
-        </div>
-      </div>
-
+            <h2>Projects</h2>
+            <br>
       <div class="visual-buttons">
         <a class="button">#APPLICATIONS</a>
         <a class="button">#RESEARCH</a>
@@ -980,328 +935,184 @@
              <br>
              <br>
     </section>
-
-    <section id="connect" class="section">
-        <h2>Contact Information</h2>
-        <br>
-        <div class="typing-container">
-          <div class="ps">
-          <h1>
-            <span class="typed-text">>LET'S <i>CONNECT :)</i></span>
-          </h1>
-          </div>
-        </div>
-
-        <br>
-        <p><i class="fa-solid fa-star"></i> Let's get in touch! You can reach me through 
-          <b>email or social media.</b></p>
-        <div class="connect-buttons">
-          <a href="mailto:jsocampo@uwaterloo.ca" class="button" style="background-color: var(--hightlightbutton);">
-            <b>Email Me </b> <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/jessica--ocampo/" class="button" target="_blank">
-            <b>View LinkedIn </b><i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <br>
-        <br>
-        
-  <footer>
-    <p>© 2025 Jessica Ocampo. All rights reserved. <i class="fa-solid fa-rocket"></i> Coded & Designed By Jessica Ocampo.</p>
-  </footer>
-      </section>
   </main>
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <a href="mailto:jsocampo@uwaterloo.ca" class="footer-button">Let's Chat <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> jsocampo@uwaterloo.ca</li>
+          <li><i class="fas fa-link"></i> <a href="https://www.linkedin.com/in/jessica--ocampo/" target="_blank">LinkedIn</a></li>
+          <li><i class="fas fa-location-dot"></i> Waterloo, Ontario, CA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed with heart, leveled up by curiosity.</p>
+    </div>
+  </footer>
+  </div>
 
+  <div class="custom-cursor"></div>
   <script>
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
     const bentoBox = document.querySelector('.bento-box');
     const homeButtons = document.querySelector('.home-buttons');
     const homeButtonLinks = document.querySelectorAll('.home-buttons .button');
-
+    
     // Function to handle section transitions
     navLinks.forEach(link => {
-      link.addEventListener('click', event => {
-        event.preventDefault();
-
-        const targetId = link.getAttribute('data-target');
-
-        // Remove active class and reset animation
-        sections.forEach(section => {
-          section.classList.remove('active');
-        });
-
-        // Add active class to the target section and trigger animation
-        const targetSection = document.getElementById(targetId);
-        targetSection.classList.add('active');
-
-        // If it's the projects section, trigger bento box animation
-        if (targetId === 'projects') {
-          setTimeout(() => {
-            bentoBox.classList.add('active');
-          }, 500); // Delay to match section transition
-        } else {
-          bentoBox.classList.remove('active');
-        }
-
-        // If it's the home section, trigger home buttons animation
-        if (targetId === 'home') {
-          homeButtons.classList.add('active');
-        } else {
-          homeButtons.classList.remove('active');
-        }
-      });
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const targetId = link.getAttribute('data-target');
+    sections.forEach(section => {
+      section.classList.remove('active');
     });
+    const targetSection = document.getElementById(targetId);
+    targetSection.classList.add('active');
+
+    if (link.getAttribute('href') === '#footer') {
+      setTimeout(() => {
+        document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+      }, 100); // wait for the section to open
+    }
+
+    if (targetId === 'home') {
+      homeButtons.classList.add('active');
+      setTimeout(() => {
+        bentoBox.classList.add('active');
+      }, 500);
+    } else {
+      homeButtons.classList.remove('active');
+      bentoBox.classList.remove('active');
+    }
+  });
+});
 
     // Handle "Go to Projects" button click
     homeButtonLinks.forEach(button => {
-  button.addEventListener('click', event => {
-    const targetId = button.getAttribute('data-target');
-
-    if (targetId) { // Only prevent default if there is a data-target
-      event.preventDefault();
-
-      // Remove active class from all sections
-      sections.forEach(section => {
-        section.classList.remove('active');
+      button.addEventListener('click', event => {
+        const targetId = button.getAttribute('data-target');
+    
+        if (targetId) {
+          event.preventDefault();
+    
+          sections.forEach(section => {
+            section.classList.remove('active');
+          });
+    
+          const targetSection = document.getElementById(targetId);
+          targetSection.classList.add('active');
+    
+          if (targetId === 'home') {
+            homeButtons.classList.add('active');
+            setTimeout(() => {
+              bentoBox.classList.add('active');
+            }, 500);
+          } else {
+            homeButtons.classList.remove('active');
+            bentoBox.classList.remove('active');
+          }
+        }
       });
-
-      // Add active class to the target section
-      const targetSection = document.getElementById(targetId);
-      targetSection.classList.add('active');
-
-      // If it's the projects section, trigger bento box animation
-      if (targetId === 'projects') {
-        setTimeout(() => {
-          bentoBox.classList.add('active');
-        }, 500);
-      } else {
-        bentoBox.classList.remove('active');
-      }
-
-      // If it's the home section, trigger home buttons animation
-      if (targetId === 'home') {
-        homeButtons.classList.add('active');
-      } else {
-        homeButtons.classList.remove('active');
-      }
-    }
-  });
-});
-
-
+    });
+    
     // Trigger the initial animation on page load (for home section)
     window.addEventListener('load', () => {
-      updateGreeting();  // Set the greeting based on the time
       document.getElementById('home').classList.add('active');
-      homeButtons.classList.add('active'); // Trigger animation for buttons on page load
+      homeButtons.classList.add('active');
+      bentoBox.classList.add('active'); // Show bento-box on load
     });
-
-// Modal Functionality
-const bentoItems = document.querySelectorAll('.bento-item');
-const modals = document.querySelectorAll('.modal');
-const closeButtons = document.querySelectorAll('.close');
-
-// Open modal on bento-item click
-bentoItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const modalId = item.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.style.display = 'block';
-    }
-  });
-});
-
-// Close modal on close button click
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal');
-    modal.style.display = 'none';
-  });
-});
-
-// Close modal on clicking outside the modal content
-window.addEventListener('click', (event) => {
-  modals.forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
-
-//Slide Show
-// Function to handle each slideshow independently
-document.querySelectorAll('.slideshow').forEach(slideshow => {
-    const slides = slideshow.querySelectorAll("img");
-    const prev = slideshow.querySelector(".arrow.left");
-    const next = slideshow.querySelector(".arrow.right");
-    let currentIndex = 0;
-
-    function showSlide(index) {
+    
+    // Modal Functionality
+    const bentoItems = document.querySelectorAll('.bento-item');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close');
+    
+    bentoItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const modalId = item.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'block';
+        }
+      });
+    });
+    
+    closeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        modal.style.display = 'none';
+      });
+    });
+    
+    window.addEventListener('click', (event) => {
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+    
+    // Slideshow
+    document.querySelectorAll('.slideshow').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll("img");
+      const prev = slideshow.querySelector(".arrow.left");
+      const next = slideshow.querySelector(".arrow.right");
+      let currentIndex = 0;
+    
+      function showSlide(index) {
         slides[currentIndex].classList.remove("active");
         currentIndex = (index + slides.length) % slides.length;
         slides[currentIndex].classList.add("active");
-    }
-
-    prev.addEventListener("click", () => showSlide(currentIndex - 1));
-    next.addEventListener("click", () => showSlide(currentIndex + 1));
-});
-
-//Game
-const gameContainer = document.getElementById('game-container');
-    const scoreDisplay = document.getElementById('score');
-    const startBtn = document.getElementById('start-btn');
-
-    let score = 0;
-    let gameInterval;
-    let gameDuration = 12; // seconds
-    let isGameRunning = false;
-
-    function getRandomPosition() {
-      const x = Math.random() * (gameContainer.offsetWidth - 50);
-      const y = Math.random() * (gameContainer.offsetHeight - 50);
-      return { x, y };
-    }
-
-    function createShape() {
-      const shape = document.createElement('div');
-      shape.classList.add('shape');
-
-      const { x, y } = getRandomPosition();
-      shape.style.left = `${x}px`;
-      shape.style.top = `${y}px`;
-
-      shape.addEventListener('click', () => {
-        if (isGameRunning) {
-          score++;
-          scoreDisplay.textContent = score;
-          shape.remove();
-        }
-      });
-
-      gameContainer.appendChild(shape);
-
-      setTimeout(() => {
-        if (shape.parentElement) shape.remove();
-      }, 2000); // Remove shape after 2 seconds
-    }
-
-    function startGame() {
-      if (isGameRunning) return;
-
-      score = 0;
-      scoreDisplay.textContent = score;
-      isGameRunning = true;
-      startBtn.disabled = true;
-
-      gameInterval = setInterval(createShape, 800); // Spawn shapes every 800ms
-
-      setTimeout(() => {
-        clearInterval(gameInterval);
-        isGameRunning = false;
-        startBtn.disabled = false;
-        alert(`Game Over! Your score is ${score}`);
-      }, gameDuration * 1000);
-    }
-
-    startBtn.addEventListener('click', startGame);
-
-    //Additions
-    const heuristics = [
-      'Unclear error message',
-      'Inconsistent button styles',
-      'No feedback on action',
-      'Poor readability',
-      'Low contrast',
-      'Hard to read text',
-      'Crowded layout',
-      'Overloaded forms',
-      'Lack of undo/redo',
-      'Confusing terminology',
-      'Missing accessibility features'
-];
-
-function createShape() {
-  const shape = document.createElement('div');
-  shape.classList.add('shape');
-
-  shape.textContent = heuristics[Math.floor(Math.random() * heuristics.length)];
-  shape.style.fontSize = '15px';
-
-  const { x, y } = getRandomPosition();
-  shape.style.left = `${x}px`;
-  shape.style.top = `${y}px`;
-
-  shape.addEventListener('click', () => {
-    if (isGameRunning) {
-      score++;
-      scoreDisplay.textContent = score;
-      shape.remove();
-    }
-  });
-
-  gameContainer.appendChild(shape);
-
-  setTimeout(() => {
-    if (shape.parentElement) shape.remove();
-  }, 2000);
-}
-
-// Text rotates on Home Screen
-// Array of phrases to rotate between
-const phrases = [
+      }
+    
+      prev.addEventListener("click", () => showSlide(currentIndex - 1));
+      next.addEventListener("click", () => showSlide(currentIndex + 1));
+    });
+    
+    // Rotating text
+    const phrases = [
       "A pro in design, research, & analytics.",
       "Proficient in HTML, CSS, & JavaScript.",
       "Killer at Figma, Miro, & Adobe Softwares."
     ];
-
-    // Reference to the HTML element
+    
     const textElement = document.getElementById("rotatingText");
-
-    // Current phrase index
     let index = 0;
-
-    // Function to rotate text
+    
     function rotateText() {
-      // Increment the index and wrap around if needed
       index = (index + 1) % phrases.length;
-
-      // Update the text content
       textElement.textContent = phrases[index];
     }
-
-    // Set an interval to rotate text every 6 seconds (6000 milliseconds)
-setInterval(rotateText, 6000);
-
-// Function to activate the fold-in animation for the animated text
-function activateFoldIn() {
-    const textElement = document.getElementById("animatedText");
-
-    if (textElement) {
-        // Reset the animation (in case it needs to be retriggered)
+    
+    setInterval(rotateText, 6000);
+    
+    function activateFoldIn() {
+      const textElement = document.getElementById("animatedText");
+    
+      if (textElement) {
         textElement.classList.remove("active");
-
-        // Add the "active" class after a small delay to trigger the animation
         setTimeout(() => {
-            textElement.classList.add("active");
-        }, 100); // Delay to ensure proper rendering before animation starts
+          textElement.classList.add("active");
+        }, 100);
+      }
     }
-}
-
-document.getElementById("openModalBtn").addEventListener("click", function() {
-    document.getElementById("myNav").classList.add("hidden");
-});
-
-document.getElementById("closeModalBtn").addEventListener("click", function() {
-    document.getElementById("myNav").classList.remove("hidden");
-});
-
-
-
-// Call the function when the page loads
-window.addEventListener("load", activateFoldIn);
-
-  </script>
+    
+    document.getElementById("openModalBtn").addEventListener("click", function() {
+      document.getElementById("myNav").classList.add("hidden");
+    });
+    
+    document.getElementById("closeModalBtn").addEventListener("click", function() {
+      document.getElementById("myNav").classList.remove("hidden");
+    });
+    
+    window.addEventListener("load", activateFoldIn);
+    </script>
 </body>
 </html>

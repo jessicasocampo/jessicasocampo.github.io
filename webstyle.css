@@ -28,6 +28,26 @@
 }
 
 /* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Roboto Mono', monospace;
@@ -63,7 +83,9 @@ htwo {
 }
 
 hr {
-    color: var(--hr-color);
+    border: none;
+    height: 2px;
+    background-color: #333; /* or any color you want */
 }
 
 .aboutlinks {
@@ -97,10 +119,10 @@ h1, h2, h3 {
 }
 
 h1 { 
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 500;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
     color: var(--outline-box);
@@ -137,6 +159,7 @@ h3 {
     font-family: "Press Start 2P", serif;
     font-weight: 400;
     font-style: normal;
+    
   }
 
  .float-right-image {
@@ -161,34 +184,34 @@ h3 {
 
 /* Navigation Bar */
 nav {
-  width: 100%;
+  width: 98%;
   background-color: var(--nav-color);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; /* Centers all items horizontally */
-  padding: 20px 0px 20px 0px;
+  justify-content: space-between; /* Left and right alignment */
+  padding: 10px 0px 0px 0px; /* Added horizontal padding */
   position: fixed;
   height: 50px;
-  gap: 30px;
   z-index: 9999;
 }
 
 nav h1 {
   font-family: "Press Start 2P", serif;
-  padding: 10px;
   font-size: 0.9rem;
   color: var(--text-color);
-  text-align: left;
-  align-items: left;
   font-weight: 400;
   background-color: var(--nav-color);
-  border: none;
-  margin: 0;
+  margin-left: 10px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 nav a {
-  margin-top: 5px;
   text-decoration: none;
   color: var(--text-color);
   padding: 10px;
@@ -201,35 +224,23 @@ nav a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a i {
-  margin-bottom: 2px;
-}
-
 nav p {
   font-size: 12px;
   margin: 0;
   padding: 2px;
 }
 
-nav a:hover {
-  background-color: var(--hover-color);
-  color: var(--bg-color);
-}
-
 nav p:hover {
   color: var(--hightlightbutton);
 }
 
-
-
 /* Main Content */
 main {
-    margin-top: 130px;
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-top: 80px;
+    margin-left: 300px;
+    margin-right: 300px;
     padding: 50px;
     flex: 1;
-    
 }
 
 /* Sections */
@@ -241,15 +252,11 @@ main {
 }
 
 #home {
-  height: 1400px;
-}
-
-#projects {
-  height: 1280px;
+  height: 2900px;
 }
 
 #about {
-  height: 1400px;
+  height: 1500px;
 }
 
 #connect {
@@ -257,8 +264,81 @@ main {
 }
 
 footer {
+  clear: both;
+  position: relative;
+  background-color: #181818;
+  color: #e0e0e0;
+  padding: 40px 80px;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: auto;
+  margin-left: 300px;
+ margin-right: 300px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--hightlightbutton);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: var(--hover-color);
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 10px; 
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #333;
+  font-size: 0.85rem;
 }
 
 .section.active {
@@ -270,14 +350,11 @@ footer {
 /* Bento Box */
 .bento-box {
   display: grid;
-  grid-template-areas:
-      "item1 item2"
-      "item3 item4";
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr; /* One column only */
+  grid-auto-rows: auto;
   margin-top: 30px;
   gap: 30px;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -295,22 +372,23 @@ footer {
   padding: 15px;
   text-align: center;
   font-size: 12px;
-  width: 500px;
+  width: 700px;
   height: auto; /* Let the height be determined by content */
   transition: transform 0.3s ease;
-
+  margin: 0 auto; /* Center each bento item */
 }
+
 .coversty {
-  width:500px;
+  width: 700px;
   float: right;
 }
 
 .image-container {
   display: flex;
   justify-content: center; /* Centers the image horizontally */
-  align-items: center; /* Centers vertically if needed */
-  width: 800px; /* Keeps the container at a fixed width */
-  margin: 0 auto; /* Centers the container itself */
+  align-items: center;
+  width: 800px;
+  margin: 0 auto;
   padding: 10px;
 }
 
@@ -324,13 +402,14 @@ footer {
     padding: 15px;
     text-align: center;
     font-size: 12px;
-    width: 780px;
-    height: auto; /* Let the height be determined by content */
+    width: 800px;
+    height: auto;
     transition: transform 0.3s ease;
+    margin: 0 auto;
   }
 
   .coversty {
-    width: 780px;
+    width: 800px;
     float: right;
   }
 }
@@ -338,6 +417,7 @@ footer {
 .bento-item:hover {
   transform: scale(1.02);
 }
+
 
 /* Visual Buttons Styling */
 .visual-buttons {
@@ -542,69 +622,6 @@ footer {
     right: 20px;
 }
 
-/* Game */
-#game-container {
-  position: relative;
-  width: 700px;
-  height: 200px;
-  overflow: hidden;
-  background-color: var(--bg-color);
-  border: dotted 2px;
-  border-radius: 10px;
-  padding: 20px;
-  
-  /* Center Horizontally */
-  margin: 0 auto;
-  display: block; /* Ensures it's centered as a block element */
-}
-
-.shape {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background-color: var(--hightlighttext);
-  font-size: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  animation: fadeInOut 2s linear forwards;
-}
-
-.shape:hover {
-  scale: 105%;
-}
-
-@keyframes fadeInOut {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-#scoreboard {
-  font-size: 16px;
-}
-
-#start-btn {
-  padding: 20px 30px;
-  font-size: 14px;
-  background-color: var(--button-bg-color);
-  color: var(--text-color);
-  border-style: none;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: background-color 0.3s;
-
-  /* Centering */
-  display: block;
-  margin: 20px auto; /* Centers horizontally */
-  text-align: center;
-}
-
-
-#start-btn:hover {
-  background-color: var(--hightlightbutton);
-}
-
 /* Text that rotates out */
 #rotatingText {
     font-size: 28px;
@@ -618,7 +635,7 @@ footer {
     display: block;
     white-space: nowrap; /* Ensures the text doesn't wrap */
     overflow: hidden;    /* Hides the text that is being "typed" */
-    width: 85ch; /* Adjust based on the length of your text */
+    width: 80ch; /* Adjust based on the length of your text */
     animation: typing 3s steps(16) 1s forwards, blink 0.5s step-end infinite;
 
     /* Centering Horizontally Without Affecting Typing */
@@ -633,7 +650,7 @@ footer {
       width: 0;
     }
     to {
-      width: 85ch; /* Matches the width of the text */
+      width: 80ch; /* Matches the width of the text */
     }
   }
 
