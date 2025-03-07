@@ -215,7 +215,7 @@ nav h1 {
   color: var(--text-color);
   font-weight: 400;
   background-color: var(--nav-color);
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 nav .nav-links {
