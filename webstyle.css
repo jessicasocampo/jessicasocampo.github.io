@@ -137,7 +137,7 @@ h2 {
     font-size: 28px;
     font-weight: 500;
     padding: 5px;
-    color: var(--text-color);
+    color: var(--text-color2);
 
     text-align: center;
  }
@@ -158,6 +158,13 @@ h3 {
     margin: 0px;
     font-weight: 400;
     color: var(--text-color2);
+ }
+
+ h5 {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-left: 10px;
+    text-align: left;
  }
 
  .ps {
@@ -257,7 +264,7 @@ main {
 }
 
 #home {
-  height: 2900px;
+  height: 3350px;
 }
 
 #about {
@@ -381,6 +388,13 @@ footer {
   height: auto; /* Let the height be determined by content */
   transition: transform 0.3s ease;
   margin: 0 auto; /* Center each bento item */
+}
+
+
+.bento-box h5, p {
+  padding: 0px;
+  margin: 0px;
+  line-height: 2;
 }
 
 .coversty {
