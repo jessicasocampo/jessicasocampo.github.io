@@ -1,30 +1,29 @@
 /* Root Variables */
 :root {
-    --bg-color: #19191a; 
-    --nav-color: #19191a; 
-    --text-color: #e5e5e5; 
-    --text-color2: #cacaca;
-    --link-text: #7fb9ff;
+    --bg-color: #e6e6ee; 
+    --nav-color: #e6e6ee; 
+    --text-color: #212123; 
+    --text-color2: #2f2f32;
+    --link-text: #5f7cb6;
 
     --highlight-color: #c9b7c1; 
-    --hightlighttext: #324267;
-    --hightlightbutton: #1a8fce;
-    --hover-color: #303133; 
+    --hightlighttext: #b3c6f2;
+    --hightlightbutton: #8fadea;
+    --hover-color: #9cb8ef; 
 
-    --button-bg-color: #4c5054; 
-    --button-hover-color: #5f6469; 
+    --button-bg-color: #9c9da0; 
+    --button-hover-color: #afb0b4; 
 
-    --visual-button: #252525;
-    --visual-button-outline: #323232;
-    --visual-text: #e2e2e2; 
+    --visual-button: #e6e6ee;
+    --visual-button-outline: #2f2f32;
+    --visual-text: #2f2f32; 
 
     --hr-color: #212121;
     --black: #141414;
     
-    --bg-box: #252525;
-    --outline-box: #e5e5e5;
-
-    --bg-bento: #2c2d2f;
+    --bg-box: #d0d0d6;
+    --outline-box: #212123;
+    --bg-bento: #d0d0d6;
 }
 
 /* Global Styles */
@@ -85,7 +84,7 @@ htwo {
 hr {
     border: none;
     height: 2px;
-    background-color: #333; /* or any color you want */
+    background-color: #b0b0b0; /* or any color you want */
 }
 
 .aboutlinks {
@@ -127,8 +126,8 @@ h1 {
     color: var(--outline-box);
     background-color: var(--bg-box); 
     border: none;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     text-align: center;
  }
@@ -279,13 +278,13 @@ main {
 footer {
   clear: both;
   position: relative;
-  background-color: #181818;
-  color: #e0e0e0;
+  background-color: none;
   padding: 40px 80px;
   font-family: 'Roboto Mono', monospace;
   margin-top: auto;
   margin-left: 300px;
  margin-right: 300px;
+ color: var(--text-color2);
 }
 
 .footer-container {
@@ -322,7 +321,7 @@ footer {
 }
 
 .footer-section a {
-  color: #e0e0e0;
+  color: var(--text-color2);
   text-decoration: none;
 }
 
@@ -335,11 +334,11 @@ footer {
   margin-top: 15px;
   padding: 10px 20px;
   background-color: var(--hightlightbutton);
-  color: #fff;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  color: var(--text-color2);
 }
 
 .footer-button:hover {
@@ -350,7 +349,7 @@ footer {
   text-align: center;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 2px solid #333;
+  border-top: 2px solid #b0b0b0;
   font-size: 0.85rem;
 }
 
