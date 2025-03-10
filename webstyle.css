@@ -4,6 +4,7 @@
     --nav-color: #e6e6ee; 
     --text-color: #212123; 
     --text-color2: #535355;
+    --text-color3: #77777a;
     --link-text: #5f7cb6;
 
     --highlight-color: #c9b7c1; 
@@ -22,7 +23,7 @@
     --black: #141414;
     
     --bg-box: #d6d6db;
-    --outline-box: #212123;
+    --outline-box: #15151b;
     --bg-bento: #d0d0d6;
 }
 
@@ -67,6 +68,15 @@ p {
 
 b {
   text-align: center; /* Centers the text */
+  color: var(--text-color);
+}
+
+cpt {
+  font-size: 12px;
+  margin: 10px;
+  line-height: 2;
+  text-align: center;
+  color: var(--text-color3);
 }
 
 ac {
@@ -137,7 +147,7 @@ h2 {
     font-size: 28px;
     font-weight: 500;
     padding: 5px;
-    color: var(--text-color2);
+    color: var(--text-color);
 
     text-align: left;
  }
@@ -265,7 +275,7 @@ main {
 }
 
 #home {
-  height: 3450px;
+  height: 3850px;
 }
 
 #about {
@@ -443,7 +453,7 @@ footer {
 
 /* Visual Buttons Styling */
 .visual-buttons {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: left; /* Centers buttons horizontally */
   align-items: left; /* Ensures they are aligned properly */
