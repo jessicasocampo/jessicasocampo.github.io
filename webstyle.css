@@ -268,7 +268,7 @@ main {
 }
 
 #about {
-  height: 1500px;
+  height: 1600px;
 }
 
 #connect {
@@ -425,6 +425,7 @@ footer {
     height: auto;
     transition: transform 0.3s ease;
     margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
   }
 
   .coversty {
@@ -434,7 +435,8 @@ footer {
 }
 
 .bento-item:hover {
-  transform: scale(1.02);
+  transform: rotate(2deg) scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -672,4 +674,46 @@ footer {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.about-container {
+  max-width: 900px; /* Adjust as needed */
+  margin: auto;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Space between image and text */
+}
+
+.about-img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px; /* Optional: Adds rounded corners */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-text {
+  flex: 1; /* Makes the text take up remaining space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .about-img {
+      width: 200px;
+  }
+}
+
+.about-img:hover {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
