@@ -3,7 +3,7 @@
     --bg-color: #e6e6ee; 
     --nav-color: #e6e6ee; 
     --text-color: #212123; 
-    --text-color2: #2f2f32;
+    --text-color2: #535355;
     --link-text: #5f7cb6;
 
     --highlight-color: #c9b7c1; 
@@ -129,6 +129,7 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 
+    border-radius: 5px;
     text-align: center;
  }
 
@@ -338,7 +339,7 @@ footer {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  color: var(--text-color2);
+  color: var(--text-color);
 }
 
 .footer-button:hover {
