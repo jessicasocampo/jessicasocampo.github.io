@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
-    --bg-color: #e6e6ee; 
-    --nav-color: #e6e6ee; 
+    --bg-color: #F9F9F9; 
+    --nav-color: #F9F9F9; 
     --text-color: #212123; 
     --text-color2: #535355;
     --text-color3: #77777a;
@@ -12,19 +12,19 @@
     --hightlightbutton: #8fadea;
     --hover-color: #9cb8ef; 
 
-    --button-bg-color: #b1b2b5; 
-    --button-hover-color: #bdbec3; 
+    --button-bg-color: #c5c5c5; 
+    --button-hover-color: rgb(209, 209, 209); 
 
-    --visual-button: #e6e6ee;
+    --visual-button: #F9F9F9;
     --visual-button-outline: #2f2f32;
     --visual-text: #2f2f32; 
 
     --hr-color: #212121;
     --black: #141414;
     
-    --bg-box: #d6d6db;
+    --bg-box: #e9e9e9;
     --outline-box: #15151b;
-    --bg-bento: #d0d0d6;
+    --bg-bento: #212123;
 }
 
 /* Global Styles */
