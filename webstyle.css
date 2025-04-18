@@ -1,30 +1,32 @@
 /* Root Variables */
 :root {
-    --bg-color: #F9F9F9; 
-    --nav-color: #F9F9F9; 
-    --text-color: #212123; 
-    --text-color2: #535355;
-    --text-color3: #77777a;
-    --link-text: #5f7cb6;
+  --bg-color: #1b1b1f;           /* dark charcoal background */
+  --nav-color: #222228;          /* slightly lighter for nav */
+  --nav-color2: rgba(60, 60, 70, 0.6); /* subtle grey with softness */
 
-    --highlight-color: #c9b7c1; 
-    --hightlighttext: #b3c6f2;
-    --hightlightbutton: #8fadea;
-    --hover-color: #9cb8ef; 
+  --text-color: #f0f0f0;         /* main text – soft white */
+  --text-color2: #b0b0b8;        /* secondary – light grey-lavender */
+  --text-color3: #888893;        /* tertiary – muted violet-grey */
+  --link-text: #a8c3f5;          /* soft powder blue */
 
-    --button-bg-color: #c5c5c5; 
-    --button-hover-color: rgb(209, 209, 209); 
+  --highlight-color: #cbb6c8;    /* muted rose-lavender */
+  --hightlighttext: #404656;     /* soft periwinkle highlight */
+  --hightlightbutton: #7e9ad8;   /* cozy lavender-blue button */
+  --hover-color: #90a8dd;        /* gentle hover periwinkle */
 
-    --visual-button: #F9F9F9;
-    --visual-button-outline: #2f2f32;
-    --visual-text: #2f2f32; 
+  --button-bg-color: #2e2e35;    /* soft dark grey */
+  --button-hover-color: #40404a; /* hover = slightly lighter grey */
 
-    --hr-color: #212121;
-    --black: #141414;
-    
-    --bg-box: #e9e9e9;
-    --outline-box: #15151b;
-    --bg-bento: #212123;
+  --visual-button: #26262c;
+  --visual-button-outline: linear-gradient(to right, #aebce7, #cbb6c8);
+  --visual-text: #f2f2f2;
+
+  --hr-color: #3a3a40;
+  --black: #f0f0f0;              /* reversed for dark mode contrast */
+
+  --bg-box: #23232a;             /* for cards, content blocks */
+  --outline-box: #e0e0e6;        /* subtle off-white for contrast */
+  --bg-bento: #2a2a31;           /* slightly lighter than base bg */
 }
 
 /* Global Styles */
@@ -210,13 +212,13 @@ h3 {
 
 /* Navigation Bar */
 nav {
-  width: 98%;
-  background-color: var(--nav-color);
+  width: 100%;
+  background: linear-gradient(to bottom, var(--nav-color2), var(--bg-color));
   display: flex;
   flex-direction: row;
   align-items: center; /* vertically centers items like h1 and links */
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px;
   position: fixed;
   z-index: 9999;
   height: 50px;
@@ -228,8 +230,8 @@ nav h1 {
   font-size: 0.9rem;
   color: var(--text-color);
   font-weight: 400;
-  background-color: var(--nav-color);
   margin-left: 20px;
+  background: transparent; /* or just remove the background entirely */
  
 }
 
@@ -237,6 +239,7 @@ nav .nav-links {
   display: flex;
   gap: 5px;
   align-items: center;
+  padding-right: 20px; 
 }
 
 nav a {
@@ -337,8 +340,11 @@ footer {
   padding: 0;
 }
 
-.footer-section a {
+.footer-section ul a {
   color: var(--text-color2);
+}
+
+.footer-section a {
   text-decoration: none;
 }
 
@@ -355,7 +361,11 @@ footer {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.footer-button a {
+  color: var(--bg-color);
 }
 
 .footer-button:hover {
@@ -467,17 +477,20 @@ footer {
 }
 
 .visual-buttons .button {
-  background-color: var(--visual-button);
-  color: var(--visual-text);
   padding: 15px 25px;
   text-decoration: none;
-  border-radius: 10px;
   font-size: 12px;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--visual-button-outline);
+
+  background: 
+    linear-gradient(var(--visual-button), var(--visual-button)) padding-box, 
+    var(--visual-button-outline) border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: var(--visual-text);
 }
 
 /* Home Buttons Styling */
