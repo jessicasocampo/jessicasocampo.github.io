@@ -64,6 +64,9 @@ p {
     margin: 10px;
     line-height: 2;
     text-align: left;
+
+    transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 b {
@@ -211,13 +214,14 @@ nav {
   background-color: var(--nav-color);
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between; /* Left and right alignment */
-  padding: 10px 0px 0px 0px; /* Added horizontal padding */
+  align-items: center; /* vertically centers items like h1 and links */
+  justify-content: space-between;
+  padding: 10px 0;
   position: fixed;
-  height: 50px;
   z-index: 9999;
+  height: 50px;
 }
+
 
 nav h1 {
   font-family: "Press Start 2P", serif;
@@ -226,6 +230,7 @@ nav h1 {
   font-weight: 400;
   background-color: var(--nav-color);
   margin-left: 20px;
+ 
 }
 
 nav .nav-links {
@@ -245,6 +250,7 @@ nav a {
   text-align: center;
   font-size: 18px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  height: 50px;
 }
 
 nav p {
@@ -468,7 +474,6 @@ footer {
   border-radius: 10px;
   font-size: 12px;
   font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -728,3 +733,4 @@ footer {
   transform: rotate(5deg) scale(1.05);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
+

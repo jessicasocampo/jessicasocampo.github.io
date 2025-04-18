@@ -28,7 +28,7 @@
       <a href="#about" class="nav-link" data-target="about">
         <p>ABOUT</p>
       </a>
-      <a href="#footer" class="nav-link" data-target="home">
+      <a href="#footer" class="nav-link" data-target="footer">
         <p>CONNECT</p>
       </a>
     </div>
@@ -43,7 +43,7 @@
       <div class="typing-container">
         <div class="ps">
         <h1>
-        <span class="typed-text">>Hello, <i>I'm Jess</i>.</span>
+        <span class="typed-text">>Hello, I'm Jess.</span>
         </h1>
         </div>
       </div>
@@ -53,6 +53,7 @@
         I have previously worked <b>@ Maple Leaf Foods, Sushi Kui and PCI Glass.</b></p>
         <br>
         <p style="text-align: center;">View my projects below <i class="fa-solid fa-arrow-down"></i></p>
+        <br>
           <div class="home-buttons">
             <a href="#projects" class="button" data-target="about" style="background: var(--hightlightbutton)">
                 <b>Learn More</b>
@@ -877,7 +878,7 @@
       <br>
       <div class="typing-container">
         <div class="ps"><h1>
-        <span class="typed-text">>Who is <i>Jessica?</i></span>
+        <span class="typed-text">>Who is Jessica?</span>
         </h1></div>
       </div>
       
@@ -1005,28 +1006,34 @@
     navLinks.forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
+
     const targetId = link.getAttribute('data-target');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-    const targetSection = document.getElementById(targetId);
-    targetSection.classList.add('active');
 
-    if (link.getAttribute('href') === '#footer') {
-      setTimeout(() => {
-        document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
-      }, 100); // wait for the section to open
-    }
+// If the footer, just scroll — don’t toggle sections
+if (targetId === 'footer') {
+  document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+  return;
+}
 
-    if (targetId === 'home') {
-      homeButtons.classList.add('active');
-      setTimeout(() => {
-        bentoBox.classList.add('active');
-      }, 500);
-    } else {
-      homeButtons.classList.remove('active');
-      bentoBox.classList.remove('active');
-    }
+// Otherwise, handle section switching
+sections.forEach(section => {
+  section.classList.remove('active');
+});
+const targetSection = document.getElementById(targetId);
+targetSection.classList.add('active');
+targetSection.scrollIntoView({ behavior: 'smooth' });
+
+if (targetId === 'home') {
+  homeButtons.classList.add('active');
+  setTimeout(() => {
+    bentoBox.classList.add('active');
+  }, 500);
+} else {
+  homeButtons.classList.remove('active');
+  bentoBox.classList.remove('active');
+}
+
+
   });
 });
 
