@@ -52,7 +52,12 @@
         A UX designer, University of Waterloo student and entrepreneur, who loves cats, cozy gaming and weight-lifting. 
         I have previously worked <b>@ Maple Leaf Foods, Sushi Kui and PCI Glass.</b></p>
         <br>
-        <p style="text-align: center;">View my projects below <i class="fa-solid fa-arrow-down"></i></p>
+
+        <p style="text-align: center;">
+          <a href="#projects" class="projects-link">
+            View my projects below 
+          <i class="fa-solid fa-arrow-down"></i></a></p>
+
         <br>
           <div class="home-buttons">
             <a href="#projects" class="button" data-target="about" style="background: var(--hightlightbutton)">
@@ -70,8 +75,13 @@
             <hr>
             <br>
             <br>
+
+            <div id="projects">
             <div class="ps">
-          <h3>>Projects</h3></div>
+          <h3>>Projects</h3>
+        </div>
+        </div>
+
       <div class="bento-box">
 
         <h5><i class="fa-solid fa-leaf"></i> Maple Leaf Foods: Path to Paperless</h5>
@@ -1033,7 +1043,6 @@ if (targetId === 'home') {
   bentoBox.classList.remove('active');
 }
 
-
   });
 });
 
@@ -1154,6 +1163,12 @@ if (targetId === 'home') {
     document.getElementById("closeModalBtn").addEventListener("click", function() {
       document.getElementById("myNav").classList.remove("hidden");
     });
+
+    document.querySelector('.projects-link').addEventListener('click', function(event) {
+  event.preventDefault();
+  const target = document.getElementById('projects');
+  target.scrollIntoView({ behavior: 'smooth' });
+});
     
     window.addEventListener("load", activateFoldIn);
     </script>

@@ -734,3 +734,12 @@ footer {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* View projects button */
+.projects-link {
+  color: inherit;          /* Makes the text take the surrounding text color */
+  text-decoration: none;   /* Removes the underline */
+}
+
+.projects-link:hover {
+  text-decoration: underline;    /* Optional hover underline */
+}
