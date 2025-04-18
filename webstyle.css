@@ -11,7 +11,7 @@
 
   --highlight-color: #cbb6c8;    /* muted rose-lavender */
   --hightlighttext: #404656;     /* soft periwinkle highlight */
-  --hightlightbutton: #7e9ad8;   /* cozy lavender-blue button */
+  --hightlightbutton: #6e88c2;   /* cozy lavender-blue button */
   --hover-color: #90a8dd;        /* gentle hover periwinkle */
 
   --button-bg-color: #2e2e35;    /* soft dark grey */
@@ -63,7 +63,7 @@ body {
 p {
     color: var(--text-color2);
     font-size: 14px;
-    margin: 10px;
+    margin: 5px;
     line-height: 2;
     text-align: left;
 
@@ -141,8 +141,8 @@ h1 {
     color: var(--outline-box);
     background-color: var(--bg-box); 
     border: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 
     border-radius: 5px;
     text-align: center;
@@ -181,6 +181,7 @@ h3 {
     font-size: 18px;
     margin-left: 10px;
     text-align: left;
+    margin: 0px;
  }
 
  .ps {
@@ -233,6 +234,8 @@ nav h1 {
   margin-left: 20px;
   background: transparent; /* or just remove the background entirely */
  
+  display: flex;
+  margin: 0;
 }
 
 nav .nav-links {
@@ -258,8 +261,11 @@ nav a {
 
 nav p {
   font-size: 12px;
+  line-height: 1;
   margin: 0;
-  padding: 2px;
+  padding: 0 5px;
+  display: flex;
+  height: 100%;
 }
 
 nav p:hover {
@@ -368,10 +374,6 @@ footer {
   color: var(--bg-color);
 }
 
-.footer-button:hover {
-  background-color: var(--hover-color);
-}
-
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -391,7 +393,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr; /* One column only */
   grid-auto-rows: auto;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
   gap: 30px;
   opacity: 1;
   transform: translateY(20px);
@@ -418,10 +421,9 @@ footer {
 }
 
 
-.bento-box h5, p {
-  padding: 0px;
-  margin: 0px;
+.bento-box p {
   line-height: 2;
+  margin-top: 0;
 }
 
 .coversty {
