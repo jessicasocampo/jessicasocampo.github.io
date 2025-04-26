@@ -1,33 +1,34 @@
 /* Root Variables */
 :root {
-  --bg-color: #1b1b1f;           /* dark charcoal background */
-  --nav-color: #222228;          /* slightly lighter for nav */
-  --nav-color2: rgba(60, 60, 70, 0.6); /* subtle grey with softness */
+  --bg-color: #f9f9fb;           /* soft off-white background */
+  --nav-color: #f0f0f5;          /* very light grey for nav */
+  --nav-color2: rgba(200, 200, 210); /* subtle soft grey with transparency */
 
-  --text-color: #f0f0f0;         /* main text – soft white */
-  --text-color2: #b0b0b8;        /* secondary – light grey-lavender */
-  --text-color3: #888893;        /* tertiary – muted violet-grey */
-  --link-text: #a8c3f5;          /* soft powder blue */
+  --text-color: #212123;         /* main text – soft black */
+  --text-color2: #535355;        /* secondary – muted grey */
+  --text-color3: #77777a;        /* tertiary – softer muted grey */
+  --link-text: #5f7cb6;          /* gentle muted blue */
 
-  --highlight-color: #cbb6c8;    /* muted rose-lavender */
-  --hightlighttext: #404656;     /* soft periwinkle highlight */
-  --hightlightbutton: #6e88c2;   /* cozy lavender-blue button */
-  --hover-color: #90a8dd;        /* gentle hover periwinkle */
+  --highlight-color: #c9b7c1;    /* muted rose-lavender */
+  --hightlighttext: #c2c7df;     /* soft periwinkle-dark */
+  --hightlightbutton: #8fadea;   /* cozy lavender-blue button */
+  --hover-color: #9cb8ef;        /* gentle brighter periwinkle */
 
-  --button-bg-color: #2e2e35;    /* soft dark grey */
-  --button-hover-color: #40404a; /* hover = slightly lighter grey */
+  --button-bg-color: #e4e4ea;    /* soft light grey */
+  --button-hover-color: #d0d0da; /* slightly darker on hover */
 
-  --visual-button: #26262c;
+  --visual-button: #f0f0f5;
   --visual-button-outline: linear-gradient(to right, #aebce7, #cbb6c8);
-  --visual-text: #f2f2f2;
+  --visual-text: #212123;
 
-  --hr-color: #3a3a40;
-  --black: #f0f0f0;              /* reversed for dark mode contrast */
+  --hr-color: #d4d4d8;
+  --black: #212123;              /* standard dark for light mode */
 
-  --bg-box: #23232a;             /* for cards, content blocks */
-  --outline-box: #e0e0e6;        /* subtle off-white for contrast */
-  --bg-bento: #2a2a31;           /* slightly lighter than base bg */
+  --bg-box: rgb(234, 234, 238);             /* pure white for cards, content blocks */
+  --outline-box: #1c1c1e;        /* soft grey outline */
+  --bg-bento: rgb(234, 234, 238);           /* slightly darker than base bg for bento sections */
 }
+
 
 /* Global Styles */
 html, body {
@@ -99,7 +100,7 @@ htwo {
 hr {
     border: none;
     height: 2px;
-    background-color: #b0b0b0; /* or any color you want */
+    background-color: #e8e8e8; /* or any color you want */
 }
 
 .aboutlinks {
@@ -378,7 +379,7 @@ footer {
   text-align: center;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 2px solid #b0b0b0;
+  border-top: 2px solid #e8e8e8;
   font-size: 0.85rem;
 }
 
@@ -407,19 +408,23 @@ footer {
 }
 
 .bento-item {
-  background-color: var(--bg-bento);
-  color: var(--text-color);
-  border: none;
-  border-radius: 5px;
+  background-color: #f2f2f2; /* very light grey background */
+  color: #333333; /* dark grey text */
+  border: 3px solid rgb(234, 234, 238); /* mid grey border */
+  border-radius: 10px; /* sharp corners for pixel feel */
   padding: 15px;
   text-align: center;
   font-size: 12px;
   width: 700px;
-  height: auto; /* Let the height be determined by content */
-  transition: transform 0.3s ease;
-  margin: 0 auto; /* Center each bento item */
-}
+  height: auto;
+  transition: transform 0.2s ease;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
+  box-shadow: 
+    4px 4px 0px #c1c1c1, /* darker grey first shadow */
+    8px 8px 0px #d6d6d6; /* lighter grey second shadow */
+}
 
 .bento-box p {
   line-height: 2;
