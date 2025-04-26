@@ -18,7 +18,7 @@
   --button-hover-color: #d0d0da; /* slightly darker on hover */
 
   --visual-button: #f0f0f5;
-  --visual-button-outline: linear-gradient(to right, #aebce7, #cbb6c8);
+  --visual-button-outline: linear-gradient(to right, #8fadea, #64748b);
   --visual-text: #212123;
 
   --hr-color: #d4d4d8;
@@ -408,7 +408,7 @@ footer {
 }
 
 .bento-item {
-  background-color: #f2f2f2; /* very light grey background */
+  background-color: none;
   color: #333333; /* dark grey text */
   border: 3px solid rgb(234, 234, 238); /* mid grey border */
   border-radius: 10px; /* sharp corners for pixel feel */
@@ -420,10 +420,6 @@ footer {
   transition: transform 0.2s ease;
   margin-top: 10px;
   margin-bottom: 10px;
-
-  box-shadow: 
-    4px 4px 0px #c1c1c1, /* darker grey first shadow */
-    8px 8px 0px #d6d6d6; /* lighter grey second shadow */
 }
 
 .bento-box p {
