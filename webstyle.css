@@ -2,32 +2,33 @@
 :root {
   --bg-color: #f9f9fb;           /* soft off-white background */
   --nav-color: #f0f0f5;          /* very light grey for nav */
-  --nav-color2: rgba(200, 200, 210); /* subtle soft grey with transparency */
+  --nav-color2: rgb(181, 181, 190); /* subtle soft grey with transparency */
 
   --text-color: #212123;         /* main text – soft black */
   --text-color2: #535355;        /* secondary – muted grey */
   --text-color3: #77777a;        /* tertiary – softer muted grey */
-  --link-text: #5f7cb6;          /* gentle muted blue */
+  --link-text: #7c9166;          /* soft muted matcha green */
 
   --highlight-color: #c9b7c1;    /* muted rose-lavender */
-  --hightlighttext: #c2c7df;     /* soft periwinkle-dark */
-  --hightlightbutton: #8fadea;   /* cozy lavender-blue button */
-  --hover-color: #9cb8ef;        /* gentle brighter periwinkle */
+  --hightlighttext: #c4d6a6;     /* soft matcha highlight text */
+  --hightlightbutton: #98b27d;   /* cozy grounded matcha button */
+  --hover-color: #6f965a;        /* deeper matcha hover */
 
   --button-bg-color: #e4e4ea;    /* soft light grey */
   --button-hover-color: #d0d0da; /* slightly darker on hover */
 
   --visual-button: #f0f0f5;
-  --visual-button-outline: linear-gradient(to right, #8fadea, #64748b);
+  --visual-button-outline: linear-gradient(to right, #a3b18a, #b4abab); /* matcha green gradient */
   --visual-text: #212123;
 
   --hr-color: #d4d4d8;
   --black: #212123;              /* standard dark for light mode */
 
-  --bg-box: rgb(234, 234, 238);             /* pure white for cards, content blocks */
-  --outline-box: #1c1c1e;        /* soft grey outline */
-  --bg-bento: rgb(234, 234, 238);           /* slightly darker than base bg for bento sections */
+  --bg-box: rgb(234, 234, 238);  /* soft box background */
+  --outline-box: #1c1c1e;        /* dark outline for structure */
+  --bg-bento: rgb(234, 234, 238); /* slightly darker for bento */
 }
+
 
 
 /* Global Styles */
