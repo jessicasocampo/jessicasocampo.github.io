@@ -18,7 +18,7 @@
   --button-hover-color: #d0d0da; /* slightly darker on hover */
 
   --visual-button: #f0f0f5;
-  --visual-button-outline: linear-gradient(to right, #a3b18a, #b4abab); /* matcha green gradient */
+  --visual-button-outline: linear-gradient(to right, #bebebe, #989898); /* matcha green gradient */
   --visual-text: #212123;
 
   --hr-color: #d4d4d8;
@@ -485,10 +485,11 @@ footer {
 }
 
 .visual-buttons .button {
-  padding: 15px 25px;
+  padding: 12px 20px;
   text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 9px;
+  font-weight: normal;
+  font-family: 'Press Start 2P', cursive; /* pixel-style font */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -496,9 +497,11 @@ footer {
   background: 
     linear-gradient(var(--visual-button), var(--visual-button)) padding-box, 
     var(--visual-button-outline) border-box;
-  border: 2px solid transparent;
-  border-radius: 10px;
+  border: 3px solid transparent;
+  border-radius: 0px; /* sharp corners for pixel vibe */
   color: var(--visual-text);
+  box-shadow: 4px 4px 0px var(--hightlightbutton); /* chunky pixel shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Home Buttons Styling */
