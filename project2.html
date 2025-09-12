@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>J.O - Soft Steps: Accessibility Platformer Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbfbfb; --ink:#0b0b0c; --muted:#6b7280; --line:#e5e7eb; --max:760px; --navH:52px;
+      --card:#ffffff; --callout:#eef7e7; --callout-border:#d7ebd2; --caption:#8b919a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+
+    .nav {position:sticky;top:0;z-index:30;height:var(--navH);display:flex;align-items:center;background:#fff;}
+    .nav .inner{max-width:var(--max);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 10px}
+    
+    /* same as css file - but logo -> brand*/
+    .brand{ font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }    
+
+    /* NAV same as css */
+    /* Navbar */
+    .nav {
+      position: fixed; inset: 0 0 auto 0; height: var(--navH);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000;
+      background: transparent; /* we'll paint a gradient with ::aborder-bottom: 1px solid #e5e7eb; /* keep the crisp edge over the gradient */
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      will-change: transform;
+      }
+
+  /* Feathered top-to-bottom gradient behind the nav */
+      .nav::after {
+      content: "";
+      position: absolute; left: 0; right: 0; top: 0;
+      height: calc(var(--navH) + 100px); /* how far the fade extends */
+      pointer-events: none;
+      z-index: 0;
+      background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.16) 0%, /* darker at top */
+      rgba(0,0,0,0.06) 45%,
+      rgba(255,255,255,0) 100% /* fades to page */
+      );
+      }
+
+    /* removed blur layer to prevent ghosting */
+    .nav-inner { position: relative; z-index: 1;  width: 100%; max-width: var(--maxW); padding: 0 20px; display: flex; align-items: center; gap: 12px;}
+    .logo { font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }
+    .spacer { flex: 1; }
+    .nav a.link { padding: 8px 12px; border-radius: 12px; color: var(--muted); transition: color .2s, background .2s;}
+    .nav a.link:hover { color: var(--dark-grey); background: none; font-weight: 500;}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px 14px 90px}
+
+
+    /* same as css file*/
+    h1 {
+      margin: 60px 0 0;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      font-family: 'EASVHS', monospace; /* pixel font */
+      }
+    .hero-media{background:#f3f4f6;border:1px solid var(--line);border-radius:8px;height:220px;display:flex;align-items:center;justify-content:center;color:#9aa1a6}
+
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 6px}
+    .row{display:flex;align-items:center;gap:10px;font-size:13px;color:#6b7280}
+    .label{font-weight:600;color:#8b919a;min-width:92px;text-transform:capitalize}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 10px;font-size:12.5px;color:#0b0b0c}
+
+    /*same as css file*/
+    .hero-buttons { margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 18px 22px; border-radius: 14px; border: 1px solid #e5e7eb; background: none; color: var(--fg); text-decoration: none; }
+    .btn:hover { background: #e5e7eb; }
+
+    .copy{line-height:1.75;color:#2a2a2a;font-size:14.5px}
+    .note{background:var(--callout);border:1px solid var(--callout-border);border-radius:8px;padding:12px 12px;margin:18px 0}
+    .note .label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#4f7a46;margin-bottom:6px;font-weight:700;min-width:0}
+
+    /* Carousel */
+    .carousel {
+  position: relative;
+  max-width: 720px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides figure {
+  min-width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+.slides figcaption {
+  font-size: 12px;
+  color: var(--caption);
+  margin-top: 6px;
+}
+
+/* buttons */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.carousel button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+    section{padding-top:6px;margin-bottom:18px}
+    h2.section{margin:26px 0 8px;font-weight:700;font-size:24px;font-family: 'EASVHS', monospace;}
+    h3.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#98a0ab;margin:18px 0 10px}
+
+    figure{margin:12px 0}
+    figure img{width:100%;border-radius:6px;border:1px solid var(--line)}
+    figcaption{font-size:12px;color:var(--caption);margin-top:6px}
+
+    footer{border-top:1px solid var(--line);padding:26px 0 40px;margin-top:36px;color:#97a0aa;font-size:12.5px}
+    @media (max-width: 560px){.meta{grid-template-columns:1fr}}
+
+    /* Kill underlines in the top nav, all states */
+header.nav nav a.link:link,
+header.nav nav a.link:visited,
+header.nav nav a.link:hover,
+header.nav nav a.link:active,
+header.nav a.logo {
+  text-decoration: none !important;
+}
+
+  </style>
+</head>
+<body>
+  <!-- on project page (e.g., project1.html) -->
+<header class="nav" role="navigation" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="logo" href="index.html#home" aria-label="Home">j.o</a>
+    <div class="spacer"></div>
+    <nav>
+      <a class="link" href="index.html#projects-1">projects</a>
+      <a class="link" href="index.html#about-1">about</a>
+      <a class="link" href="index.html#connect">connect</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="wrap">
+      <section>
+        <h1>Soft Steps: Accessibility<br/>Platformer Game</h1>
+        <br>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
+    <iframe 
+      src="https://player.vimeo.com/video/1076745764?h=9f3b1f2d3a" 
+      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+        <figcaption>Short Walkthrough Video</figcaption>
+
+      <div class="meta">
+        <div class="row"><div class="label">Timeline</div><div class="chips"><span class="chip">2 months</span></div></div>
+        <div class="row"><div class="label">Team</div><div class="chips"><span class="chip">Jessica Ocampo</span><span class="chip">Cici Chen</span><span class="chip">Sophia Ho</span><span class="chip">Joy Li</span><span class="chip">Estella Langenhoven</span></div></div>
+        <div class="row"><div class="label">Tools</div><div class="chips"><span class="chip">p5.js</span><span class="chip">VSCode</span><span class="chip">Procreate</span></div></div>
+        <div class="row"><div class="label">Disciplines</div><div class="chips"><span class="chip">UX/UI Research</span><span class="chip">Game Design</span><span class="chip">UX/UI Design</span><span class="chip">Game Development</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section">A Gentle Game About Sharp Feelings</h2>
+
+      <h3 class="kicker">Overview</h3>
+      <div class="copy">Soft Steps is a 2D pixel platformer game designed to raise awareness about hyperesthesia and hyperalgesia by simulating sensory overload through gameplay. Players navigate soft, rough, and sharp surfaces while managing a sensitivity meter, collecting healing orbs, and progressing through gardens, caves, and forests. The art direction emphasizes cozy, muted aesthetics to evoke calm, contrasting typical bright platformer visuals.</div>
+
+      <h3 class="kicker">Context</h3>
+      <div class="copy">The game was created to simulate the daily sensory challenges faced by individuals with hyperesthesia. Popular platformers often prioritize excitement and difficulty but rarely consider how overstimulation can affect playability. Our goal was to introduce an empathetic lens into game design, balancing challenge with accessibility.</div>
+    </section>
+
+    <section>
+      <h2 class="section">Textures That Tell Stories</h2>
+      <h3 class="kicker">Process</h3>
+      <div class="note"><div class="label">🔬 Research</div>
+      <div class="copy">Our team investigated the lived experience of hyperesthesia and hyperalgesia,
+         exploring symptoms like pain sensitivity and how textures can become overwhelming.
+          Research influenced how we designed surface types and informed gameplay mechanics like the sensitivity bar.
+           We also looked into global accessibility design principles to ensure inclusivity.</div>
+    </section>
+
+    <section>
+      <h2 class="section">Low-fidelity Sketches</h2>
+      <figure>
+        <img src="sketches_softsteps.png" alt="Low‑fi sketches"/>
+        <figcaption>Low‑fidelity sketches for potential game screens.</figcaption>
+      </figure>
+
+      <section>
+      <div class="note"><div class="label">💡 Ideation</div>
+      <div class="copy">We brainstormed around metaphors and mechanics that could convey discomfort without being punitive
+         The narrative of searching for a lost cat served as a grounding emotional anchor. Multiple design sketches
+          and platforming tests helped visualize the game flow before coding began.</div>
+      </div>
+      </section>
+
+    </section>
+
+    <section>
+      <h2 class="section">Low-fidelity Prototype</h2>
+      <figure>
+        <img src="low-fid_softsteps.png" alt="Prototype"/>
+        <figcaption>Low‑fidelity prototype focusing on main components like shapes, colours and labels for clear functionality.</figcaption>
+      </figure>
+      <div class="hero-buttons">
+        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">View Code ↗</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section">Visual Simplicity, Emotional Depth</h2>
+      <section>
+      <div class="note"><div class="label">✍ Design</div>
+      <div class="copy">The pixelated design direction was chosen to enhance clarity and mood while maintaining simplicity.
+         Levels include floral gardens, forest paths, and caves, each with soft, muted tones. Custom assets,
+          AI‑assisted visuals, and consistent UI elements made the experience more cohesive.</div>
+      </div>
+      </section>
+
+      <h3 class="kicker">Custom Visual Assets</h3>
+      <div>
+        <img src="Rock 2.png" style="width: 150px"/> <img src="Checkpoint 1.png"style="width: 150px"/> 
+        <img src="Spike 3.png"style="width: 150px"/><img src="Sparkles.png"style="width: 100px"/>
+      </div>
+      <br>
+       <div>
+        <a class="btn" href="https://drive.google.com/drive/folders/1dfcvaPOOZANCG2lyi11qPwdVqwT9XI89?usp=drive_link" target="_blank" rel="noreferrer">View Assets ↗</a>
+      </div>
+
+      <section>
+      <div class="note"><div class="label">🛠️ Testing</div>
+      <div class="copy">Play‑testing was conducted with classmates and professors across both development phases.
+         Feedback focused on platform difficulty, jump range accuracy, and visual readability.
+          Based on this, we adjusted platform spacing, added checkpoints, and ensured all jumps were always reachable.</div>
+      </div>
+      </section>
+    </section>
+
+    <section>
+      <h2 class="section">Final Product</h2>
+
+      <div class="carousel">
+  <div class="slides">
+    <figure>
+      <img src="final_ss1.png" alt="Image 1">
+      <figcaption>Starting Title Screen</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss2.png" alt="Image 2">
+      <figcaption>Instruction Screen</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss3.png" alt="Image 3">
+      <figcaption>Level 1</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss4.png" alt="Image 4">
+      <figcaption>Level 1 Completed</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss5.png" alt="Image 5">
+      <figcaption>Level 2</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss6.png" alt="Image 6">
+      <figcaption>Level 2 Completed</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss7.png" alt="Image 7">
+      <figcaption>Level 3</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss8.png" alt="Image 8">
+      <figcaption>Level 3 Completed</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss9.png" alt="Image 9">
+      <figcaption>Overwhelmed - Game Over Screen</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss10.png" alt="Image 10">
+      <figcaption>Boss Level</figcaption>
+    </figure>
+    <figure>
+      <img src="final_ss11.png" alt="Image 11">
+      <figcaption>Cat Found - Game Completed Screen</figcaption>
+    </figure>
+  </div>
+
+  <!-- navigation -->
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+
+    </section>
+    <div class="hero-buttons">
+        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">View Code ↗</a>
+      </div>
+
+    <section>
+      <h3 class="kicker">Solution</h3>
+      <div class="copy">The final game invites players into a serene yet stimulating environment where overstimulation is not just a challenge—but a central gameplay mechanic. With features like healing orbs, checkpoints, and a sensitivity bar, players are empowered to self‑regulate their experience. These elements work together to simulate the heightened sensory awareness associated with hyperalgesia, offering both immersion and introspection. The project was applauded by both professors and students for its thoughtful implementation of disability representation and its innovative game functionality.</div>
+
+      <h3 class="kicker">Reflection</h3>
+      <div class="copy">This project taught me how to translate abstract sensations into game logic, balance levels, and iterate based on feedback. I gained experience in p5.js development, accessibility‑focused design, and user testing while improving teamwork, code optimization, and adaptive design. Challenges like jump consistency and aligning visuals with gameplay were solved through grid‑based validation, custom assets, and refined pacing.</div>
+    </section>
+
+    <section>
+      <h2 class="section">Solving Softly</h2>
+      <div class="note"><div class="label">🌟 Results</div><div class="copy">Soft Steps used pain sensitivity mechanics to promote empathy, spark discussions on invisible disabilities, and encourage inclusive design thinking. By translating complex sensory experiences into interactive gameplay, the project fostered deeper understanding and dialogue around accessibility in digital spaces.</div></div>
+      <div class="note"><div class="label">📋 Outcome</div><div class="copy">The final four‑level platformer included boss mechanics, checkpoints, collectibles, and a pause menu, earning positive feedback for originality and theme cohesion. Its layered design and thoughtful integration of accessibility features were especially praised for enhancing both gameplay and narrative depth.</div></div>
+      <div class="note"><div class="label">📈 Metrics</div><div class="copy">Play‑testing showed smoother navigation and reduced frustration, with 80% of testers completing the game without overloading their sensitivity meter. This affirmed the success of our accessibility mechanics in balancing challenge with comfort.</div></div>
+    </section>
+
+    <footer>
+      2025 © all rights reserved · <a href="mailto:jsocampo@uwaterloo.ca">jsocampo@uwaterloo.ca</a>
+    </footer>
+  </main>
+  <script>
+const slides = document.querySelector('.slides');
+const slideCount = document.querySelectorAll('.slides figure').length;
+let index = 0;
+
+document.querySelector('.next').addEventListener('click', () => {
+  index = (index + 1) % slideCount;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  index = (index - 1 + slideCount) % slideCount;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+</body>
+</html>

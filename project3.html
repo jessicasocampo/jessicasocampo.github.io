@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>J.O - Crosscultura: AR Language Learning App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#fbfbfb; --ink:#0b0b0c; --muted:#6b7280; --line:#e5e7eb; --max:760px; --navH:52px; --card:#ffffff; --callout:#eef7e7; --callout-border:#d7ebd2; --caption:#8b919a; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+
+    .nav {position:sticky;top:0;z-index:30;height:var(--navH);display:flex;align-items:center;background:#fff;}
+    .nav .inner{max-width:var(--max);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 10px}
+    
+    /* same as css file - but logo -> brand*/
+    .brand{ font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }    
+
+    /* NAV same as css */
+    /* Navbar */
+    .nav {
+      position: fixed; inset: 0 0 auto 0; height: var(--navH);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000;
+      background: transparent; /* we'll paint a gradient with ::aborder-bottom: 1px solid #e5e7eb; /* keep the crisp edge over the gradient */
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      will-change: transform;
+      }
+
+  /* Feathered top-to-bottom gradient behind the nav */
+      .nav::after {
+      content: "";
+      position: absolute; left: 0; right: 0; top: 0;
+      height: calc(var(--navH) + 100px); /* how far the fade extends */
+      pointer-events: none;
+      z-index: 0;
+      background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.16) 0%, /* darker at top */
+      rgba(0,0,0,0.06) 45%,
+      rgba(255,255,255,0) 100% /* fades to page */
+      );
+      }
+
+    /* removed blur layer to prevent ghosting */
+    .nav-inner { position: relative; z-index: 1;  width: 100%; max-width: var(--maxW); padding: 0 20px; display: flex; align-items: center; gap: 12px; }
+    .logo { font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }
+    .spacer { flex: 1; }
+    .nav a.link { padding: 8px 12px; border-radius: 12px; color: var(--muted); transition: color .2s, background .2s; }
+    .nav a.link:hover { color: var(--dark-grey); background: none; font-weight: 500;}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px 14px 90px}
+
+
+    /* same as css file*/
+    h1 {
+      margin: 60px 0 0;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      font-family: 'EASVHS', monospace; /* pixel font */
+      }
+    .hero-media{background:#f3f4f6;border:1px solid var(--line);border-radius:8px;height:220px;display:flex;align-items:center;justify-content:center;color:#9aa1a6}
+
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 6px}
+    .row{display:flex;align-items:center;gap:10px;font-size:13px;color:#6b7280}
+    .label{font-weight:600;color:#8b919a;min-width:92px;text-transform:capitalize}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 10px;font-size:12.5px;color:#0b0b0c}
+
+    /*same as css file*/
+    .hero-buttons { margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 18px 22px; border-radius: 14px; border: 1px solid #e5e7eb; background: none; color: var(--fg); text-decoration: none; }
+    .btn:hover { background: #e5e7eb; }
+
+    .copy{line-height:1.75;color:#2a2a2a;font-size:14.5px}
+    .note{background:var(--callout);border:1px solid var(--callout-border);border-radius:8px;padding:12px 12px;margin:18px 0}
+    .note .label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#4f7a46;margin-bottom:6px;font-weight:700;min-width:0}
+
+    /* Carousel */
+    .carousel {
+  position: relative;
+  max-width: 720px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides figure {
+  min-width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+.slides figcaption {
+  font-size: 12px;
+  color: var(--caption);
+  margin-top: 6px;
+}
+
+/* buttons */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.carousel button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+    /* Figma Imbedded */
+      .figma-embed{
+    position: relative;
+    width: 100%;
+    /* pick a comfortable ratio for canvases (taller than 16:9 helps) */
+    aspect-ratio: 16/10;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .figma-embed iframe{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+  /* Styly Imbedded */
+  /* match your figure/hero-media look */
+.styly-embed{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;           /* tweak to 16/10 if you want taller */
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.styly-embed iframe{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+    section{padding-top:6px;margin-bottom:18px}
+    h2.section{margin:26px 0 8px;font-weight:700;font-size:24px;font-family: 'EASVHS', monospace;}
+    h3.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#98a0ab;margin:18px 0 10px}
+
+    figure{margin:12px 0}
+    figure img{width:100%;border-radius:6px;border:1px solid var(--line)}
+    figcaption{font-size:12px;color:var(--caption);margin-top:6px}
+
+    footer{border-top:1px solid var(--line);padding:26px 0 40px;margin-top:36px;color:#97a0aa;font-size:12.5px}
+    @media (max-width: 560px){.meta{grid-template-columns:1fr}}
+
+    /* Kill underlines in the top nav, all states */
+header.nav nav a.link:link,
+header.nav nav a.link:visited,
+header.nav nav a.link:hover,
+header.nav nav a.link:active,
+header.nav a.logo {
+  text-decoration: none !important;
+}
+
+  </style>
+</head>
+<body>
+  <!-- on project page (e.g., project1.html) -->
+<header class="nav" role="navigation" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="logo" href="index.html#home" aria-label="Home">j.o</a>
+    <div class="spacer"></div>
+    <nav>
+      <a class="link" href="index.html#projects-1">projects</a>
+      <a class="link" href="index.html#about-1">about</a>
+      <a class="link" href="index.html#connect">connect</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="wrap">
+    <section>
+      <h1>Crosscultura: AR<br/>Language Learning App</h1>
+      <br>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
+    <iframe 
+      src="https://player.vimeo.com/video/1048652427?h=9f3b1f2d3a" 
+      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <figcaption>Short Advertisment Video</figcaption>
+
+      <div class="meta">
+        <div class="row"><div class="label">Timeline</div><div class="chips"><span class="chip">2 months</span></div></div>
+        <div class="row"><div class="label">Team</div><div class="chips"><span class="chip">Jessica Ocampo</span><span class="chip">Isabella Cho</span><span class="chip">Jackie Zhang</span></div></div>
+        <div class="row"><div class="label">Tools</div><div class="chips"><span class="chip">Figma</span><span class="chip">Styly</span><span class="chip">Premiere Pro</span><span class="chip">Figjam</span></div></div>
+        <div class="row"><div class="label">Disciplines</div><div class="chips"><span class="chip">UX/UI Research</span><span class="chip">Game Design</span><span class="chip">UX/UI Design</span><span class="chip">Game Development</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section">Real-World Readiness, Virtually Delivered</h2>
+
+      <h3 class="kicker">Overview</h3>
+      <div class="copy">The project focused on developing an AR-based Cultural Adjustment and Language Learning app to support international undergraduate students. It aimed to address language barriers, cultural adaptation, and feelings of isolation by helping students practice real-life scenarios, build confidence in communication, and understand cultural nuances. The app also sought to reduce anxiety and mental health challenges, fostering smoother academic and social integration.</div>
+
+      <h3 class="kicker">Context</h3>
+      <div class="copy">International students often face language barriers, cultural adjustment challenges, and isolation, which can heighten stress and mental health concerns. These difficulties hinder their ability to practice language, navigate cultural norms, and feel supported, ultimately impacting academic performance, well-being, and community integration—underscoring the need for tailored support tools.</div>
+    </section>
+
+    <section>
+      <h2 class="section">From Isolation to Integration</h2>
+      <h3 class="kicker">Process</h3>
+
+      <div class="note"><div class="label">🔬 Research</div>
+      <div class="copy">Our team employed a range of methods including think-aloud protocol,
+         System Usability Scale (SUS) surveys, semi-structured interviews, and user interaction
+          analytics. We also developed detailed personas, user flows, and user journeys to guide
+           design decisions. Feedback consistently emphasized accessibility, intuitive use, and engaging features</div></div>
+
+      <h2 class="section">User Personas</h2>
+      <figure>
+        <img src="cc_personas.png" alt="Image 1">
+        <figcaption>Personas for international and domestic students who would use our product.</figcaption>
+      </figure>
+
+      <h2 class="section">User Flow Maps</h2>
+      <div class="carousel">
+      <div class="slides">
+      <figure>
+        <img src="cc_flow1.png" alt="Image 1">
+        <figcaption>User flow map for a domestic student who would use our app.</figcaption>
+      </figure>
+      <figure>
+        <img src="cc_flow2.png" alt="Image 2">
+        <figcaption>User flow map for a international student who would use our app.</figcaption>
+      </figure> 
+      </div>
+        <!-- navigation -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+      <section>
+      <div class="note"><div class="label">💡 Ideation</div>
+      <div class="copy">We began with low-fidelity sketches to explore layout and interaction
+         ideas, which were then refined into iterated sketches based on team feedback and
+          usability insights. During brainstorming, we conceptualized immersive learning scenarios,
+           NPC interactions, and gamification elements like XP points, leaderboards, and
+            level progression to enhance engagement and accessibility.</div></div>
+      </section>
+
+      <h2 class="section">Low-fidelity Sketches</h2>
+      <figure>
+        <img src="cc_sketches1.png" alt="Sketches"/>
+        <figcaption>Low-fidelity sketches focusing on major screens impacting gameplay/learning.</figcaption>
+      </figure>
+      <figure>
+        <img src="cc_sketches2.png" alt="Sketches"/>
+        <figcaption>Low-fidelity Sketches -Iterated</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="section">From Sketch to Immersion</h2>
+
+      <section>
+      <div class="note"><div class="label">✍ Design</div>
+      <div class="copy">We used Figma to create high-fidelity prototypes and STYLY to
+         build immersive VR experiences. Throughout development, we applied Universal
+          Design principles to ensure accessibility for a wide range of users.
+           This included features such as high-contrast visual modes, text-to-speech
+            functionality, and voice command integration.</div></div>
+      </section>
+
+      <h2 class="section">Brand Style Guide</h2>
+      <div class="figma-embed">
+      <iframe
+        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FtzlFNhu4Stcp0tosduZJfP%2FHigh-Fidelity-Prototype%3Fnode-id%3D1-1241"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+
+      <div class="hero-buttons">
+        <a class="btn" href="https://www.figma.com/design/tzlFNhu4Stcp0tosduZJfP/High-Fidelity-Prototype?node-id=1-1241&t=1J5fFZIxsiZiCwyW-1" target="_blank" rel="noreferrer">View Figma ↗</a>
+      </div>
+
+      <section>
+      <div class="note"><div class="label">🛠️ Testing</div>
+      <div class="copy">We conducted user testing to gather both qualitative and quantitative insights.
+         Issues like navigation, unclear interface elements, and limited interactivity were identified
+          and addressed. Ongoing testing with students led to repeated design and functionality changes,
+           helping us refine the experience with each iteration.</div></div>
+      </section>
+    </section>
+
+    <section>
+      <h2 class="section">Final Product</h2>
+      <div class="figma-embed">
+  <iframe
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FtzlFNhu4Stcp0tosduZJfP%2FHigh-Fidelity-Prototype%3Fnode-id%3D71-201"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+</div>
+
+
+      <div class="hero-buttons">
+        <a class="btn" href="https://www.figma.com/design/tzlFNhu4Stcp0tosduZJfP/High-Fidelity-Prototype?node-id=0-1&t=1J5fFZIxsiZiCwyW-1" target="_blank" rel="noreferrer">View Figma ↗</a>
+      </div>
+    </section>
+    <section>
+      <!-- STYLY embed -->
+    <div class="styly-embed">
+      <iframe
+        src="https://build.styly.cc/player/release/?93a43a96-cfcc-49ee-a7d7-524e4b4d1c0f"
+        loading="lazy"
+        allow="xr-spatial-tracking; gyroscope; accelerometer; camera; microphone; fullscreen; autoplay"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+      <div class="hero-buttons">
+        <a class="btn" href="https://gallery.styly.cc/scene/93a43a96-cfcc-49ee-a7d7-524e4b4d1c0f" target="_blank" rel="noreferrer">View Walkthrough ↗</a>
+        <a class="btn" href="https://gallery.styly.cc/scene/0d8428bd-a69b-4da4-b9cf-579735087945" target="_blank" rel="noreferrer">View Scenario ↗</a>
+      </div>
+    </section>
+    </section>
+
+    <section>
+      <h3 class="kicker">Solution</h3>
+      <div class="copy">The solution featured immersive AR scenarios simulating real-life settings, accessibility enhancements like voice commands and text-to-speech, and gamification elements such as XP rewards and progress tracking. A feedback system provided real-time insights, helping users practice language, adapt to cultural norms, reduce anxiety, and foster a sense of achievement.</div>
+
+      <h3 class="kicker">Reflection</h3>
+      <div class="copy">This project strengthened my skills in user-centered design, prototyping (Figma, Styly), and user research. I learned the importance of iteration, accessibility, and testing to improve usability. Challenges like navigation and balancing immersion with simplicity were solved by refining layouts, clarifying buttons, and streamlining features.</div>
+    </section>
+
+    <section>
+      <h2 class="section">Real-Life Practice, Real-Time Support</h2>
+      <div class="note"><div class="label">🌟 Results</div><div class="copy">The app achieved a mean ease-of-use score of 3.75, with users praising transcripts, adjustable audio speeds, XP rewards, and simulated environments for supporting mental health and reducing anxiety.</div></div>
+      <div class="note"><div class="label">📋 Outcome</div><div class="copy">It’s immersive, gamified approach encouraged frequent use and showed potential to boost student confidence and academic/social adjustment.</div></div>
+      <div class="note"><div class="label">📈 Metrics</div><div class="copy">Usability testing yielded an average System Usability Scale (SUS) score of 74, indicating above-average user satisfaction. The low complexity rating of 1.5 suggested that users found the interface intuitive and easy to navigate.</div></div>
+    </section>
+
+    <footer>
+      2025 © all rights reserved · <a href="mailto:jsocampo@uwaterloo.ca">jsocampo@uwaterloo.ca</a>
+    </footer>
+  </main>
+  <script>
+const slides = document.querySelector('.slides');
+const slideCount = document.querySelectorAll('.slides figure').length;
+let index = 0;
+
+document.querySelector('.next').addEventListener('click', () => {
+  index = (index + 1) % slideCount;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  index = (index - 1 + slideCount) % slideCount;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+</body>
+</html>

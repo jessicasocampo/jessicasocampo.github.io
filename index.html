@@ -1,1163 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jessica Ocampo</title>
-  <!-- CSS Sheet -->
-  <link rel="stylesheet" href="webstyle.css">
-
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jessica Ocampo - Portfolio</title>
+  <link rel="stylesheet" href="webstyle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-  <div class="page-wrapper">
-  <nav>
-    <h1> >JO.</h1>
-    <div class="nav-links">
-      <a href="#home" class="nav-link" data-target="home">
-        <p><i class="fa-solid fa-star-of-life"></i>&nbsp;projects</p>
-      </a>
-      <a href="#about" class="nav-link" data-target="about">
-        <p>about</p>
-      </a>
-      <a href="#footer" class="nav-link" data-target="footer">
-        <p>connect</p>
-      </a>
+  <!-- Fixed Navigation -->
+  <header class="nav" role="navigation" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="#home" class="logo" aria-label="Home">j.o</a>
+      <div class="spacer"></div>
+      <nav>
+        <a class="link" href="#projects-1">projects</a>
+        <a class="link" href="#about-1">about</a>
+        <a class="link" href="#connect">connect</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main>
-
-    <section id="home" class="section active">
-      
-      <h2><div id="rotatingText"> A pro in design, research, & analytics.</div> </h2>
-
-      <div class="typing-container">
-        <div class="ps">
-        <h1>
-        <span class="typed-text">>Hello, I'm Jess !</span>
-        </h1>
-        </div>
+  <!-- Home (1 screen) -->
+  <section id="home" aria-label="Home" class="hero">
+    <span class="label">HOME</span>
+    <div class="wrap">
+      <div class="eyebrow">
+        currently
+        <a href="https://www.rogers.com/" target="_blank" rel="noopener noreferrer">@rogers</a>
+        &
+        <a href="https://hackthevalley.io/" target="_blank" rel="noopener noreferrer">@hackthevalley</a>
       </div>
+            <br>
+      <h1>hi, i’m jess; ux/ui-er who is story-driven & game inspired</h1>
       <br>
-      <p style="text-align: center;"><i class="fa-solid fa-star-of-life"></i> Hey Stranger, I'm Jessica Ocampo. 
-        A <b>UX designer, University of Waterloo student and entrepreneur</b>, who loves cats, cozy gaming and weight-lifting 🛠️ 🍵 🎮
-        </p>
-        <br>
-
-        <p style="text-align: center;">
-          <a href="#projects" class="projects-link">
-            View my projects below 
-          <i class="fa-solid fa-arrow-down"></i></a></p>
-
-        <br>
-          <div class="home-buttons">
-            <a href="#projects" class="button" data-target="about" style="background: var(--hightlightbutton)">
-                <b>Learn More</b>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          
-            <a href="https://docs.google.com/document/d/1to7_K3YdC5uoMdBK5PZyvYo5_1diwFRCgcU2f2W7_T4/edit?usp=sharing" class="button" target="_blank">
-                <b>View Resume</b>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-            </div>
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-
-            <div id="projects">
-            <div class="ps">
-          <h3>>Projects</h3>
-        </div>
-        </div>
-
-      <div class="bento-box">
-        <h5><i class="fa-solid fa-puzzle-piece"></i>
-          Soft Steps: Hyperesthesia Awareness RPG Platformer Game
-        </h5>
-      <p>A cozy and exploration <b>js.p5 game</b>, 
-        that brings awareness to hyperesthesia for younger audiences in an immersive manner.</p>
-          <div class="visual-buttons">
-            <a class="button"><i class="fa-solid fa-puzzle-piece"></i>&nbsp;RPG & PLATFORMER GAME</a>
-            <a class="button"><i class="fa-solid fa-gear"></i>&nbsp;JS.P5 CODING</a>
-            <a class="button"><i class="fa-solid fa-pen-nib"></i>&nbsp;UX/UI DESIGN</a>
-          </div>
-        <div class="bento-item" data-modal="modal-sushi">
-          <img src="softsteps.png" class="coversty"">
-        </div>
-      </div>
-
+      <p class="lead"> a UX/UI designer, University of Waterloo student & entrepreneur that loves cats, cozy gaming and weight-lifting 🐈‍⬛ 🍵 🧩 </p>
       <br>
-      <hr>
-      <br>
-
-      <div class="bento-box">
-        <h5><i class="fa-solid fa-leaf"></i> 
-          Maple Leaf Foods: Path to Paperless
-        </h5>
-      <p>A versatile <b>tablet-based form application</b> designed to 
-        replace traditional paper surveys and forms in Maple Leaf
-         Foods manufacturing plants.</p>
-         <div class="visual-buttons">
-          <a class="button"><i class="fa-solid fa-gears"></i>&nbsp;DESIGN SYSTEMS</a>
-          <a class="button"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;USER RESEARCH</a>
-          <a class="button"><i class="fa-solid fa-tablet-screen-button"></i>&nbsp;TABLET</a>
-        </div>
-        <div class="bento-item" data-modal="modal-maple">
-          <img src="mlfcover.png" class="coversty">
-        </div>
-        </div>
-
-        <br>
-        <hr>
-        <br>
-
-        <div class="bento-box">
-        <h5><i class="fa-solid fa-eye"></i> CrossCultura: Stress-Free & Immersive Learning</h5>
-        <p><b>An extended reality application</b> designed to support language
-           learning, cultural adaptation, and mental well-being for
-            post-secondary students and young adults.</p>
-            <div class="visual-buttons">
-              <a class="button"><i class="fa-solid fa-video"></i>&nbsp;VIDEO</a>
-              <a class="button"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;USER RESEARCH</a>
-              <a class="button"><i class="fa-solid fa-vr-cardboard"></i>&nbsp;XR APP</a>
-            </div>
-        <div class="bento-item" data-modal="modal-cross">
-          <img src="crosscover.png" class="coversty"">
-        </div>
-        </div>
-
-        <br>
-        <hr>
-        <br>
-
-        <div class="bento-box">
-        <h5><i class="fa-solid fa-brain"></i> Moodle: Mental Health Support & Awareness</h5>
-        <p>An engaging and incentivizing <b>mobile application</b>
-           designed to raise awareness and support mental 
-           well-being among pre-teens and young teens.</p>
-           <div class="visual-buttons">
-            <a class="button"><i class="fa-solid fa-trophy"></i>&nbsp;DESIGN-A-THON</a>
-            <a class="button"><i class="fa-solid fa-pen-nib"></i>&nbsp;UI DESIGN</a>
-            <a class="button"><i class="fa-solid fa-mobile-screen-button"></i>&nbsp;MOBILE</a>
-          </div>
-        <div class="bento-item" data-modal="modal-moodle">
-          <img src="moodcover.png" class="coversty"">
-        </div>
-        </div>
-
-        <br>
-        <hr>
-        <br>
-        
-    </section>
-
-    <!-- Modal Structure -->
-    <div id="modal-sushi" class="modal">
-      <div class="modal-content">
-
-        <span class="close">&times;</span>
-        <br>
-        <br>
-        <img src="softstepsstartscreen.png" alt="Soft Steps Start" style="width: 100%; height: 600px; object-fit: cover;">
-        <cpt>This is a screenshot from our start screen.</cpt>
-        <br>
-        <br>
-        <h2>SOFT STEPS</h2>
-        <p><i class="fa-solid fa-user-group"></i> Team: Jessica Ocampo, Cici Chen, Sophia Ho, Joy Li, Estella Langenhoven
-          <br>
-          <i class="fa-solid fa-stopwatch"></i> Duration: 2 Months</p>
-        <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Role:</b>
-        <div class="visual-buttons">
-          <a class="button">GAME MECHANICS DESIGNER</a>
-          <a class="button">UX/UI DESIGNER</a>
-          <a class="button">PS.P5 DEVELOPER</a>
-        </div>
-          <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Tools:</b>
-        <div class="visual-buttons">
-          <a class="button">#JS.P5</a>
-          <a class="button">#VSCODE</a>
-          <a class="button">#PROCREATE</a>
-        </div>
-        <br>
-        <div style="padding:54.43% 0 0 0;position:relative;">
-          <iframe src="https://player.vimeo.com/video/1076745764?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-          frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-          style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Soft Steps Walkthrough"></iframe>
-        </div><script src="https://player.vimeo.com/api/player.js"></script>
-        <br>
-        <hr>
-
-        <h3><i class="fa-solid fa-thumbtack"></i> OVERVIEW</h3>
-          <p>
-            Soft Steps is a <h>2D pixel platformer game</h> designed to raise awareness
-             about hyperalgesia by <h>simulating sensory overload through gameplay</h>.
-              Players navigate soft, rough, and sharp surfaces while managing
-               a sensitivity meter, collecting healing orbs, and progressing
-                through gardens, caves, and forests. The art direction
-                 emphasizes cozy, muted aesthetics to evoke calm, contrasting
-                  typical bright platformer visuals.
-        </p>
-        <br>
-          <h3><i class="fa-solid fa-circle-exclamation"></i> PROBLEM</h3>
-          <p>
-            The game was created to <h>simulate the daily sensory challenges faced
-             by individuals with hyperalgesia</h>. Popular platformers often
-              prioritize excitement and difficulty but rarely consider how
-               overstimulation can affect playability. Our goal was to
-                introduce an empathetic lens into game design, balancing
-                 challenge with accessibility.
-        </p>
-          <br>
-          <h3><i class="fa-solid fa-screwdriver-wrench"></i> PROCESS</h3>
-            <ul>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Research:</b> 
-                Our team investigated the lived experience of hyperesthesia
-                 and hyperalgesia, exploring symptoms like <h>pain sensitivity
-                  and how textures can become overwhelming</h>. Research
-                   influenced how we designed surface types—soft, rough,
-                    and sharp—and informed gameplay mechanics like the
-                     sensitivity bar. We also looked into global
-                      accessibility design principles to ensure inclusivity​.</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Ideation:</b> 
-                We brainstormed around metaphors and mechanics that could
-                 <h>convey discomfort without being punitive</h>. The narrative
-                  of searching for a lost cat served as a grounding emotional
-                   anchor. Multiple design sketches and platforming tests
-                    helped visualize the game flow before coding began.</p>
-              <br>
-              <br>
-              <img src="lowfidsoftsteps1.png" alt="Low-Fidelity Soft Steps 1" style="width: 100%; height: 600px; object-fit: cover;">
-<cpt>This is a screenshot from our low-fidelity.</cpt>
-<br>
-<br>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Design:</b> 
-                The pixelated design direction was chosen to <h>enhance clarity
-                 and mood while maintaining simplicity</h>. Levels include floral
-                  gardens, forest paths, and caves, each with soft, muted
-                   tones. Custom assets, AI-assisted visuals, and consistent
-                    UI elements made the experience more cohesive​.</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Testing:</b> 
-                Playtesting was conducted with classmates and professors across
-                 both development phases. Feedback focused on <h>platform difficulty,
-                  jump range accuracy, and visual readability</h>. Based on this,
-                   we adjusted platform spacing, added checkpoints, and ensured
-                    all jumps were always reachable​.</p>
-           </ul>
-           <br>
-
-           <br>
-        <br>
-        <img src="softstepslvl1.png" alt="Soft Steps Lvl 1" style="width: 100%; height: 600px; object-fit: cover;">
-        <cpt>This is a screenshot from level one of Soft Steps.</cpt>
-        <br>
-        <br>
-
-        <hr>
-
-          <h3><i class="fa-solid fa-star"></i> SOLUTION</h3>
-          <p>The final game immerses players in a soothing but challenging world
-             where overstimulation is a core mechanic. The inclusion of healing
-              orbs, checkpoints, and a sensitivity bar allows players to
-               self-regulate their experience. These features collectively
-                simulate the heightened awareness experienced with hyperalgesia.
-        </p>
-          <br>
-          <h3><i class="fa-solid fa-bolt"></i> IMPACT</h3>
-            <ul> 
-             <p><b> <i class="fa-solid fa-star-of-life"></i> Results:</b> 
-              By translating pain sensitivity into interactive mechanics,
-               Soft Steps promotes empathy through play. The project
-                fostered discussion around invisible disabilities in digital
-                 spaces and how gameplay can be a vehicle for storytelling
-                  and understanding. It also encouraged more inclusive
-                   design thinking within our peer group.
-              </p>
-
-              <p><b><i class="fa-solid fa-star-of-life"></i> What was the outcome?</b>
-                The final product was a four-level platformer complete with boss
-               mechanics, checkpoints, collectibles, and a pause menu.
-                All members contributed equally to visuals, coding,
-                 testing, and polish. The game was successfully submitted
-                  and received positive feedback for its theme cohesion
-                   and originality.
-              </p>
-
-              <p><b><i class="fa-solid fa-star-of-life"></i> Measurable metrics: </b>
-                Key success metrics included smoother player navigation, reduced sensitivity
-                -related frustration, and more consistent feedback in class reviews.
-                 In our playtests, 80% of testers reached the end goal without overloading
-                  their sensitivity meter after the final tweaks​.
-              </p>
-            </ul>
-        <hr>
-
-          <h3>WHAT DID I LEARN?</h3>
-            <ul>
-              <p>1. I learned how to translate abstract physical sensations into game logic and visual storytelling.
-                <br>
-              2. This project pushed me to code more effectively, troubleshoot level balancing, and work fluidly across team roles.
-              <br>
-              3. It also reinforced how feedback and iteration are key to accessible design.
-            </p>
-            </ul>
-            <br>
-          <b> Challenges & how I overcame them:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> One major challenge was ensuring all platforms remained jumpable
-               across levels with different heights. We resolved this by implementing
-                a grid-based jump validation system.</p>
-            <p><i class="fa-solid fa-star-of-life"></i> 
-              Another challenge was aligning visual tone with gameplay pacing—we
-               achieved this through custom assets and revised level timing​.
-            </p>
-          </ul>
-
-          <b>Skills Gained:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> I gained hands-on experience in game development using p5.js,
-               visual design for accessibility, and user-centered testing.
-                I also strengthened my skills in team communication, code
-                 optimization, and adaptive design based on stakeholder
-                  feedback.</p>
-          </ul>
-        <br>
-          <div class="visual-buttons">
-            <a class="button">IMPROVED GAME DEVELOPMENT</a>
-            <a class="button">DESIGN FOR ACCESSIBILITY</a>
-            <a class="button">USER-CENTERED TESTING</a>
-          </div>
+      <div class="hero-buttons">
+        <a class="btn" href="#projects-1">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">View Resume ↗</a>
       </div>
     </div>
-
-
-    <div id="modal-maple" class="modal">
-      <div class="modal-content">
-
-        <span class="close">&times;</span>
-        <h2>MAPLE LEAF FOOD'S INSPECTION FORM</h2>
-        <p><i class="fa-solid fa-user-group"></i> Team: Jessica Ocampo & Jenani Yoganathan
-          <br>
-          <i class="fa-solid fa-stopwatch"></i> Duration: 3 Months</p>
-        <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Role:</b>
-        <div class="visual-buttons">
-          <a class="button">UX RESEARCHER</a>
-          <a class="button">UX DESIGNER</a>
-          <a class="button">APP DEVELOPER</a>
-        </div>
-          <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Tools:</b>
-        <div class="visual-buttons">
-          <a class="button">#FIGMA</a>
-          <a class="button">#POWER APPS</a>
-          <a class="button">#CANVA</a>
-        </div>
-        <br>
-        <div class="slideshow" style="width: 700px;">
-          <img src="formpg1-landscape.png" class="active" alt="Slide 1">
-          <img src="formpg2-landscape.png" alt="Slide 2">
-          <img src="formpg3-landscape.png" alt="Slide 3">
-          <img src="formpg4-landscape.png" alt="Slide 4">
-          <img src="formpg5-landscape.png" alt="Slide 5">
-          <img src="formpg6-landscape.png" alt="Slide 6">
-          <img src="formpg7-landscape.png" alt="Slide 7">
-          <img src="formpg8-landscape.png" alt="Slide 8">
-          <img src="formpg9-landscape.png" alt="Slide 9">
-          <img src="formpg10-landscape.png" alt="Slide 10">
-          <img src="formpg11-landscape.png" alt="Slide 11">
-
-        <button class="arrow left">&#10094;</button>
-        <button class="arrow right">&#10095;</button>
-        </div>
-        <br>
-        <hr>
-
-        <h3><i class="fa-solid fa-thumbtack"></i> OVERVIEW</h3>
-          <p>
-            The project involved designing a <h>tablet application prototype</h> as part of 
-            Maple Leaf Foods’ <h>"Path to Paperless"</h> initiative. This application served
-            as a universal form prototype/design system for employees to use at the plants,
-            replacing paper forms such as inspection forms.
-            It was developed exclusively for Maple Leaf Foods employees, specifically for plant workers.
-            The goal was to <h>reduce paper usage across Maple Leaf Foods</h> by providing a digital solution
-            that streamlined form-based tasks in an accessible and efficient way.
-        </p>
-        <br>
-          <h3><i class="fa-solid fa-circle-exclamation"></i> PROBLEM</h3>
-          <p>
-            Plant workers relied on paper-based forms, which were inefficient,
-             environmentally unfriendly, and challenging to manage. Maple 
-             Leaf Foods wanted to <h>digitize this process</h> to align with their 
-             sustainability goals. Employees wearing gloves needed the application to be 
-             functional despite limited tactile precision.
-          Employees who were <h>less tech-savvy</h> needed a user-friendly interface.
-          The forms needed to balance simplicity and visual appeal while maintaining functionality. 
-          The paper-based process was resource-intensive, less environmentally sustainable,
-           and prone to inefficiencies. Digitization offered a way to <h>enhance operational
-            effectiveness</h> and align with Maple Leaf Foods’ sustainability goals.
-        </p>
-          <br>
-          <h3><i class="fa-solid fa-screwdriver-wrench"></i> PROCESS</h3>
-            <ul>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Research:</b> 
-              Conducted interviews and user testing with plant employees to understand their needs,
-              workflows, and challenges with transitioning to digital forms.</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Ideation:</b> 
-              Brainstormed solutions collaboratively using Figma to create low-fidelity wireframes,
-               which evolved into high-fidelity prototypes. Canva was used to source icons to 
-               enhance the visual design.</p>
-              <br>
-              <iframe 
-  src="https://www.figma.com/embed?embed_host=astra&url=https://www.figma.com/design/90PwVmr67K63XEP7qAHG3d/Standardized-MLF-Design-System?node-id=128-663&p=f&t=Ukjo8HxsqegCUV05-0" 
-  allowfullscreen 
-  width="100%" 
-  height="600" 
-  style="border: none;">
-</iframe>
-<cpt>This is the original design which got changed due to a new criteria to have no MLF branding.</cpt>
-<br>
-<br>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Design:</b> 
-              Focused on creating simple yet visually appealing forms with key features
-              such as dark mode and light mode. The high-fidelity designs were built in Figma.</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Testing:</b> 
-              Validated designs through usability testing with employees to ensure they were intuitive and functional, 
-              even for users with gloves or limited tech experience. Prototypes were then built in Microsoft Power Apps
-              for further testing.</p>
-           </ul>
-           <br>
-           <iframe 
-          src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/hLeyeyj7N6Lizn5dVMUcrY/Revised-MLF-Design-System?node-id=0-1&p=f&t=Yx0VYsJ6n2CSIktj-0" 
-          allowfullscreen 
-          width="100%" 
-          height="600" 
-          style="border: none;">
-        </iframe>
-        <cpt>This is the final product.</cpt>
-        <hr>
-
-          <h3><i class="fa-solid fa-star"></i> SOLUTION</h3>
-          <p>A simple, user-friendly interface.
-            Support for dark mode and light mode to cater to 
-            user preferences and visual comfort.
-            <h>Compatibility with glove use</h> to accommodate plant workers.
-            Icons and visual elements to enhance clarity and usability.
-            The design addressed user needs by being <h>intuitive and accessible</h>
-            for a wide range of employees, reducing the learning curve for
-            older or less tech-savvy workers. It eliminated paper dependency,
-            aligning with the company’s sustainability objectives.
-        </p>
-          <br>
-          <h3><i class="fa-solid fa-bolt"></i> IMPACT</h3>
-            <ul> 
-             <p><b><i class="fa-solid fa-star-of-life"></i> Results:</b> The prototype was handed off to the development team for implementation.
-              It set the foundation for a scalable, reusable design system for other form-based applications 
-              across Maple Leaf Foods.</p>
-
-              <p><b><i class="fa-solid fa-star-of-life"></i> What was the outcome?</b> Positioned the company to significantly reduce paper 
-              usage at plants, contributing to their "Path to Paperless" initiative.</p>
-
-              <p><b><i class="fa-solid fa-star-of-life"></i> Measurable metrics: </b>While specific metrics were not mentioned, 
-              the project advanced Maple Leaf Foods’ sustainability and digital 
-              transformation goals.</p>
-            </ul>
-        <hr>
-
-          <h3>WHAT DID I LEARN?</h3>
-            <ul>
-              <p>1. How to work cross-functionally with various teams and stakeholders.
-                <br>
-              2. Best practices for designing tablet applications, especially for industrial use cases.
-              <br>
-              3. The importance of user-centric design in making technology accessible.
-            </p>
-            </ul>
-            <br>
-          <b>Challenges & how I overcame them:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> One challenge involved designing for users who wear gloves. 
-              The solution was to simplify touchpoints and conduct usability testing while users were wearing gloves.</p>
-            <p><i class="fa-solid fa-star-of-life"></i> Another challenge was ensuring the application appealed to older, less tech-savvy employees. 
-              To address this, simplicity was prioritized, and the application was extensively tested with this user group.</p>
-          </ul>
-
-          <b>Skills Gained:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> Developed proficiency in Figma for design and prototyping, gained experience with Microsoft Power Apps for 
-              low-fidelity interactive prototypes, and enhanced understanding of design standards for iPad/tablet applications.</p>
-          </ul>
-        <br>
-          <div class="visual-buttons">
-            <a class="button">IMPROVED FIGMA PROTOTYPING</a>
-            <a class="button">POWER APPS PROFICIENCY</a>
-            <a class="button">ENHANCED APPLICATION UNDERSTANDING</a>
-          </div>
-      </div>
-    </div>
-
-    <div id="modal-cross" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>CROSSCULTURA</h2>
-        <p><i class="fa-solid fa-user-group"></i> Team: Jessica Ocampo, Isabelle Cho, Jackie Zhang
-          <br>
-          <i class="fa-solid fa-stopwatch"></i> Duration: 2 Months</p>
-        <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Role:</b> 
-        <div class="visual-buttons">
-          <a class="button">UX RESEARCHER</a>
-          <a class="button">UX DESIGNER</a>
-          <a class="button">STYLY DEVELOPER</a>
-        </div>
-          <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Tools:</b>
-        <div class="visual-buttons">
-          <a class="button">#FIGMA</a>
-          <a class="button">#STYLY</a>
-          <a class="button">#PREMIERE PRO</a>
-        </div>
-  
-        <div class="slideshow" style="width: 950px;">
-          <img src="crosscultura1-front.png" class="active" alt="Slide 1">
-          <img src="crosscultura2-front.png" alt="Slide 2">
-          <img src="crosscultura3-front.png" alt="Slide 3">
-          <img src="crosscultura4-front.png" alt="Slide 4">
-          <img src="crosscultura5-front.png" alt="Slide 5">
-
-        <button class="arrow left">&#10094;</button>
-        <button class="arrow right">&#10095;</button>
-        </div>
-        <br>
-        <hr>
-        <h3><i class="fa-solid fa-video"></i> SHORT VIDEO</h3>
-          <div style="padding:56.25% 0 0 0;position:relative;">
-            <iframe src="https://player.vimeo.com/video/1048652427?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="CrossCultura Short Video">
-            </iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-        <hr>
-
-        <h3><i class="fa-solid fa-thumbtack"></i> OVERVIEW</h3>
-        
-          <p>
-            The project focused on developing a Cultural Adjustment and Language Learning App to support
-             international students in <h>overcoming language barriers, cultural adjustment challenges, and feelings of isolation.</h>
-            The app was designed for international undergraduate students as the primary target audience, 
-            addressing their unique challenges.
-            <br>
-            <br>
-            The goal was to create an <h>augmented reality app</h> that helps international students
-             improve language skills, understand cultural nuances, and practice real-life scenarios. 
-             The app aimed to alleviate anxiety and mental health challenges, fostering better academic 
-             and social integration.
-        </p>
-        <br>
-          <h3><i class="fa-solid fa-circle-exclamation"></i> PROBLEM</h3>
-          <p>
-            International students often struggle with language barriers, adapting to cultural norms
-             and feelings of isolation, which intensify <h>stress and mental health challenges.</h> These 
-             difficulties make it harder for students to practice academic and conversational language,
-            navigate cultural etiquette, and <h>feel supported in their new environments.</h> As a result,
-            their academic performance, well-being, and ability to integrate into their communities
-            suffer, highlighting a critical need for tailored mental health support and adjustment
-            tools to address these unique challenges.
-        </p>
-          <br>
-          <h3><i class="fa-solid fa-screwdriver-wrench"></i> PROCESS</h3>
-            <ul>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Research:</b> 
-                Methods Used: Think-aloud protocol, System Usability Scale (SUS) surveys,
-                semi-structured interviews, and user interaction analytics.
-                Feedback emphasized accessibility, intuitive use, and engaging features.</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Ideation:</b> 
-                Brainstormed features like immersive scenarios (e.g., grocery shopping, lectures),
-                 NPC interactions, and gamification elements (XP points, levels).</p>
-<br>
-                 <iframe 
-  src="https://www.figma.com/embed?embed_host=astra&url=https://www.figma.com/design/JKm94KmgaPhtuJ2oflzXjI/Brand-Style-Guide--Assignment-3--GBDA301?node-id=0-1&p=f&t=7f4ezdV1yBKOWI9O-0" 
-  allowfullscreen 
-  width="100%" 
-  height="600" 
-  style="border: none;">
-</iframe>
-<cpt>This is the brand style guideline.</cpt>
-<br>
-              <br>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Design:</b> 
-                Tools: Figma and Styly for high-fidelity prototypes.
-                Implemented Universal Design principles, ensuring accessibility (e.g., 
-                high-contrast modes, text-to-speech, and voice commands).</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Testing:</b> 
-                Validation Methods: User testing provided qualitative and
-                 quantitative insights. Issues like navigation, clarity of interface elements,
-                  and the lack of interactivity were identified and iterated upon.</p>
-           </ul>
-           <br>
-           <iframe 
-              src="https://www.figma.com/embed?embed_host=astra&url=https://www.figma.com/design/tzlFNhu4Stcp0tosduZJfP/High-Fidelity-Prototype?node-id=71-201&p=f&t=MyyOYbWY06efjZZR-0" 
-              allowfullscreen 
-              width="100%" 
-              height="600" 
-              style="border: none;">
-            </iframe>
-            <cpt>This is the iterated prototype.</cpt>
-        <hr>
-
-          <h3><i class="fa-solid fa-star"></i> SOLUTION</h3>
-          <p>
-            The solution featured <h>immersive AR scenarios simulating real-life settings,</h>
-             accessibility enhancements like voice commands and text-to-speech, and
-              gamification elements such as XP rewards and progress tracking. A
-               feedback system provided real-time insights, helping users practice
-                language, adapt to <h>cultural norms, reduce anxiety, and foster a sense of achievement.</h>
-        </p>
-          <br>
-          <h3><i class="fa-solid fa-bolt"></i> IMPACT</h3>
-            <ul> 
-              <p><b><i class="fa-solid fa-star-of-life"></i> Results:</b> 
-              The app demonstrated improved usability, with SUS scores indicating it was user-friendly,
-               achieving a mean ease-of-use score of 3.75. Users provided positive feedback,
-                praising features such as transcripts, adjustable audio speeds, and XP rewards
-                 for supporting mental health and enhancing engagement. Additionally, the
-                  simulated environments helped <h>reduce anxiety by making learning less intimidating.</h>
-            </p>
-
-              <p><b><i class="fa-solid fa-star-of-life"></i> What was the outcome?</b> 
-                Users appreciated the app’s immersive and gamified approach,
-                 encouraging frequent use. Participants suggested the
-                  potential for increased student confidence and improved academic/social adjustment.
-              </p>
-
-              <p><b><i class="fa-solid fa-star-of-life"></i> Measurable metrics: </b>
-                Average SUS score: 74 (indicative of good usability).
-                Reduced perceived complexity: Low complexity score (mean 1.5).
-              </p>
-            </ul>
-        <hr>
-
-        <h3>WHAT DID I LEARN?</h3>
-            <ul>
-              <p><i class="fa-solid fa-star-of-life"></i> The project highlighted the importance of user-centered design and the
-                 value of <h>continuous iteration based on feedback</h>. Incorporating accessibility
-                  and inclusivity was shown to enhance usability and increase user satisfaction.
-                   Additionally, user testing proved invaluable for uncovering hidden pain points
-                    and identifying areas for improvement.</p>
-            </ul>
-            <br>
-          <b>Challenges & how I overcame them:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> One challenge was ensuring intuitive navigation and interactivity within the app.
-               This was addressed by adding headers, improving button clarity, and enhancing
-                navigation paths. Another challenge involved balancing immersion and simplicity,
-                 which was resolved by streamlining unnecessary features, such as removing
-                  confusing visualizers.</p>
-          </ul>
-
-          <b>Skills Gained:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> The project enhanced proficiency in prototyping tools like Figma
-               and Styly. It also developed skills in conducting user research and
-                analyzing both qualitative and quantitative data. Additionally, it
-                 emphasized applying Universal Design principles to ensure
-                  accessibility for all users.</p>
-          </ul>
-        <br>
-          <div class="visual-buttons">
-            <a class="button">IMPROVED FIGMA PROTOTYPING</a>
-            <a class="button">USER RESEARCH DATA</a>
-            <a class="button">ENHANCED DESIGN PRINCIPLES</a>
-          </div>
-      </div>
-    </div>
-
-    <div id="modal-moodle" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>MOODLE</h2>
-        <div class="slideshow" style="width: 350px; float: right;">
-        <img src="moodle1-portrait.png" class="active" alt="Slide 1">
-        <img src="moodle2-portrait.png"  alt="Slide 2">
-        <img src="moodle3-portrait.png"  alt="Slide 3">
-        <img src="moodle4-portrait.png"  alt="Slide 4">
-        <img src="moodle5-portrait.png"  alt="Slide 5">
-        <img src="moodle6-portrait.png"  alt="Slide 6">
-        <img src="moodle7-portrait.png"  alt="Slide 7">
-        <img src="moodle8-portrait.png"  alt="Slide 8">
-        <img src="moodle9-portrait.png"  alt="Slide 9">
-        <img src="moodle10-portrait.png"  alt="Slide 10">
-        <img src="moodle11-portrait.png"  alt="Slide 11">
-        <img src="moodle12-portrait.png"  alt="Slide 12">
-        <img src="moodle13-portrait.png"  alt="Slide 13">
-
-        <button class="arrow left">&#10094;</button>
-        <button class="arrow right">&#10095;</button>
-        </div>
-
-        <p><i class="fa-solid fa-user-group"></i> Team: Jessica Ocampo, Cindy Choung, 
-          Joy Li, Cici Chen, Sophia Ho, Collin Yeung
-          <br>
-          <i class="fa-solid fa-stopwatch"></i> Duration: 6 hours</p>
-        <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Role:</b> 
-        <div class="visual-buttons">
-          <a class="button">UX RESEARCHER</a>
-          <a class="button">UX DESIGNER</a>
-          <a class="button">GRAPHIC DESIGNER</a>
-        </div>
-          <br>
-        <b><i class="fa-solid fa-star-of-life"></i> Tools:</b>
-        <div class="visual-buttons">
-          <a class="button">#FIGMA</a>
-          <a class="button">#PROCREATE</a>
-          <a class="button">#ILLUSTRATOR</a>
-        </div>
-        <br>
-        <hr>
-
-        <h3><i class="fa-solid fa-thumbtack"></i> OVERVIEW</h3>
-          <p>
-            The project was about designing a mobile application aimed at raising awareness
-             and <h>reducing the stigma around mental health</h> for pre-teens. It featured
-              educational and engaging components to help foster a better understanding
-              of mental health in a fun, interactive way. The application was developed
-              for the <h>Sun Life UXperience Designathon.</h> The goal was to create an engaging
-              and educational tool to help pre-teens understand mental health better,
-             raise awareness, and combat the stigma surrounding it.
-        </p>
-        <br>
-          <h3><i class="fa-solid fa-circle-exclamation"></i> PROBLEM</h3>
-          <p>
-            The key problem was the <h>lack of accessible, engaging resources aimed at
-             reducing the stigma</h> around mental health for pre-teens. Mental health
-              awareness is often overlooked at a younger age, especially for those
-              in the pre-teen demographic. The primary challenge was that pre-teens
-               often don’t have access to or understanding of mental health resources
-                that are both appropriate and engaging for their age. This could lead
-                 to misunderstandings or stigma around mental health. For Sun Life
-                  and the UXperience Designathon, addressing mental health stigma
-                   in the younger demographic could help in shaping a <h>more informed,
-                    compassionate generation</h> and strengthen the community's
-                     well-being and engagement.</p>
-          <br>
-          <h3><i class="fa-solid fa-screwdriver-wrench"></i> PROCESS</h3>
-            <ul>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Research:</b> 
-                We began by researching existing mobile health applications
-                 to analyze trends, features, and targeting user demographics.
-                  This helped ensure the app’s feasibility, usability,
-                   and engagement potential.</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Ideation:</b> 
-                We kicked off the design process with brainstorming sessions
-                 to generate ideas, followed by group discussions to refine
-                  the concept. This collaborative approach helped us focus
-                   on features that would resonate with the pre-teen
-                    demographic.</p>
-                 </ul>  
-
-              
-                      <img src="moodroughproto.png" class="image-container">
-                      <cpt>This is a drawing of our low-fidelity.</cpt>
-                  
-                  <ul>
-              <p><b><i class="fa-solid fa-star-of-life"></i> Design:</b> 
-                We used tools like Figma for creating the low-fidelity
-                 sketches and prototypes, and Procreate for visual
-                  design elements. Our graphic designers worked on
-                   the visual aesthetics, while researchers ensured
-                    the design remained cohesive and appropriate
-                     for the target audience.</p>
-              
-              <p><b><i class="fa-solid fa-star-of-life"></i> Testing:</b> 
-                 We took the opportunity
-                to <h>consult with mentors during the event,</h> who
-                provided valuable insights that helped us edit
-                and improve our designs and concepts. 
-                This feedback was crucial in validating our design
-                choices and enhancing the app’s overall appeal
-                 and usability.</p>
-           </ul>
-           <br>
-           <iframe 
-          src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/GphHfEIMGQPFyR1BNZSkNx/MENTAL-HEALTH-APP?node-id=0-1&p=f&t=hLS82PVvrldte524-0" 
-          allowfullscreen 
-          width="100%" 
-          height="600" 
-          style="border: none;">
-        </iframe>
-        <cpt>This is our brainstorming & final prototype file.</cpt>
-        <hr>
-
-          <h3><i class="fa-solid fa-star"></i> SOLUTION</h3>
-          <p>The design featured <h>interactive educational content,</h>
-             an easy-to-navigate interface, and visuals tailored
-              to pre-teens. We focused on creating a fun and
-               informative experience. By providing a non-intimidating
-                space to learn about mental health, the design directly
-                 addressed the stigma surrounding it, helping pre-teens
-                  understand the topic in an accessible way.
-        </p>
-          <br>
-          <h3><i class="fa-solid fa-bolt"></i> IMPACT</h3>
-            <p>The project received positive feedback during the pitch,
-               with judges praising the engaging and educational design.
-                Although there were no measurable metrics due to the
-                 6-hour time limit, the judges <h>appreciated the balance
-                  of usability, aesthetics, and educational value.</h>
-                   They also provided constructive feedback, which
-                    helped refine our concept. As our first designathon,
-                     there was room for improvement, and we took the
-                      insights to enhance our future design processes.</p>
-        <hr>
-
-        <h3>WHAT DID I LEARN?</h3>
-            <ul>
-              <p>1. I learned how to <h>rapidly collaborate with a team</h> to ideate,
-                 design, and prototype an application under tight time constraints.</p>
-              <p>2. It was also a valuable experience in understanding how to tailor
-                 solutions for specific user demographics.</p>
-            </ul>
-            <br>
-          <b>Challenges & how I overcame them:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> The biggest challenge was working within the time limit.
-               We overcame this by efficiently dividing tasks, with each
-                team member focusing on their strengths—graphic design,
-                 research, and prototyping—while ensuring cohesive collaboration.</p>
-          </ul>
-
-          <b>Skills Gained:</b>
-          <ul>
-            <p><i class="fa-solid fa-star-of-life"></i> I gained experience in rapid prototyping with Figma,
-               collaborative brainstorming, and research on health-related
-                mobile apps. I also honed my skills in presenting and
-                 pitching concepts to judges.</p>
-          </ul>
-        <br>
-          <div class="visual-buttons">
-            <a class="button">RAPID FIGMA PROTOTYPING</a>
-            <a class="button">COLLABORATIVE BRAINSTORMING</a>
-            <a class="button">PITCHES & PRESENTATIONS</a>
-          </div>
-      </div>
-    </div>
-
-    
   </section>
 
-    <section id="about" class="section">
-      <h2>Learn More.</h2>
-      <br>
-      <div class="typing-container">
-        <div class="ps"><h1>
-        <span class="typed-text">>Who is Jessica ?</span>
-        </h1></div>
+  <!-- Projects (3 screens, each full height + clickable) -->
+  <section id="projects-1" aria-label="Project 1">
+    <span class="label">PROJECTS · 1 / 3</span>
+    <div class="wrap project">
+      <a class="section-link" href="project1.html" aria-label="Open Project 1"></a>
+      <h2>Rogers: Energy & Utilities Dashboard</h2>
+      <p>Crafted a smart energy dashboard for Rogers — intuitive, partner-aligned, and built for all users to take control.</p>
+      <div class="tags">
+        <span class="chip"><i class="fa-solid fa-mobile"></i> Mobile</span>
+        <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI Design</span>
+        <span class="chip"><i class="fa-solid fa-layer-group"></i> Prototyping</span>
       </div>
-      
-      <br>
-      <hr>
-      <br>
+      <span class="cta">Open case study</span>
+    </div>
+  </section>
 
-      <div class="about-container">
-        <div class="ps">
-            <h3 style="background-color: var(--bg-color); color: var(--text-color);">>About</h3>
+  <section id="projects-2" aria-label="Project 2">
+    <span class="label">PROJECTS · 2 / 3</span>
+    <div class="wrap project">
+      <a class="section-link" href="project2.html" aria-label="Open Project 2"></a>
+      <h2>Soft Steps: Accessibility Platformer Game</h2>
+      <p>Created a cozy pixel platformer that turns sensory overload into gameplay to spotlight hyperesthesia.</p>
+      <div class="tags">
+        <span class="chip"><i class="fa-solid fa-desktop"></i> Desktop</span>
+        <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI Design</span>
+        <span class="chip"><i class="fa-solid fa-code"></i> Game Development</span>
+      </div>
+      <span class="cta">Open case study</span>
+    </div>
+  </section>
+
+  <section id="projects-3" aria-label="Project 3">
+    <span class="label">PROJECTS · 3 / 3</span>
+    <div class="wrap project">
+      <a class="section-link" href="project3.html" aria-label="Open Project 3"></a>
+      <h2>Crosscultura: AR Language Learning App</h2>
+      <p>Created an AR app that helps international students break language barriers and connect with new cultures through immersive, real-world scenarios.</p>
+      <div class="tags">
+        <span class="chip"><i class="fa-solid fa-vr-cardboard"></i> Augumented Reality</span>
+        <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI Design</span>
+        <span class="chip"><i class="fa-solid fa-eye"></i> AR Development</span>
+      </div>
+      <span class="cta">Open case study</span>
+    </div>
+  </section>
+
+  <!-- About (2 screens) -->
+  <section id="about-1" class="about" aria-label="About 1">
+    <div class="wrap">
+      <div class="card">
+        <h2>About me</h2>
+        <p>👋 Hey, I’m a fourth-year GBDA student at the University of Waterloo. I like to explore the intersection between business, design and technology. I have a strong eye for detail and an innovative mindset.
+        </p>
+        <h3>Favourite Tools</h3>
+        <div class="tags">
+          <span class="chip">Figma</span>
+          <span class="chip">Adobe Creative Suite</span>
+          <span class="chip">Miro</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">Canva</span>
         </div>
         <br>
-        <div class="about-content">
-            <img src="me.jpg" alt="Image of Me." class="about-img">
-
-            <div class="about-text">
-                <p>
-                    <i class="fa-solid fa-star"></i> <b>Hi, I’m Jessica Ocampo,</b> a third-year 
-                    <a href="https://uwaterloo.ca/future-students/programs/global-business-and-digital-arts" 
-                    class="aboutlinks" target="_blank"> 
-                    Global Business and Digital Arts <i class="fa-solid fa-link"></i></a>
-                    student at the <h>University of Waterloo</h>, where I explore the
-                    intersection of business, design, and technology. With a strong eye
-                    for detail and an innovative mindset, I enjoy crafting creative solutions
-                    that meet user needs and business goals.
-                    <br><br>
-                    My journey spans roles at <h>Maple Leaf Foods, Sushi Kui,
-                    and PCI Glass</h>, where I honed my skills in UX, design,
-                    and problem-solving. I’ve developed a range of prototypes,
-                    from iPad apps to mobile interfaces, websites, and physical
-                    menus and flyers. In addition, my knowledge of coding helps me bring ideas to
-                    life across digital platforms.
-                    <br>
-                </p>
-            </div>
+        <h3>Hobbies & Interests</h3>
+        <div class="tags">
+          <span class="chip">Graphic Design</span>
+          <span class="chip">Video-editing</span>
+          <span class="chip">Coding</span>
+          <span class="chip">Hair-cutting</span>
+          <span class="chip">Weight-lifting</span>
+          <span class="chip">Cozy Gaming</span>
         </div>
-    </div>
-    
-        <br><hr><br>
-        <div class="ps">
-          <h3 style="background-color: var(--bg-color); color: var(--text-color); 
-           ">>Hobbies</h3>
-            </div>
-      <div class="visual-buttons">
-        <a class="button"><i class="fa-solid fa-code"></i>&nbsp;CODING</a>
-        <a class="button"><i class="fa-solid fa-gamepad"></i>&nbsp;GAMING</a>
-        <a class="button"><i class="fa-solid fa-dumbbell"></i>&nbsp;WEIGHT-LIFTING</a>
-        <a class="button"><i class="fa-solid fa-scissors"></i>&nbsp;HAIR-CUTTING</a>
       </div>
+    </div>
+  </section>
+
+  <section id="about-2" class="about" aria-label="About 2">
+    <div class="wrap">
+      <div class="card">
+        <h2>Designing for Connection</h2>
+        <p>💡 For me, UX is about more than just making things usable—it's about creating moments that connect people to a brand’s story and improving existing products. I’m always curious about how psychology, creativity, and design come together to shape behaviour and add real value.
+        </p>
+        <h3>Fun Meets Function</h3>
+        <p>💭 I believe that every interaction tells a story, and I aim to craft experiences that are not only functional but also captivating and fun. By infusing elements of gamification and narrative into my designs, I create engaging journeys that resonate with users on a deeper level.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect (1 screen) -->
+  <section id="connect" class="connect" aria-label="Connect">
+    <div class="wrap">
+      <h1>Let’s connect</h1>
+      <p class="lead">Interested in working together or just saying hi? I’d love to hear from you.</p>
       <br>
-      <br>
-      <div class="ps">
-        <h3 style="background-color: var(--bg-color); color: var(--text-color); 
-         ">>Interests</h3>
-          </div>
-      <div class="visual-buttons">
-        <a class="button"><i class="fa-solid fa-robot"></i>&nbsp;EXTENDED REALITITES</a>
-        <a class="button"><i class="fa-solid fa-object-group"></i>&nbsp;GRAPHIC DESIGN</a>
-        <a class="button"><i class="fa-solid fa-film"></i>&nbsp;VIDEO-EDITING</a>
-      </div>
-      <br><hr><br>
-      <div class="ps">
-        <h3 style="background-color: var(--bg-color); color: var(--text-color); 
-         ">>Passion</h3>
-          </div>
-      <p>At the heart of my passion for UX design
-         is the drive to create experiences that seamlessly <b>
-          <i class="fa-solid fa-star"></i> blend
-          functionality with emotion</b>. I believe that design
-           isn’t just about usability—it’s about crafting moments
-            that connect users to a brand’s story. By exploring the intersection
-              of <h>psychology, innovation, and usability,</h> I aim to
-               design solutions that influence behavior, and bring value to users and businesses.
-                 This approach <b>fuels my curiosity</b> and motivates me
-                  to build meaningful designs.</p>
-      <br><hr><br>
-      <div class="ps">
-        <h3 style="background-color: var(--bg-color); color: var(--text-color); 
-         ">>Philosophy</h3>
-          </div>
-      <p>I believe that <b>every interaction tells a story,</b>
-         and I aim to craft experiences that are not only
-          functional but also captivating and fun. By
-           infusing elements of <h>gamification and narrative</h>
-            into my designs, I create engaging journeys
-             that resonate with users on a deeper level.
-             <br>
-             <br>
-             <br>
-             <br>
-    </section>
-  </main>
-  <footer id="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <a href="mailto:jsocampo@uwaterloo.ca" 
-        class="footer-button">
-        Let's Chat
-        <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-  
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <ul>
-          <li><i class="fas fa-envelope"></i> jsocampo@uwaterloo.ca</li>
-          <li><i class="fas fa-link"></i> 
-            <a href="https://www.linkedin.com/in/jessica--ocampo/" target="_blank">
-              LinkedIn
-            </a></li>
-          <li><i class="fas fa-location-dot"></i> Ontario, CA</li>
-        </ul>
+      <div class="socials">
+        <a class="btn" href="mailto:hello@example.com">Email ↗</a>
+        <a class="btn" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>Designed with <i class="fa-regular fa-heart"></i>, leveled up by curiosity.</p>
-    </div>
-  </footer>
-  </div>
-
-  <div class="custom-cursor"></div>
-  <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.section');
-    const bentoBox = document.querySelector('.bento-box');
-    const homeButtons = document.querySelector('.home-buttons');
-    const homeButtonLinks = document.querySelectorAll('.home-buttons .button');
-    
-    // Function to handle section transitions
-    navLinks.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-
-    const targetId = link.getAttribute('data-target');
-
-// If the footer, just scroll — don’t toggle sections
-if (targetId === 'footer') {
-  document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
-  return;
-}
-
-// Otherwise, handle section switching
-sections.forEach(section => {
-  section.classList.remove('active');
-});
-const targetSection = document.getElementById(targetId);
-targetSection.classList.add('active');
-targetSection.scrollIntoView({ behavior: 'smooth' });
-
-if (targetId === 'home') {
-  homeButtons.classList.add('active');
-  setTimeout(() => {
-    bentoBox.classList.add('active');
-  }, 500);
-} else {
-  homeButtons.classList.remove('active');
-  bentoBox.classList.remove('active');
-}
-
-  });
-});
-
-    // Handle "Go to Projects" button click
-    homeButtonLinks.forEach(button => {
-      button.addEventListener('click', event => {
-        const targetId = button.getAttribute('data-target');
-    
-        if (targetId) {
-          event.preventDefault();
-    
-          sections.forEach(section => {
-            section.classList.remove('active');
-          });
-    
-          const targetSection = document.getElementById(targetId);
-          targetSection.classList.add('active');
-    
-          if (targetId === 'home') {
-            homeButtons.classList.add('active');
-            setTimeout(() => {
-              bentoBox.classList.add('active');
-            }, 500);
-          } else {
-            homeButtons.classList.remove('active');
-            bentoBox.classList.remove('active');
-          }
-        }
-      });
-    });
-    
-    // Trigger the initial animation on page load (for home section)
-    window.addEventListener('load', () => {
-      document.getElementById('home').classList.add('active');
-      homeButtons.classList.add('active');
-      bentoBox.classList.add('active'); // Show bento-box on load
-    });
-    
-    // Modal Functionality
-    const bentoItems = document.querySelectorAll('.bento-item');
-    const modals = document.querySelectorAll('.modal');
-    const closeButtons = document.querySelectorAll('.close');
-    
-    bentoItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const modalId = item.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-        if (modal) {
-          modal.style.display = 'block';
-        }
-      });
-    });
-    
-    closeButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
-        modal.style.display = 'none';
-      });
-    });
-    
-    window.addEventListener('click', (event) => {
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    });
-    
-    // Slideshow
-    document.querySelectorAll('.slideshow').forEach(slideshow => {
-      const slides = slideshow.querySelectorAll("img");
-      const prev = slideshow.querySelector(".arrow.left");
-      const next = slideshow.querySelector(".arrow.right");
-      let currentIndex = 0;
-    
-      function showSlide(index) {
-        slides[currentIndex].classList.remove("active");
-        currentIndex = (index + slides.length) % slides.length;
-        slides[currentIndex].classList.add("active");
-      }
-    
-      prev.addEventListener("click", () => showSlide(currentIndex - 1));
-      next.addEventListener("click", () => showSlide(currentIndex + 1));
-    });
-    
-    // Rotating text
-    const phrases = [
-      "A pro in design, research, & analytics.",
-      "Proficient in HTML, CSS, & JavaScript.",
-      "Killer at Figma, Miro, & Adobe Softwares."
-    ];
-    
-    const textElement = document.getElementById("rotatingText");
-    let index = 0;
-    
-    function rotateText() {
-      index = (index + 1) % phrases.length;
-      textElement.textContent = phrases[index];
-    }
-    
-    setInterval(rotateText, 6000);
-    
-    function activateFoldIn() {
-      const textElement = document.getElementById("animatedText");
-    
-      if (textElement) {
-        textElement.classList.remove("active");
-        setTimeout(() => {
-          textElement.classList.add("active");
-        }, 100);
-      }
-    }
-    
-    document.getElementById("openModalBtn").addEventListener("click", function() {
-      document.getElementById("myNav").classList.add("hidden");
-    });
-    
-    document.getElementById("closeModalBtn").addEventListener("click", function() {
-      document.getElementById("myNav").classList.remove("hidden");
-    });
-
-    document.querySelector('.projects-link').addEventListener('click', function(event) {
-  event.preventDefault();
-  const target = document.getElementById('projects');
-  target.scrollIntoView({ behavior: 'smooth' });
-});
-    
-    window.addEventListener("load", activateFoldIn);
-    </script>
+  </section>
 </body>
 </html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>J.O - Rogers: Energy & Utilities Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#fbfbfb; --ink:#0b0b0c; --muted:#6b7280; --line:#e5e7eb; --max:760px; --navH:52px; --card:#ffffff; --callout:#eef7e7; --callout-border:#d7ebd2; --caption:#8b919a; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+
+    .nav {position:sticky;top:0;z-index:30;height:var(--navH);display:flex;align-items:center;background:#fff;}
+    .nav .inner{max-width:var(--max);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 10px}
+    
+    /* same as css file - but logo -> brand*/
+    .brand{ font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }    
+
+    /* NAV same as css */
+    /* Navbar */
+    .nav {
+      position: fixed; inset: 0 0 auto 0; height: var(--navH);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000;
+      background: transparent; /* we'll paint a gradient with ::aborder-bottom: 1px solid #e5e7eb; /* keep the crisp edge over the gradient */
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      will-change: transform;
+      }
+
+  /* Feathered top-to-bottom gradient behind the nav */
+      .nav::after {
+      content: "";
+      position: absolute; left: 0; right: 0; top: 0;
+      height: calc(var(--navH) + 100px); /* how far the fade extends */
+      pointer-events: none;
+      z-index: 0;
+      background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.16) 0%, /* darker at top */
+      rgba(0,0,0,0.06) 45%,
+      rgba(255,255,255,0) 100% /* fades to page */
+      );
+      }
+
+    /* removed blur layer to prevent ghosting */
+    .nav-inner { position: relative; z-index: 1;  width: 100%; max-width: var(--maxW); padding: 0 20px; display: flex; align-items: center; gap: 12px; }
+    .logo { font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }
+    .spacer { flex: 1; }
+    .nav a.link { padding: 8px 12px; border-radius: 12px; color: var(--muted); transition: color .2s, background .2s; }
+    .nav a.link:hover { color: var(--dark-grey); background: none; font-weight: 500;}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px 14px 90px}
+
+    /* same as css file*/
+    h1 {
+      margin: 60px 0 0;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      font-family: 'EASVHS', monospace; /* pixel font */
+      }
+    .hero-media{background:#f3f4f6;border:1px solid var(--line);border-radius:8px;height:220px;display:flex;align-items:center;justify-content:center;color:#9aa1a6}
+
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 6px}
+    .row{display:flex;align-items:center;gap:10px;font-size:13px;color:#6b7280}
+    .label{font-weight:600;color:#8b919a;min-width:92px;text-transform:capitalize}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 10px;font-size:12.5px;color:#0b0b0c}
+
+    .copy{line-height:1.75;color:#2a2a2a;font-size:14.5px}
+    .note{background:var(--callout);border:1px solid var(--callout-border);border-radius:8px;padding:12px 12px;margin:18px 0}
+    .note .label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#4f7a46;margin-bottom:6px;font-weight:700;min-width:0}
+
+    section{padding-top:6px;margin-bottom:18px}
+    h2.section{margin:26px 0 8px;font-weight:700;font-size:24px;font-family: 'EASVHS', monospace;}
+    h3.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#98a0ab;margin:18px 0 10px}
+
+    figure{margin:12px 0}
+    figure img{width:100%;border-radius:6px;border:1px solid var(--line)}
+    figcaption{font-size:12px;color:var(--caption);margin-top:6px}
+
+    footer{border-top:1px solid var(--line);padding:26px 0 40px;margin-top:36px;color:#97a0aa;font-size:12.5px}
+    @media (max-width: 560px){.meta{grid-template-columns:1fr}}
+
+    /* Kill underlines in the top nav, all states */
+header.nav nav a.link:link,
+header.nav nav a.link:visited,
+header.nav nav a.link:hover,
+header.nav nav a.link:active,
+header.nav a.logo {
+  text-decoration: none !important;
+}
+
+  </style>
+</head>
+<body>
+  <!-- on project page (e.g., project1.html) -->
+<header class="nav" role="navigation" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="logo" href="index.html#home" aria-label="Home">j.o</a>
+    <div class="spacer"></div>
+    <nav>
+      <a class="link" href="index.html#projects-1">projects</a>
+      <a class="link" href="index.html#about-1">about</a>
+      <a class="link" href="index.html#connect">connect</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="wrap">
+    <section>
+      <h1>Rogers: Energy &<br/>Utilities Dashboard</h1>
+      <div class="hero-media">Short Demo Video</div>
+
+      <div class="meta">
+        <div class="row"><div class="label">Timeline</div><div class="chips"><span class="chip">4 months</span></div></div>
+        <div class="row"><div class="label">Team</div><div class="chips"><span class="chip">Jessica Ocampo</span><span class="chip">Dani Dejong</span></div></div>
+        <div class="row"><div class="label">Tools</div><div class="chips"><span class="chip">Figma</span><span class="chip">Figjam</span><span class="chip">Procreate</span></div></div>
+        <div class="row"><div class="label">Disciplines</div><div class="chips"><span class="chip">UX/UI Research</span><span class="chip">UX/UI Design</span><span class="chip">Prototyping</span><span class="chip">Market Research</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section">Energy UX That Works Anywhere</h2>
+
+      <h3 class="kicker">Overview</h3>
+      <div class="copy">Designing a user-friendly Energy & Utilities dashboard for Rogers, aimed at helping users monitor and control smart home devices while understanding and optimizing their energy consumption. The dashboard supports both experienced and inexperienced users in making informed energy-saving decisions. It was created for presentation to stakeholders from a partnering company, with integrated features reflecting their offerings.</div>
+
+      <h3 class="kicker">Context</h3>
+      <div class="copy">This project was developed for Rogers in partnership with municipally owned electricity utility and distributor whose features were integrated into the app. The goal was to give users intuitive control over energy usage and smart home devices. Most existing dashboards are desktop-heavy, rely on complex graphs, and aren’t optimized for mobile, making them hard to use—especially for less tech-savvy users.</div>
+    </section>
+
+    <section>
+      <h2 class="section">Blueprints for Better Energy</h2>
+      <h3 class="kicker">Process</h3>
+      <div class="note"><div class="label">🔬 Research</div>
+      <div class="copy">We researched energy consumption trends, smart home tech, and user expectations
+         to understand the market. By analyzing existing dashboards, we identified usability gaps and
+          design opportunities. Personas for both tech-savvy and novice users guided our decisions,
+           and user flows and journeys ensured smooth, intuitive navigation.</div></div>
+    </section>
+
+      <figure>
+        <img src="ui_inspo.png" alt="Research board"/>
+        <figcaption>UX/UI research and inspiration on existing models of energy & utility dashboards.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="section">User Personas</h2>
+      <figure>
+        <img src="personas_e&u.png" alt="Personas"/>
+        <figcaption>Personas for high tech proficiency vs. moderate-low tech proficiency users who would use our product.</figcaption>
+      </figure>
+    </section>
+
+      <section>
+      <div class="note"><div class="label">💡 Ideation</div>
+      <div class="copy">We started with low-fidelity sketches to explore layout, hierarchy, and core features.
+         These were refined into mid-fidelity designs in Figma with basic styling for validation.
+          Throughout ideation, we prioritized key features like device toggles, energy summaries,
+           and partner integrations to ensure the dashboard was both functional and user-friendly.</div>
+    </section>
+
+    <section>
+      <h2 class="section">Low-fidelity Sketches</h2>
+      <figure>
+        <img src="low-fid_e&u1.png" alt="Sketch set 1"/>
+        <figcaption>Low-fidelity sketches for onboarding, home, energy and impact page.</figcaption>
+      </figure>
+      <figure>
+        <img src="low-fid_e&u2.png" alt="Sketch set 2"/>
+        <figcaption>Low-fidelity sketches for profile, simulation and help page.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="section">Designing for Utility & Usability</h2>
+
+      <section>
+      <div class="note"><div class="label">✍ Design</div>
+      <div class="copy">We created a high-fidelity prototype in Figma with realistic interactions
+         and transitions to simulate the final user experience. A design system was developed
+          alongside it, featuring reusable components and consistent styles to support scalability.
+           Accessibility was a key focus throughout, ensuring the interface was inclusive and easy
+            to use for a wide range of users.</div>
+    </section>
+      <h2 class="section">Mid-fidelity Prototype</h2>
+      <figure>
+        <img src="mid-fid_walk.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Onboarding Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_home.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Home Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_usage.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Usage Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_profile.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Profile Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_devices.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Device Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_link.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity "Link a Device" Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_sim.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Simulator Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_goals.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Goals Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_impact.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Impact Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="mid-fid_notifs.png" alt="Mid‑fi prototype"/>
+        <figcaption>Mid-fidelity Notifcations Prototype</figcaption>
+      </figure>
+
+      <section>
+      <div class="note"><div class="label">🛠️ Testing</div>
+      <div class="copy">We conducted usability tests with both experienced and new users to
+         evaluate the dashboard’s effectiveness. Key pain points included confusing device
+          grouping, lack of feedback on energy-saving actions, and a desire for customizable views.
+           Based on this feedback, we iterated on the layout and interactions to improve clarity
+            and user control.</div>
+    </section>
+    </section>
+
+    <section>
+      <h2 class="section">Final Product</h2>
+      <figure>
+        <img src="high-fid_walk.png" alt="High‑fi prototype"/>
+        <figcaption>High-fidelity Onboarding & Login Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="high-fid_home.png" alt="High‑fi prototype"/>
+        <figcaption>High-fidelity Home & Notifcations Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="high-fid_usage.png" alt="High‑fi prototype"/>
+        <figcaption>High-fidelity Usage Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="high-fid_profile.png" alt="High‑fi prototype"/>
+        <figcaption>Mid-fidelity Profile Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="high-fid_devices.png" alt="High‑fi prototype"/>
+        <figcaption>High-fidelity Devices & Link Devices Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="high-fid_sim.png" alt="High‑fi prototype"/>
+        <figcaption>High-fidelity Simulator Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="high-fid_goals.png" alt="High‑fi prototype"/>
+        <figcaption>High-fidelity Goals Prototype</figcaption>
+      </figure>
+      <figure>
+        <img src="high-fid_impact.png" alt="High‑fi prototype"/>
+        <figcaption>High-fidelity Impact Prototype</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3 class="kicker">Solution</h3>
+      <div class="copy">We delivered a mobile-first dashboard that simplifies energy monitoring and smart device control through a clean, intuitive interface. Designed to address common usability issues in existing platforms—like cluttered layouts and poor mobile support—it integrates partner features seamlessly while guiding users of all experience levels toward smarter energy habits.</div>
+
+      <h3 class="kicker">Reflection</h3>
+      <div class="copy">This project sharpened my skills in building scalable design systems and creating interactive prototypes in Figma, especially using advanced features like component variants and smart animations. I also gained experience in aligning design decisions with stakeholder priorities while ensuring the dashboard remained intuitive and accessible. One of the biggest challenges was translating complex energy data into a clear, user-friendly interface that met both business goals and user needs.</div>
+    </section>
+
+    <section>
+      <h2 class="section">Energy Control for Everyone</h2>
+      <div class="note"><div class="label">🌟 Results</div><div class="copy">Users responded positively to the dashboard’s clarity and ease of use. Stakeholders showed interest, and we’re preparing for feedback and next steps. The design improves accessibility and engagement over traditional dashboards.</div></div>
+      <div class="note"><div class="label">📋 Outcome</div><div class="copy">The final product is a polished, interactive dashboard ready for stakeholder review. Next steps include refining features based on feedback and preparing for rollout.</div></div>
+      <div class="note"><div class="label">📈 Metrics</div><div class="copy">We plan to track usability scores, task completion rates, post-launch engagement, and stakeholder satisfaction after the presentation.</div></div>
+    </section>
+
+    <footer>
+      2025 © all rights reserved · <a href="mailto:jsocampo@uwaterloo.ca">jsocampo@uwaterloo.ca</a>
+    </footer>
+  </main>
+</body>
+</html>
