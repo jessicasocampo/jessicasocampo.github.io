@@ -137,7 +137,7 @@ h1 {
 /* Connect */
 .connect { text-align: center; }
 .socials { margin-top: 12px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.btn { display: inline-block; padding: 18px 22px; border-radius: 14px; border: 1px solid #e5e7eb; background: none; color: var(--fg); }
+.btn { display: inline-block; padding: 16px 20px; border-radius: 14px; border: 1px solid #e5e7eb; background: none; color: var(--fg); }
 .btn:hover { background: #e5e7eb; }
 
 /* Helper: subtle section labels in the corner */
