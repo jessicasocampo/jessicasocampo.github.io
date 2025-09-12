@@ -50,7 +50,14 @@
     .logo { font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }
     .spacer { flex: 1; }
     .nav a.link { padding: 8px 12px; border-radius: 12px; color: var(--muted); transition: color .2s, background .2s; }
-    .nav a.link:hover { color: var(--dark-grey); background: none; font-weight: 500;}
+    .nav a.link:hover { 
+      color: var(--dark-grey); 
+      background: none; 
+      font-weight: 500;
+    }
+    .nav a.link:hover::before {
+      content: "> ";
+    }
 
     .wrap{max-width:var(--max);margin:0 auto;padding:22px 14px 90px}
 
@@ -62,6 +69,13 @@
       line-height: 1.05;
       font-family: 'EASVHS', monospace; /* pixel font */
       }
+
+      hr {
+      border: none;                /* remove default browser styles */
+      border-top: 1px solid #e5e5e5; /* very light grey line */
+      margin: 1.5rem 0;            /* spacing above/below */
+    }
+
     .hero-media{background:#f3f4f6;border:1px solid var(--line);border-radius:8px;height:220px;display:flex;align-items:center;justify-content:center;color:#9aa1a6}
 
     .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 6px}
@@ -215,7 +229,7 @@ header.nav a.logo {
     </iframe>
   </div>
   <figcaption>Short Advertisment Video</figcaption>
-
+  <hr>
       <div class="meta">
         <div class="row"><div class="label">Timeline</div><div class="chips"><span class="chip">2 months</span></div></div>
         <div class="row"><div class="label">Team</div><div class="chips"><span class="chip">Jessica Ocampo</span><span class="chip">Isabella Cho</span><span class="chip">Jackie Zhang</span></div></div>
@@ -228,10 +242,19 @@ header.nav a.logo {
       <h2 class="section">Real-World Readiness, Virtually Delivered</h2>
 
       <h3 class="kicker">Overview</h3>
-      <div class="copy">The project focused on developing an AR-based Cultural Adjustment and Language Learning app to support international undergraduate students. It aimed to address language barriers, cultural adaptation, and feelings of isolation by helping students practice real-life scenarios, build confidence in communication, and understand cultural nuances. The app also sought to reduce anxiety and mental health challenges, fostering smoother academic and social integration.</div>
+      <div class="copy">The project focused on developing an AR-based Cultural Adjustment and
+         Language Learning app to support international and domestic undergraduate students. It aimed to
+          <b>address language barriers, cultural adaptation, and feelings of isolation</b> by helping
+           students practice real-life scenarios, build confidence in communication, and
+            understand cultural nuances. The app also sought to <b>reduce anxiety and mental health
+             challenges,</b> fostering smoother academic and social integration.</div>
 
       <h3 class="kicker">Context</h3>
-      <div class="copy">International students often face language barriers, cultural adjustment challenges, and isolation, which can heighten stress and mental health concerns. These difficulties hinder their ability to practice language, navigate cultural norms, and feel supported, ultimately impacting academic performance, well-being, and community integration—underscoring the need for tailored support tools.</div>
+      <div class="copy">International students often face language barriers, cultural adjustment challenges,
+         and isolation, which <b>can heighten stress and mental health concerns.</b> These difficulties hinder
+          their ability to practice language, navigate cultural norms, and feel supported, ultimately
+           impacting academic performance, well-being, and community integration—underscoring the need
+            for tailored support tools.</div>
     </section>
 
     <section>
@@ -307,12 +330,12 @@ header.nav a.logo {
       ></iframe>
     </div>
 
-
       <div class="hero-buttons">
         <a class="btn" href="https://www.figma.com/design/tzlFNhu4Stcp0tosduZJfP/High-Fidelity-Prototype?node-id=1-1241&t=1J5fFZIxsiZiCwyW-1" target="_blank" rel="noreferrer">View Figma ↗</a>
       </div>
 
       <section>
+        <hr>
       <div class="note"><div class="label">🛠️ Testing</div>
       <div class="copy">We conducted user testing to gather both qualitative and quantitative insights.
          Issues like navigation, unclear interface elements, and limited interactivity were identified
@@ -322,7 +345,7 @@ header.nav a.logo {
     </section>
 
     <section>
-      <h2 class="section">Final Product</h2>
+      <h2 class="section">Final High-fidelity Screens</h2>
       <div class="figma-embed">
   <iframe
     src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FtzlFNhu4Stcp0tosduZJfP%2FHigh-Fidelity-Prototype%3Fnode-id%3D71-201"
@@ -330,13 +353,13 @@ header.nav a.logo {
     loading="lazy"
   ></iframe>
 </div>
-
-
       <div class="hero-buttons">
         <a class="btn" href="https://www.figma.com/design/tzlFNhu4Stcp0tosduZJfP/High-Fidelity-Prototype?node-id=0-1&t=1J5fFZIxsiZiCwyW-1" target="_blank" rel="noreferrer">View Figma ↗</a>
       </div>
     </section>
+
     <section>
+      <h2 class="section">Final AR Prototype</h2>
       <!-- STYLY embed -->
     <div class="styly-embed">
       <iframe
@@ -354,24 +377,39 @@ header.nav a.logo {
       </div>
     </section>
     </section>
-
     <section>
+      <hr>
       <h3 class="kicker">Solution</h3>
-      <div class="copy">The solution featured immersive AR scenarios simulating real-life settings, accessibility enhancements like voice commands and text-to-speech, and gamification elements such as XP rewards and progress tracking. A feedback system provided real-time insights, helping users practice language, adapt to cultural norms, reduce anxiety, and foster a sense of achievement.</div>
+      <div class="copy">The solution featured immersive AR scenarios simulating real-life settings,
+         <b>accessibility enhancements like voice commands and text-to-speech,</b> and gamification elements
+          such as XP rewards and progress tracking. A feedback system provided real-time insights,
+           helping users <b>practice language, adapt to cultural norms, reduce anxiety,</b> and foster a
+            sense of achievement.</div>
 
       <h3 class="kicker">Reflection</h3>
-      <div class="copy">This project strengthened my skills in user-centered design, prototyping (Figma, Styly), and user research. I learned the importance of iteration, accessibility, and testing to improve usability. Challenges like navigation and balancing immersion with simplicity were solved by refining layouts, clarifying buttons, and streamlining features.</div>
+      <div class="copy">This project strengthened my skills in user-centered design, prototyping
+         (Figma, Styly), and user research. I learned the <b>importance of iteration, accessibility,
+          and testing</b> to improve usability. Challenges like navigation and balancing immersion with
+           simplicity were solved by <b>refining layouts, clarifying buttons, and streamlining features.</b></div>
     </section>
 
     <section>
       <h2 class="section">Real-Life Practice, Real-Time Support</h2>
-      <div class="note"><div class="label">🌟 Results</div><div class="copy">The app achieved a mean ease-of-use score of 3.75, with users praising transcripts, adjustable audio speeds, XP rewards, and simulated environments for supporting mental health and reducing anxiety.</div></div>
-      <div class="note"><div class="label">📋 Outcome</div><div class="copy">It’s immersive, gamified approach encouraged frequent use and showed potential to boost student confidence and academic/social adjustment.</div></div>
-      <div class="note"><div class="label">📈 Metrics</div><div class="copy">Usability testing yielded an average System Usability Scale (SUS) score of 74, indicating above-average user satisfaction. The low complexity rating of 1.5 suggested that users found the interface intuitive and easy to navigate.</div></div>
+      <div class="note"><div class="label">🌟 Results</div>
+      <div class="copy">The app achieved a mean ease-of-use score of <b>3.75,</b> with users praising
+         transcripts, adjustable audio speeds, XP rewards, and simulated environments for supporting
+          mental health and reducing anxiety.</div></div>
+      <div class="note"><div class="label">📋 Outcome</div>
+      <div class="copy">It’s immersive, gamified approach encouraged frequent use and showed potential
+         to boost student confidence and academic/social adjustment.</div></div>
+      <div class="note"><div class="label">📈 Metrics</div>
+      <div class="copy">Usability testing yielded an average System Usability Scale (SUS) score of
+         <b>74,</b> indicating above-average user satisfaction. The low complexity rating of <b>1.5</b>
+          suggested that users found the interface intuitive and easy to navigate.</div></div>
     </section>
 
     <footer>
-      2025 © all rights reserved · <a href="mailto:jsocampo@uwaterloo.ca">jsocampo@uwaterloo.ca</a>
+      2025 © all rights reserved · <a href="mailto:jsocampo@uwaterloo.ca" style="text-decoration: none;">jsocampo@uwaterloo.ca</a>
     </footer>
   </main>
   <script>

@@ -50,7 +50,14 @@
     .logo { font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }
     .spacer { flex: 1; }
     .nav a.link { padding: 8px 12px; border-radius: 12px; color: var(--muted); transition: color .2s, background .2s; }
-    .nav a.link:hover { color: var(--dark-grey); background: none; font-weight: 500;}
+    .nav a.link:hover { 
+      color: var(--dark-grey); 
+      background: none; 
+      font-weight: 500;
+    }
+    .nav a.link:hover::before {
+      content: "> ";
+    }
 
     .wrap{max-width:var(--max);margin:0 auto;padding:22px 14px 90px}
 
@@ -61,6 +68,13 @@
       line-height: 1.05;
       font-family: 'EASVHS', monospace; /* pixel font */
       }
+
+      hr {
+      border: none;                /* remove default browser styles */
+      border-top: 1px solid #e5e5e5; /* very light grey line */
+      margin: 1.5rem 0;            /* spacing above/below */
+    }
+
     .hero-media{background:#f3f4f6;border:1px solid var(--line);border-radius:8px;height:220px;display:flex;align-items:center;justify-content:center;color:#9aa1a6}
 
     .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 6px}
@@ -112,8 +126,14 @@
   <main class="wrap">
     <section>
       <h1>Rogers: Energy &<br/>Utilities Dashboard</h1>
-      <div class="hero-media">Short Demo Video</div>
-
+      <br>
+      <div style="display:flex; gap:10px;">
+          <img src="e&u_homescreen.png" alt="" style="width:150px"/>
+          <img src="e&u_usagescreen.png" alt="" style="width:150px"/>
+          <img src="e&u_devicescreen.png" alt="" style="width:150px"/>
+          <img src="e&u_impactscreen.png" alt="" style="width:150px"/>
+        </div>
+        <hr>
       <div class="meta">
         <div class="row"><div class="label">Timeline</div><div class="chips"><span class="chip">4 months</span></div></div>
         <div class="row"><div class="label">Team</div><div class="chips"><span class="chip">Jessica Ocampo</span><span class="chip">Dani Dejong</span></div></div>
@@ -126,10 +146,19 @@
       <h2 class="section">Energy UX That Works Anywhere</h2>
 
       <h3 class="kicker">Overview</h3>
-      <div class="copy">Designing a user-friendly Energy & Utilities dashboard for Rogers, aimed at helping users monitor and control smart home devices while understanding and optimizing their energy consumption. The dashboard supports both experienced and inexperienced users in making informed energy-saving decisions. It was created for presentation to stakeholders from a partnering company, with integrated features reflecting their offerings.</div>
+      <div class="copy">Designed a user-friendly energy & utilities dashboard for Rogers,
+         aimed at helping users <b>monitor and control smart home devices</b> while understanding
+          and <b>optimizing their energy consumption.</b> The dashboard supports both experienced
+           and inexperienced users in making informed energy-saving decisions.
+            It was created for presentation to stakeholders from a partnering company,
+             with integrated features reflecting their offerings.</div>
 
       <h3 class="kicker">Context</h3>
-      <div class="copy">This project was developed for Rogers in partnership with municipally owned electricity utility and distributor whose features were integrated into the app. The goal was to give users intuitive control over energy usage and smart home devices. Most existing dashboards are desktop-heavy, rely on complex graphs, and aren’t optimized for mobile, making them hard to use—especially for less tech-savvy users.</div>
+      <div class="copy">This project was developed for Rogers in partnership with municipally
+         owned electricity utility and distributor whose features were integrated into the app.
+          The goal was to give users intuitive control over energy usage and smart home devices.
+           Most <b>existing dashboards are desktop-heavy,</b> rely on complex graphs, and aren’t
+            optimized for mobile, making them <b>hard to use for less tech-savvy users.</b></div>
     </section>
 
     <section>
@@ -276,11 +305,21 @@
     </section>
 
     <section>
+      <hr>
       <h3 class="kicker">Solution</h3>
-      <div class="copy">We delivered a mobile-first dashboard that simplifies energy monitoring and smart device control through a clean, intuitive interface. Designed to address common usability issues in existing platforms—like cluttered layouts and poor mobile support—it integrates partner features seamlessly while guiding users of all experience levels toward smarter energy habits.</div>
+      <div class="copy">We delivered a <b>mobile-first dashboard</b> that simplifies energy monitoring
+         and smart device control through a clean, intuitive interface. Designed to <b>address
+          common usability issues in existing platforms</b> like cluttered layouts and poor mobile
+           support. It integrates partner features seamlessly while guiding users of all experience
+            levels toward smarter energy habits.</div>
 
       <h3 class="kicker">Reflection</h3>
-      <div class="copy">This project sharpened my skills in building scalable design systems and creating interactive prototypes in Figma, especially using advanced features like component variants and smart animations. I also gained experience in aligning design decisions with stakeholder priorities while ensuring the dashboard remained intuitive and accessible. One of the biggest challenges was translating complex energy data into a clear, user-friendly interface that met both business goals and user needs.</div>
+      <div class="copy">This project sharpened my skills in building <b>scalable design systems</b> and creating
+         interactive prototypes in Figma, especially using advanced features like <b>component variants and
+          smart animations.</b> I also gained experience in aligning design decisions with stakeholder
+           priorities while ensuring the dashboard remained intuitive and accessible. One of the biggest
+            challenges was translating complex energy data into a clear, user-friendly interface that met
+             both business goals and user needs.</div>
     </section>
 
     <section>
@@ -291,7 +330,7 @@
     </section>
 
     <footer>
-      2025 © all rights reserved · <a href="mailto:jsocampo@uwaterloo.ca">jsocampo@uwaterloo.ca</a>
+      2025 © all rights reserved · <a href="mailto:jsocampo@uwaterloo.ca" style="text-decoration: none;">jsocampo@uwaterloo.ca</a>
     </footer>
   </main>
 </body>

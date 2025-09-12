@@ -72,7 +72,14 @@ a:focus-visible, button:focus-visible { outline: 2px dashed var(--acc); outline-
 .logo { font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }
 .spacer { flex: 1; }
 .nav a.link { padding: 8px 12px; border-radius: 12px; color: var(--muted); transition: color .2s, background .2s; }
-.nav a.link:hover { color: var(--dark-grey); background: none; font-weight: 500;}
+.nav a.link:hover { 
+  color: var(--dark-grey); 
+  background: none; 
+  font-weight: 500;
+}
+.nav a.link:hover::before {
+  content: "> ";
+}
 
 /* Sections */
 section {
@@ -84,9 +91,8 @@ section {
 }
 
 .wrap { width: 100%; max-width: var(--maxW); margin: 0 auto; }
-
 .hero { text-align: center; }
-.eyebrow { text-transform: lowercase; letter-spacing: .12em; font-size: .9rem; color: var(--muted); }
+.eyebrow { text-transform: lowercase; letter-spacing: .1em; font-size: .95rem; color: var(--muted); opacity:.9; }
 .eyebrow a { color: var(--acc); text-decoration: underline; }
 
 h1 {
@@ -135,7 +141,7 @@ h1 {
 .btn:hover { background: #e5e7eb; }
 
 /* Helper: subtle section labels in the corner */
-.label { position: absolute; top: calc(var(--navH) + 10px); right: 16px; font-size: .8rem; color: var(--muted); opacity:.7; }
+.label { position: absolute; top: calc(var(--navH) + 10px); right: 16px; font-size: .7rem; color: var(--muted); opacity:.7; }
 
 /* Reduce padding on very small screens */
 #home .label { display: none; }
