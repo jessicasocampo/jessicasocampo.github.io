@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script>
+    function checkPassword() {
+      var password = prompt("Please enter the password to view this case study:");
+      if (password === "rogers098753") {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("lock-message").style.display = "none";
+      } else {
+        alert("Incorrect password");
+        location.reload(); // reloads so they can try again
+      }
+    }
+  </script>
+
+  <body onload="checkPassword()">
+  <div id="lock-message" style="text-align:center; margin-top:50px;">
+    <h2>🔒 This case study is protected</h2>
+    <p>You must enter the password to view it.</p>
+  </div>
+
+  <div id="content" style="display:none;"> </div></body>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>J.O - Rogers: Energy & Utilities Dashboard</title>
