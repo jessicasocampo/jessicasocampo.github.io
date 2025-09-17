@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <script>
     function checkPassword() {
       var password = prompt("Please enter the password to view this case study:");
@@ -13,10 +12,7 @@
         location.reload(); // reloads so they can try again
       }
     }
-  </script>
-
-  <body onload="checkPassword()">
-  <div id="content" style="display:none;"> </div></body>
+  </script> 
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -128,7 +124,8 @@
 
   </style>
 </head>
-<body>
+<body onload="checkPassword()">
+   <div id="content" style="display:none;">
   <!-- on project page (e.g., project1.html) -->
 <header class="nav" role="navigation" aria-label="Primary">
   <div class="nav-inner">
@@ -411,5 +408,6 @@
       2025 © All rights reserved · jsocampo@uwaterloo.ca · Website coded by me :3
     </footer>
   </main>
+  </div>
 </body>
 </html>
