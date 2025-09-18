@@ -1,11 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
 :root {
-  --bg: #fafafa;
-  --bg-2: #fdfdfd;
+  --bg: #f0f3f6;
+  --bg-2:  #f6f7fa;
   --fg: #1f2937;
-  --dark-grey: #181818; 
-  --muted: #4b5563;
+  --dark-grey: #252930; 
+  --medium-grey: #323842; 
+  --muted: #616d7e;
   --acc: #5a9d3b; /* green */
   --navH: 64px;
   --maxW: 800px;
@@ -101,6 +102,13 @@ h1 {
   line-height: 1.05;
   font-family: 'EASVHS', monospace; /* pixel font */
   animation: popIn 0.6s ease-out;
+  color: var(--dark-grey);
+}
+
+h3 {
+  font-family: 'EASVHS', monospace; /* pixel font */
+  font-weight: 400;
+  color: var(--medium-grey);
 }
 
 @keyframes popIn {
@@ -108,7 +116,7 @@ h1 {
   100% { transform: scale(1); opacity: 1; }
 }
 
-.lead { margin: 16px auto 0; max-width: 60ch; color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); }
+.lead { margin: 16px auto 0; max-width: 60ch; color: var(--muted); font-size: clamp(0.9rem, 2vw, 1.05rem); }
 .hero-buttons { margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
 /* Project sections */
@@ -138,7 +146,7 @@ h1 {
   100% { transform: translateY(-8px) scale(1.05); }
 }
 .project h2 { font-size: clamp(1.8rem, 4.6vw, 2.2rem); margin: 0; font-family: 'EASVHS', monospace; }
-.project p { margin: 0; color: var(--muted); max-width: 65ch; }
+.project p { margin: 0; color: var(--muted); max-width: 65ch; font-size: clamp(0.9rem, 2vw, 1.05rem);}
 .project .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { font-size: .85rem; padding: 10px 14px; border-radius: 999px; background: #f3f4f6; color: var(--fg); border: 1px solid #e5e7eb; }
 
@@ -151,7 +159,7 @@ h1 {
 .about { display: grid; place-items: center; }
 .about .card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(170, 170, 170, 0.1); }
 .about h2 { margin: 0 0 6px; font-size: clamp(1.8rem, 4.6vw, 2.2rem); font-family: 'EASVHS', monospace; }
-.about p { max-width: 70ch; color: var(--muted); }
+.about p { max-width: 70ch; color: var(--muted); font-size: clamp(0.9rem, 2vw, 1.05rem);}
 
 /* Connect */
 .connect { text-align: center; }
