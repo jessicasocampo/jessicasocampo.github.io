@@ -110,6 +110,7 @@ h1 {
   font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.05;
   font-family: 'EASVHS', monospace; /* pixel font */
+  font-weight: 300;
   animation: popIn 0.6s ease-out;
   color: var(--dark-grey);
   max-width: 60ch;
@@ -117,7 +118,7 @@ h1 {
 
 h3 {
   font-family: 'EASVHS', monospace; /* pixel font */
-  font-weight: 400;
+  font-weight: 300;
   color: var(--medium-grey);
 }
 
