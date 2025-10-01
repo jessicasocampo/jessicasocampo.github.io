@@ -162,7 +162,6 @@ h3 {
 /* Make entire project section clickable */
 .section-link { position: absolute; inset: 0; z-index: 1; }
 .project .cta { position: relative; z-index: 2; display: inline-flex; align-items: center; gap:.5rem; margin-top: 14px; font-weight: 600; color: var(--acc); }
-.project .cta::after { content: '↗'; transform: translateY(-1px); }
 
 /* About sections (two screens) */
 .about { display: grid; place-items: center; }
