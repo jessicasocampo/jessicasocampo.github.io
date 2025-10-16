@@ -2,19 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
 
+/* -----------------------------------------
+   DARK MODE (Charcoal + Silver Accent)
+   ----------------------------------------- */
 :root {
-  --bg: #f0f3f6;
-  --bg-2:  #fbfcff;
-  --fg: #1f2937;
-  --dark-grey: #252930; 
-  --medium-grey: #323842; 
-  --muted: #616d7e;
-  --acc: #5a9d3b; /* green */
+  /* Backgrounds */
+  --bg: #0c0c0c;
+  --bg-2: #111111;
+  --surface: #181818;
+  --surface-2: #1e1e1e;
+
+  /* Text */
+  --fg: #f1f1f1;            /* soft white */
+  --muted: #b8b8b8;         /* muted silver-gray */
+  --caption: #9b9b9b;
+
+  /* Neutrals */
+  --dark-grey: #e5e5e5;
+  --medium-grey: #c8c8c8;
+
+  /* Accent (subtle silver) */
+  --acc: #c0c0c0;           /* classic silver */
+  --acc-2: #e0e0e0;         /* brighter silver highlight */
+
+  /* Lines + shadows */
+  --line: #2a2a2a;
+
+  /* Layout */
   --navH: 64px;
   --maxW: 800px;
 }
 
-/* Load EASVHS pixel font */
+/* EASVHS pixel font */
 @font-face {
   font-family: 'EASVHS';
   src: url('fonts/EASVHS.woff2') format('woff2'),
@@ -24,72 +43,93 @@
 }
 
 /* Global */
-html, body { 
-  height: 100%; 
-}
-* { 
-  box-sizing: border-box; 
-}
+html, body { height: 100%; }
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   color: var(--fg);
-  background: linear-gradient(180deg, var(--bg), var(--bg-2));
+  background: radial-gradient(1200px 800px at 50% -10%, rgba(192,192,192,0.05), transparent 60%),
+              linear-gradient(180deg, var(--bg), var(--bg-2));
   font-family: 'Public Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.55;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   padding: 0 60px;
 }
 
-
 a { color: inherit; text-decoration: none; }
-a:focus-visible, button:focus-visible { outline: 2px dashed var(--acc); outline-offset: 3px; }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px dashed var(--acc);
+  outline-offset: 3px;
+  text-decoration: none;
+}
+.eyebrow a,
+.project .cta { color: var(--acc); }
 
 /* Navbar */
-.nav {position:sticky;top:0;z-index:30;height:var(--navH);display:flex;align-items:center;background:#fff;}
-.nav .inner{max-width:var(--max);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 10px}
-
 .nav {
-  position: fixed; inset: 0 0 auto 0; height: var(--navH);
-  display: flex; align-items: center; justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navH);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
-  background: transparent; /* we'll paint a gradient with ::aborder-bottom: 1px solid #e5e7eb; /* keep the crisp edge over the gradient */
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  will-change: transform;
-  }
-  
-  
-  /* Feathered top-to-bottom gradient behind the nav */
-  .nav::after {
-  content: "";
-  position: absolute; left: 0; right: 0; top: 0;
-  height: calc(var(--navH) + 100px); /* how far the fade extends */
-  pointer-events: none;
-  z-index: 0;
-  background: linear-gradient(
-  to bottom,
-  rgba(0,0,0,0.16) 0%, /* darker at top */
-  rgba(0,0,0,0.06) 45%,
-  rgba(255,255,255,0) 100% /* fades to page */
-  );
-  }
+  background: transparent;
+  border-bottom: none;
+}
 
-/* removed blur layer to prevent ghosting */
-.nav-inner { position: relative; z-index: 1;  width: 100%; max-width: var(--maxW); padding: 0 20px; display: flex; align-items: center; gap: 12px; }
-.logo { font-weight: 600; letter-spacing: 0.1em; font-size: 1.15rem; color: var(--fg); font-family: 'EASVHS', monospace; }
-.spacer { flex: 1; }
-.nav a.link { padding: 8px 12px; border-radius: 12px; color: var(--muted); transition: color .2s, background .2s; }
-.nav a.link:hover { 
-  color: var(--dark-grey); 
-  background: none; 
+.nav-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--maxW);
+  padding: 0 40px; /* more spacing from edges */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, links right */
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 1.15rem;
+  color: var(--fg);
+  font-family: 'EASVHS', monospace;
+}
+
+/* Nav links group (right-aligned) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a.link {
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: var(--muted);
+  transition: color .2s, background .2s, box-shadow .2s;
+}
+
+.nav a.link:hover {
+  color: var(--dark-grey);
+  background: rgba(255,255,255,0.02);
+  box-shadow: inset 0 0 0 1px var(--line);
   font-weight: 500;
 }
+
 .nav a.link:hover::before {
   content: "> ";
+  color: var(--acc);
 }
+
 
 /* Sections */
 section {
@@ -97,138 +137,224 @@ section {
   scroll-snap-align: start;
   display: grid; place-items: center;
   padding: calc(var(--navH) + 24px) 20px 24px;
-  position: relative; /* ensure .label is positioned inside each section */
+  position: relative;
 }
 
 .wrap { width: 100%; max-width: var(--maxW); margin: 0 auto; }
 .hero { text-align: center; }
-.eyebrow { text-transform: lowercase; letter-spacing: .1em; font-size: .95rem; color: var(--muted); opacity:.9; }
-.eyebrow a { color: var(--acc); text-decoration: underline; }
+.eyebrow {
+  text-transform: lowercase; letter-spacing: .1em;
+  font-size: .95rem; color: var(--caption); opacity: .95;
+}
 
 h1 {
   margin: 12px auto 0;
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
   line-height: 1.05;
-  font-family: 'EASVHS', monospace; /* pixel font */
+  font-family: 'EASVHS', monospace;
   font-weight: 300;
-  animation: popIn 0.6s ease-out;
   color: var(--dark-grey);
-  max-width: 60ch;
+  max-width: 25ch;
+  text-shadow: 0 0 24px rgba(255,255,255,0.08);
+  animation: popIn 0.6s ease-out;
 }
 
 h3 {
-  font-family: 'EASVHS', monospace; /* pixel font */
+  font-family: 'EASVHS', monospace;
   font-weight: 300;
   color: var(--medium-grey);
 }
 
 @keyframes popIn {
-  0% { transform: scale(0.9); opacity: 0; }
+  0% { transform: scale(0.97); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-.lead { margin: 16px auto 0; max-width: 60ch; color: var(--muted); font-size: clamp(0.9rem, 2vw, 1.05rem); }
+.lead {
+  margin: 16px auto 0; max-width: 60ch;
+  color: var(--muted);
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+}
 .hero-buttons { margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-/* Project sections */
+/* Project cards (lift only, no gold glow) */
 .project {
   position: relative; overflow: hidden;
-  border-radius: 24px; padding: 32px; /* was 48px */
-  /* Smaller, responsive card height and keep it centered */
-  min-height: clamp(360px, 55vh, 600px); /* was nearly full screen */
+  border-radius: 24px; padding: 32px;
+  min-height: clamp(360px, 55vh, 600px);
   display: grid; align-content: end; gap: 12px;
-  box-shadow: 0 10px 40px rgba(170, 170, 170, 0.1);
-  background: radial-gradient(1200px 600px at 80% 10%, rgba(153, 204, 171, 0.1), transparent 60%),
-              linear-gradient(180deg, #f6f6f8, #f9fafb);
-  border: 1px solid #e5e7eb;
-  justify-self: center; /* ensure centering inside section grid */
+  background:
+    radial-gradient(1200px 600px at 80% 10%, rgba(255,255,255,0.05), transparent 60%),
+    linear-gradient(180deg, var(--surface), var(--surface-2));
+  border: 1px solid var(--line);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(255,255,255,0.02) inset;
+  justify-self: center;
   width: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
+
 .project:hover {
-  transform: translateY(-8px) scale(1.05); /* jump + slight zoom */
-  animation: pixel-bounce 0.3s ease;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.05) inset;
 }
-/* little bounce animation */
-@keyframes pixel-bounce {
-  0%   { transform: translateY(0) scale(1); }
-  40%  { transform: translateY(-10px) scale(1.05); }
-  60%  { transform: translateY(-6px) scale(1.03); }
-  100% { transform: translateY(-8px) scale(1.05); }
+.project h2 {
+  font-size: clamp(1.8rem, 4.6vw, 2.2rem); margin: 0;
+  font-family: 'EASVHS', monospace; color: var(--fg);
 }
-.project h2 { font-size: clamp(1.8rem, 4.6vw, 2.2rem); margin: 0; font-family: 'EASVHS', monospace; }
-.project p { margin: 0; color: var(--muted); max-width: 65ch; font-size: clamp(0.9rem, 2vw, 1.05rem);}
+.project p {
+  margin: 0; color: var(--muted); max-width: 65ch;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+}
 .project .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { font-size: .85rem; padding: 10px 14px; border-radius: 999px; background: #f3f4f6; color: var(--fg); border: 1px solid #e5e7eb; }
+.chip {
+  font-size: .85rem; padding: 10px 14px; border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  color: var(--fg);
+  border: 1px solid var(--line);
+}
 
 /* Make entire project section clickable */
 .section-link { position: absolute; inset: 0; z-index: 1; }
-.project .cta { position: relative; z-index: 2; display: inline-flex; align-items: center; gap:.5rem; margin-top: 14px; font-weight: 600; color: var(--acc); }
+.project .cta {
+  position: relative; z-index: 2; display: inline-flex; align-items: center; gap:.5rem;
+  margin-top: 14px; font-weight: 600; color: var(--acc);
+}
+.project .cta:hover { color: var(--acc-2); }
 
-/* About sections (two screens) */
+/* About */
 .about { display: grid; place-items: center; }
 .about .card { background: none; border: none; border-radius: 24px; padding: 32px; }
-.about h2 { margin: 0 0 6px; font-size: clamp(1.8rem, 4.6vw, 2.2rem); font-family: 'EASVHS', monospace; }
-.about p { max-width: 70ch; color: var(--muted); font-size: clamp(0.9rem, 2vw, 1.05rem);}
+.about h2 {
+  margin: 0 0 6px; font-size: clamp(1.8rem, 4.6vw, 2.2rem);
+  font-family: 'EASVHS', monospace; color: var(--fg);
+}
+.about p { max-width: 70ch; color: var(--muted); font-size: clamp(0.9rem, 2vw, 1.05rem); }
 
-/* Connect */
-.connect { text-align: center; }
-.socials { margin-top: 12px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+/* Connect (fully centered) */
+.connect {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+.connect h2,
+.connect p {
+  text-align: center;
+  margin: 12px auto 0;
+  max-width: 60ch;
+
+}
+.connect .btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Connect buttons */
 .btn {
   display: inline-block;
   padding: 16px 30px;
   border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.4); /* subtle, light border */
-  background: rgba(255, 255, 255, 0.25);      /* glassy translucency */
-  color: var(--muted); /* or var(--muted) if you want theme control */
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03);
+  color: var(--fg);
   font-weight: 500;
   cursor: pointer;
-
-  /* Glass effect */
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-
-  /* Depth + glow */
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.6), /* glossy highlight */
-    0 4px 12px rgba(91, 91, 91, 0.1);            /* soft outer shadow */
-
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.06),
+    0 4px 12px rgba(0,0,0,0.35);
   transition: all 0.2s ease;
 }
-
 .btn:hover {
-  background: rgba(255, 255, 255, 0.35); /* stronger translucency */
+  background: rgba(255,255,255,0.06);
   transform: translateY(-1px);
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.7),
-    0 6px 16px rgba(47, 47, 47, 0.15);
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.08),
+    0 6px 16px rgba(0,0,0,0.45);
 }
-
 .btn:active {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.02);
   transform: translateY(1px);
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.5),
-    0 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.04),
+    0 3px 8px rgba(0,0,0,0.5);
 }
 
+/* Helper: subtle section labels */
+.label {
+  position: absolute; top: calc(var(--navH) + 10px); right: 16px;
+  font-size: .7rem; color: var(--caption); opacity: .8;
+}
 
-/* Helper: subtle section labels in the corner */
-.label { position: absolute; top: calc(var(--navH) + 10px); right: 16px; font-size: .7rem; color: var(--muted); opacity:.7; }
-
-/* Reduce padding on very small screens */
+/* Responsive tweaks */
 #home .label { display: none; }
-
 @media (max-width: 520px) {
   .project { padding: 28px; border-radius: 18px; }
   body { padding: 0 20px; }
 }
 
+/* Footer */
 .site-footer {
   text-align: center;
   padding: 14px;
   font-size: 12.5px;
-  color: #97a0aa;
-  background-color: none;
-  border-top: 1px solid #f2f2f2;
+  color: var(--caption);
+  background: transparent;
+  border-top: 1px solid var(--line);
+}
+
+/* Optional underline on hover */
+a:hover { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.4); text-underline-offset: 3px; }
+
+/* Auto-enable dark scheme */
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: dark; }
+}
+
+/* ===== NAV LAYOUT OVERRIDES (put at end of file) ===== */
+
+/* Make the nav span full width so center content has space */
+.nav {
+  justify-content: flex-start;            /* don't center the whole bar */
+}
+
+.nav-inner {
+  max-width: none !important;             /* remove 800px cap */
+  width: 100%;
+  padding: 0 60px;                        /* match body padding so edges align */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;            /* we’ll use the spacer to push links right */
+  gap: 0;                                 /* tighter so spacer does the work */
+}
+
+/* This pushes links to the far right */
+.spacer {
+  flex: 1 !important;
+}
+
+/* Optional: a links wrapper if you have it; keeps links tight on the right */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Tidy link spacing if you don’t have a .nav-links wrapper */
+.nav a.link { margin-left: 16px; }
+
+/* Small screens */
+@media (max-width: 520px) {
+  .nav-inner { padding: 0 20px; }
 }
