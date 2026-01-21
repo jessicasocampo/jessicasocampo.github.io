@@ -208,7 +208,8 @@ h3 {
     0 0 0 1px rgba(255,255,255,0.05) inset;
 }
 .project h2 {
-  font-size: clamp(1.8rem, 4.6vw, 2.2rem); margin: 0;
+  font-size: clamp(1.6rem, 4.2vw, 2.0rem);
+  margin: 0;
   font-family: 'EASVHS', monospace; color: var(--fg);
 }
 .project p {
