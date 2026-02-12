@@ -5,169 +5,217 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jessica Ocampo - Portfolio</title>
   <link rel="stylesheet" href="webstyle.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
   <!-- Fixed Navigation -->
   <header class="nav" role="navigation" aria-label="Primary">
     <div class="nav-inner">
       <a href="#home" class="logo" aria-label="Home">j.o</a>
       <div class="spacer"></div>
-      <nav>
-        <a class="link" href="#projects-1">Projects</a>
-        <a class="link" href="#about-1">About</a>
-        <a class="link" href="#connect">Connect</a>
-      </nav>
+      <nav class="nav-links">
+  <a class="link" href="#projects">Projects</a>
+  <a class="link" href="#about">About</a>
+</nav>
+
     </div>
   </header>
 
-  <!-- Home (1 screen) -->
+  <!-- 1) HOME -->
   <section id="home" aria-label="Home" class="hero">
-    <span class="label">HOME</span>
     <div class="wrap">
-      <div class="eyebrow">
-        > currently
-        <a href="https://nexxa.ai/" target="_blank" rel="noopener noreferrer">@nexxa.ai</a>
-        &
-        <a href="https://hackthevalley.io/" target="_blank" rel="noopener noreferrer">@hackthevalley</a>
-      </div>
-            <img src="title.png" alt="Centered Image">
-      <p class="lead">
-        A University of Waterloo student, interactive designer, and entrepreneur,
-         driven by <b>story-telling and inspired by games</b>. Enthusiast of cats, cozy games, and weightlifting. 🐈‍⬛ 🍵 🧩 </p>
-      <br>
-      <div class="hero-buttons">
-        <a class="btn" href="#projects-1">Recent project</a>
-        <a class="btn" href="https://docs.google.com/document/d/1to7_K3YdC5uoMdBK5PZyvYo5_1diwFRCgcU2f2W7_T4/edit?usp=sharing" target="_blank" rel="noreferrer">View resume</a>
-      </div>
-    </div>
-  </section>
+      <div class="home-grid">
+        <div class="home-main">
+          <div class="status" aria-label="Current status">
+  <span class="status-dot" aria-hidden="true"></span>
+  <span class="status-text">
+    currently at
+    <a href="https://nexxa.ai/" target="_blank" rel="noopener noreferrer">@nexxa.ai</a>
+    &
+    <a href="https://hackthevalley.io/" target="_blank" rel="noopener noreferrer">@hackthevalley</a>
+  </span>
+</div>
+<br>
+          <h1>Hello, I'm Jess~</h1>
 
-  <!-- Projects (3 screens, each full height + clickable) -->
-  <section id="projects-1" aria-label="Project 1">
-    <span class="label">PROJECTS ✦ 1 / 3</span>
-    <div class="wrap project">
-      <a class="section-link" href="project1.html" aria-label="Open Project 1"></a>
-        <div style="display:flex; gap:5px;">
-          <img src="e&u_homescreen.png" alt="" style="width:150px"/>
-          <img src="e&u_usagescreen.png" alt="" style="width:150px"/>
-          <img src="e&u_devicescreen.png" alt="" style="width:150px"/>
-          <img src="e&u_impactscreen.png" alt="" style="width:150px"/>
+          <p class="lead">
+            I’m an interactive designer who loves building playful, human-centered experiences.
+            I care about <b>storytelling</b>, <b>connection</b>, and products that feel great to use.
+          </p>
+
+          <div class="mini-row">
+  <span class="pill">🐈 Cat person</span>
+  <span class="pill">🎮 Cozy game lover</span>
+  <span class="pill">🏋️‍♀️ Lifting heavy</span>
+  <span class="pill">✨ Story-driven design</span>
+</div>
+          <br>
+        <div class="home-side">
+          <a class="featured" href="#projects" aria-label="Jump to projects">
+            <div class="featured-top">
+              <span class="featured-kicker">Featured</span>
+              <span class="featured-link">See projects →</span>
+            </div>
+            <div class="featured-title">Rogers ✦ Energy & Utilities Dashboard</div>
+            <div class="featured-sub">A smart dashboard helping households manage energy with clarity.</div>
+          </a>
         </div>
-      <h2>Rogers ✦ Energy & Utilities Dashboard</h2>
-      <p>Crafted a partner-aligned smart energy and utilities dashboard for Rogers. Built for experienced and inexperienced energy users to <b>manage their household.</b></p>
-      <div class="tags">
-        <span class="chip"><i class="fa-solid fa-mobile"></i> Mobile</span>
-        <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI Design</span>
-        <span class="chip"><i class="fa-solid fa-layer-group"></i> Prototyping</span>
-      </div>
-    </div>
-  </section>
 
-  <section id="projects-2" aria-label="Project 2">
-    <span class="label">PROJECTS ✦ 2 / 3</span>
-    <div class="wrap project">
-      <a class="section-link" href="project2.html" aria-label="Open Project 2"></a>
-      <div style="display:flex; gap:5px;">
-          <img src="ss_start.png" alt="" style="width:320px"/>
-          <img src="ss_boss.png" alt="" style="width:320px"/>
         </div>
-      <h2>Soft Steps ✦ Accessibility Platformer Game</h2>
-      <p>Created a comforting and strategic pixel platformer that turns <b>sensory overload into gameplay</b> to bring <b>awareness to hyperesthesia.</b></p>
-      <div class="tags">
-        <span class="chip"><i class="fa-solid fa-desktop"></i> Desktop</span>
-        <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI Design</span>
-        <span class="chip"><i class="fa-solid fa-code"></i> Game Development</span>
       </div>
     </div>
+
+    <!-- scroll cue (shows on mobile only via CSS) -->
+    <div class="scroll-cue" aria-hidden="true">Scroll ↓</div>
   </section>
 
-  <section id="projects-3" aria-label="Project 3">
-    <span class="label">PROJECTS ✦ 3 / 3</span>
-    <div class="wrap project">
-      <a class="section-link" href="project3.html" aria-label="Open Project 3"></a>
-      <div style="display:flex; gap:5px;">
-          <img src="cc_login.png" alt="" style="width:320px"/>
-          <img src="cc_classroom.png" alt="" style="width:300px"/>
-        </div>
-      <h2>Crosscultura ✦ AR Language Learning App</h2>
-      <p>Created an augumented reality app that helps international and domestic students <b>break language barriers and connect with new cultures</b> through immersive, real-world scenarios.</p>
-      <div class="tags">
-        <span class="chip"><i class="fa-solid fa-vr-cardboard"></i> Augumented Reality</span>
-        <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI Design</span>
-        <span class="chip"><i class="fa-solid fa-eye"></i> AR Development</span>
-      </div>
-    </div>
-  </section>
+  <!-- 2) PROJECTS (all 3 on one screen) -->
+  <section id="projects" aria-label="Projects">
+    
 
-  <!-- About (2 screens) -->
-  <section id="about-1" class="about" aria-label="About 1">
     <div class="wrap">
-      <div class="card">
-        <h2>About me</h2>
-        <p>👋 Hey, I’m a fourth-year
+      <div class="section-head">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A few recent builds I’m proud of.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <a class="project-card" href="project1.html" aria-label="Open Rogers Energy & Utilities Dashboard">
+          <div class="thumbs thumbs-4">
+            <img src="e&u_homescreen.png" alt="Energy & Utilities homescreen" />
+            <img src="e&u_usagescreen.png" alt="Energy usage screen" />
+            <img src="e&u_devicescreen.png" alt="Devices screen" />
+            <img src="e&u_impactscreen.png" alt="Impact screen" />
+          </div>
+
+          <div class="card-body">
+            <h3>Rogers ✦ Energy & Utilities Dashboard</h3>
+            <p>Crafted a partner-aligned dashboard to help users <b>manage their household energy</b> with clarity.</p>
+
+            <div class="tags">
+              <span class="chip"><i class="fa-solid fa-mobile"></i> Mobile</span>
+              <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI</span>
+              <span class="chip"><i class="fa-solid fa-layer-group"></i> Prototyping</span>
+            </div>
+
+            <span class="cta">View case study <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a class="project-card" href="project2.html" aria-label="Open Soft Steps Accessibility Platformer Game">
+          <div class="thumbs thumbs-2">
+            <img src="ss_start.png" alt="Soft Steps start screen" />
+            <img src="ss_boss.png" alt="Soft Steps gameplay screen" />
+          </div>
+
+          <div class="card-body">
+            <h3>Soft Steps ✦ Accessibility Platformer Game</h3>
+            <p>A comforting pixel platformer turning <b>sensory overload into gameplay</b> to raise awareness for hyperesthesia.</p>
+
+            <div class="tags">
+              <span class="chip"><i class="fa-solid fa-desktop"></i> Desktop</span>
+              <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI</span>
+              <span class="chip"><i class="fa-solid fa-code"></i> Game Dev</span>
+            </div>
+
+            <span class="cta">View case study <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a class="project-card" href="project3.html" aria-label="Open Crosscultura AR Language Learning App">
+          <div class="thumbs thumbs-2">
+            <img src="cc_login.png" alt="Crosscultura login screen" />
+            <img src="cc_classroom.png" alt="Crosscultura classroom screen" />
+          </div>
+
+          <div class="card-body">
+            <h3>Crosscultura ✦ AR Language Learning App</h3>
+            <p>An augmented reality concept to help students <b>break language barriers</b> through immersive real-world scenarios.</p>
+
+            <div class="tags">
+              <span class="chip"><i class="fa-solid fa-vr-cardboard"></i> AR</span>
+              <span class="chip"><i class="fa-solid fa-object-ungroup"></i> UX/UI</span>
+              <span class="chip"><i class="fa-solid fa-eye"></i> AR Dev</span>
+            </div>
+
+            <span class="cta">View case study <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) ABOUT (About + Designing for Connection + Let's Connect in one section) -->
+  <section id="about" class="about" aria-label="About">
+    <div class="wrap">
+     
+
+      <div class="about-grid">
+        <div class="card">
+          <h2>About me</h2>
+          <p>
+            👋 Hey, I’m a fourth-year
             <a href="https://uwaterloo.ca/stratford-school-of-interaction-design-and-business/global-business-and-digital-arts"
-              target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">GBDA</a>
-            student at the <b>University of Waterloo.</b> I like to explore the intersection between business,
-            design and technology. I have a <b>strong eye for detail</b> and an innovative mindset.
-        </p>
-        <br>
-        <h3><i class="fa-solid fa-terminal"></i> Favourite Tools</h3>
-        <div class="tags">
-          <span class="chip">Figma</span>
-          <span class="chip">Adobe Creative Suite</span>
-          <span class="chip">Miro</span>
-          <span class="chip">HTML/CSS</span>
-          <span class="chip">Canva</span>
-        </div>
-        <br>
-        <h3><i class="fa-solid fa-terminal"></i> Hobbies & Interests</h3>
-        <div class="tags">
-          <span class="chip">Graphic Design</span>
-          <span class="chip">Video-editing</span>
-          <span class="chip">Hair-cutting</span>
-          <span class="chip">Weight-lifting</span>
-          <span class="chip">Cozy Gaming</span>
-        </div>
-      </div>
-    </div>
-  </section>
+              target="_blank" rel="noopener noreferrer" class="underline">GBDA</a>
+            student at the <b>University of Waterloo.</b> I explore the intersection between business,
+            design, and technology with a <b>strong eye for detail</b>.
+          </p>
 
-  <section id="about-2" class="about" aria-label="About 2">
-    <div class="wrap">
-      <div class="card">
-        <h2>Designing for Connection</h2>
-        <p>💡 For me, UX is about more than just making things usable—it's about
-           creating moments that connect people to a brand’s story and <b>improving
-            existing products.</b> I’m always curious about how <b>psychology, creativity,
-             and design</b> come together to shape behaviour and add real value.
-        </p>
-        <h3><i class="fa-solid fa-terminal"></i> Fun Meets Function</h3>
-        <p>💭 I believe that <b>every interaction tells a story,</b> and I aim to craft
-           experiences that are not only functional but also captivating and fun.
-            By infusing <b>elements of gamification and narrative</b> into my designs,
-             I create engaging journeys that resonate with users on a deeper level.</p>
-      </div>
-    </div>
-  </section>
+          <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Favourite Tools</h3>
+          <div class="tags">
+            <span class="chip">Figma</span>
+            <span class="chip">Adobe Creative Suite</span>
+            <span class="chip">Miro</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">Canva</span>
+          </div>
 
-  <!-- Connect (1 screen) -->
-  <section id="connect" class="connect" aria-label="Connect">
-    <div class="wrap">
-      <h1>Let’s connect</h1>
-      <p class="lead">Interested in <b>working together or just saying hi?</b> I’d love to hear from you.</p>
-      <br>
-      <div class="socials">
-        <a class="btn" href="mailto:jsocampo@uwaterloo.ca">Email</a>
-        <a class="btn" href="https://www.linkedin.com/in/jessica--ocampo/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn" href="https://github.com/jessicasocampo">Github</a>
+          <h3><i class="fa-solid fa-heart"></i> Hobbies & Interests</h3>
+          <div class="tags">
+            <span class="chip">Graphic Design</span>
+            <span class="chip">Video-editing</span>
+            <span class="chip">Hair-cutting</span>
+            <span class="chip">Weight-lifting</span>
+            <span class="chip">Cozy Gaming</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Designing for Connection</h2>
+          <p>
+            💡 UX is more than usability—it's about creating moments that connect people to a brand’s story and
+            <b>improve existing products</b>. I’m curious about how <b>psychology, creativity, and design</b>
+            shape behaviour and add real value.
+          </p>
+
+          <h3><i class="fa-solid fa-gamepad"></i> Fun Meets Function</h3>
+          <p>
+            💭 I believe <b>every interaction tells a story.</b> I aim to create experiences that feel functional,
+            captivating, and fun—often using <b>gamification</b> and <b>narrative</b> to make products resonate.
+          </p>
+
+          <div id="connect" class="connect-panel" aria-label="Connect">
+            <h3>Let’s connect</h3>
+            <p class="muted">
+              Interested in <b>working together</b> or just saying hi? I’d love to hear from you.
+            </p>
+
+            <div class="connect-actions">
+              <a class="btn" href="mailto:jsocampo@uwaterloo.ca">Email</a>
+              <a class="btn" href="https://www.linkedin.com/in/jessica--ocampo/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn" href="https://github.com/jessicasocampo" target="_blank" rel="noreferrer">Github</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-  <p>2025 © All rights reserved · jsocampo@uwaterloo.ca · Website coded by me </p>
-</footer>
-
+    <p>2025 © All rights reserved · jsocampo@uwaterloo.ca · Website coded by me</p>
+  </footer>
 </body>
 </html>
